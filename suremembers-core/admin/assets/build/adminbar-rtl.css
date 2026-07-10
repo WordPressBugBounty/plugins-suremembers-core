@@ -1,0 +1,160 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./admin/assets/src/centralized-restriction/Adminbar.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************/
+.suremembers-modal .components-modal__content {
+  overflow-y: hidden;
+  margin-top: 60px;
+  padding: 0;
+}
+.suremembers-modal .components-modal__content div:nth-child(2) {
+  height: 100%;
+}
+
+.suremembers-has-restrictions {
+  background-color: #4338ca !important;
+}
+
+.suremembers-modal .components-modal__header {
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.suremembers-modal .components-modal__header .components-modal__header-heading {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.suremembers-modal .components-modal__content::before {
+  margin-bottom: 0;
+}
+
+/* Modal CSS to hide WordPress admin elements */
+body.suremembers-modal-open #wpadminbar,
+body.suremembers-modal-open .wp-admin #wpadminbar {
+  display: none !important;
+  visibility: hidden !important;
+}
+body.suremembers-modal-open #adminmenumain,
+body.suremembers-modal-open .wp-admin #adminmenumain {
+  display: none !important;
+  visibility: hidden !important;
+}
+body.suremembers-modal-open #adminmenuwrap,
+body.suremembers-modal-open .wp-admin #adminmenuwrap {
+  display: none !important;
+  visibility: hidden !important;
+}
+body.suremembers-modal-open #wpcontent,
+body.suremembers-modal-open .wp-admin #wpcontent {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+body.suremembers-modal-open #wpbody,
+body.suremembers-modal-open .wp-admin #wpbody {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+body.suremembers-modal-open .wp-responsive-open #wpbody,
+body.suremembers-modal-open .wp-admin .wp-responsive-open #wpbody {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+body.suremembers-modal-open .wp-responsive-open #wpcontent,
+body.suremembers-modal-open .wp-admin .wp-responsive-open #wpcontent {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+body.suremembers-modal-open {
+  /* Additional selectors for comprehensive hiding */
+}
+body.suremembers-modal-open #adminmenu,
+body.suremembers-modal-open .wp-admin #adminmenu {
+  display: none !important;
+  visibility: hidden !important;
+}
+body.suremembers-modal-open #adminmenu-back,
+body.suremembers-modal-open .wp-admin #adminmenu-back {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Force hide WordPress admin elements when modal is open */
+body.suremembers-modal-open #wpadminbar {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+body.suremembers-modal-open #adminmenumain,
+body.suremembers-modal-open #adminmenuwrap,
+body.suremembers-modal-open #adminmenu,
+body.suremembers-modal-open #adminmenu-back {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+body.suremembers-modal-open #wpcontent {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
+body.suremembers-modal-open #wpbody {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+body.suremembers-modal-open .wp-responsive-open #wpbody,
+body.suremembers-modal-open .wp-responsive-open #wpcontent {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+body.suremembers-modal-open {
+  /* Hide the entire admin menu area */
+}
+body.suremembers-modal-open #adminmenuback {
+  display: none !important;
+  visibility: hidden !important;
+}
+body.suremembers-modal-open {
+  /* Make sure modal is properly sized as popup */
+}
+body.suremembers-modal-open .suremembers-modal {
+  position: fixed !important;
+  top: 50% !important;
+  right: 50% !important;
+  transform: translate(50%, -50%) !important;
+  width: 95vw !important;
+  max-width: 1400px !important;
+  height: 95vh !important;
+  max-height: 900px !important;
+  z-index: 999999 !important;
+  background: white !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+body.suremembers-modal-open .suremembers-modal .components-modal__screen-overlay {
+  background: rgba(0, 0, 0, 0.5) !important;
+  z-index: 999998 !important;
+}
+body.suremembers-modal-open .suremembers-modal .components-modal__content {
+  height: calc(100% - 60px) !important;
+  overflow: hidden !important;
+}
+body.suremembers-modal-open .suremembers-modal iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  border-radius: 0 0 8px 8px !important;
+}

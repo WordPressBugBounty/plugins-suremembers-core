@@ -1,0 +1,146 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./admin/assets/src/restrict-block/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Block Restriction Editor Styles.
+ *
+ * @package SureMembersCore
+ * @since 1.0.0
+ */
+.suremembers-post-meta-choose {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 8px;
+  margin-bottom: 24px;
+}
+
+.suremembers-label-head {
+  font-weight: 400;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.suremembers-post-meta-restrcited-content * {
+  box-sizing: border-box;
+}
+
+.suremembers-post-meta-restrcited-content.suremembers-focuson .suremembers-multiple-plans-container {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px #007cba;
+}
+
+.suremembers-post-meta-restrcited-content .suremembers-multiple-plans-container {
+  border: 1px solid #757575;
+  border-radius: 2px;
+}
+
+.suremembers-input-added-group {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 4px;
+  padding: 4px;
+  cursor: text;
+}
+.suremembers-input-added-group .suremembers-group-item {
+  padding: 2px 0 2px 6px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  background-color: #ddd;
+  color: #1e1e1e;
+  font-size: 13px;
+}
+.suremembers-input-added-group .suremembers-group-item > span {
+  height: unset;
+  width: unset;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.suremembers-input-added-group input.search-input {
+  display: inline-block;
+  flex: 1;
+  font-family: inherit;
+  font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  min-height: 24px;
+  min-width: 50px;
+  background: inherit;
+  border: 0;
+  color: #1e1e1e;
+  line-height: 1;
+  box-shadow: unset;
+  outline: none;
+}
+
+.suremembers-post-meta-restricted-post-result {
+  border-top: 1px solid #757575;
+}
+.suremembers-post-meta-restricted-post-result .suremembers-not-found-error {
+  padding: 4px;
+  display: block;
+  color: #cc1818;
+}
+.suremembers-post-meta-restricted-post-result > div {
+  padding: 4px;
+  cursor: pointer;
+  color: #1e1e1e;
+}
+.suremembers-post-meta-restricted-post-result > div:hover {
+  background: var(--wp-admin-theme-color);
+  color: #fff;
+}
+
+.suremembers-create-group {
+  display: block;
+  padding: 12px;
+  background: #f0f0f1;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--wp-admin-theme-color);
+}
+.suremembers-create-group:hover {
+  background: #e0e0e1;
+  text-decoration: underline;
+}
+
+.suremembers-pro-upgrade-text {
+  margin: 0;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #fff;
+}
+.suremembers-pro-upgrade-text a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.suremembers-pro-upgrade-text a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+.suremembers-pro-upgrade-text a .components-external-link__icon {
+  display: none;
+}
+
+.suremembers-restrict-block-panel .components-panel__body-toggle {
+  position: relative;
+}
+.suremembers-restrict-block-panel .components-panel__body-toggle::after {
+  content: "Premium";
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2px 6px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}

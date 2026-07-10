@@ -1,0 +1,94 @@
+.suremembers-updating-inline::before {
+	animation: rotation 2s infinite linear;
+	color: #06ed92;
+	content: "\f463";
+	display: inline-block;
+	font: normal 600 20px/1 dashicons, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	vertical-align: middle;
+}
+
+.suremembers-updating-inline {
+	pointer-events: none;
+}
+
+#suremembers-bulk-titles .ntdelbutton::before {
+	background: 0 0;
+	color: #787c82;
+	content: "\f153";
+	display: block;
+	font: 600 16px/20px dashicons;
+	speak: never;
+	height: 20px;
+	text-align: center;
+	width: 20px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#suremembers-bulk-titles .ntdelbutton:focus::before,
+#suremembers-bulk-titles .ntdelbutton:hover::before {
+	color: #d63638;
+}
+
+#suremembers-bulk-titles-list,
+#suremembers-bulk-titles-list li {
+	margin: 0;
+	position: relative;
+}
+
+#suremembers-bulk-titles {
+	height: 14em;
+	border: 1px solid #ddd;
+	margin: 0 0 5px;
+	padding: 0.2em 5px;
+	overflow-y: scroll;
+}
+
+#suremembers-bulk-titles .ntdelbutton,
+#suremembers-bulk-titles .ntdeltitle {
+	display: inline-block;
+	margin: 0;
+	padding: 3px 0;
+	line-height: 20px;
+	vertical-align: top;
+}
+
+#suremembers-bulk-titles .ntdelitem {
+	padding-left: 23px;
+}
+
+#suremembers-bulk-titles .ntdelbutton {
+	width: 26px;
+	height: 26px;
+	margin: 0 0 0 -26px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+#suremembers-bulk-titles .ntdelbutton::before {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#suremembers-bulk-titles .ntdelbutton:focus {
+	box-shadow: 0 0 0 2px #3582c4;
+	outline: 2px solid transparent;
+	outline-offset: 0;
+}
+.suremembers-button-link {
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	border: 0;
+	border-radius: 0;
+	background: 0 0;
+	cursor: pointer;
+	text-align: left;
+	color: #2271b1;
+	text-decoration: underline;
+	transition-property: border, background, color;
+	transition-duration: 0.05s;
+	transition-timing-function: ease-in-out;
+}

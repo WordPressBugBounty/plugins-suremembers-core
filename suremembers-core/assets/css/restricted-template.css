@@ -1,0 +1,23 @@
+/* Restricted content css*/
+.suremembers-main-container {
+	width: 100%;
+}
+
+.suremembers-container-div {
+	margin: 3em 0;
+	padding: 3em;
+	background-color: #fff;
+	width: 100%;
+	max-width: -webkit-fill-available;
+	text-align: center;
+}
+
+.suremembers-unauthorized-container {
+	margin-top: 1em;
+}
+
+.suremembers-logout-button {
+	cursor: pointer;
+	margin-left: 20px;
+	text-decoration: none !important;
+}

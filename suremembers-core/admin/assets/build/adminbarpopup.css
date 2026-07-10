@@ -1,0 +1,106 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./admin/assets/src/centralized-restriction/Adminbarpopup.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+#wpadminbar,
+#adminmenu,
+#adminmenumain,
+#wpfooter,
+.page-title-action,
+#screen-meta-links,
+.subsubsub {
+  display: none !important;
+}
+
+html.wp-toolbar {
+  padding-top: 0;
+}
+
+#suremembers-header {
+  top: 0 !important;
+}
+
+#wpcontent,
+#wpfooter {
+  margin-left: 0;
+}
+
+#suremembers_posts .sm-header-bar {
+  top: 0;
+}
+
+.suremembers-header-actions {
+  display: none;
+}
+
+.notice {
+  display: none;
+}
+
+body.wsm_access_group_page_suremembers-manage-license.auto-fold #wpcontent {
+  width: 100%;
+}
+body.wsm_access_group_page_suremembers-manage-license .notice {
+  display: block;
+}
+body.wsm_access_group_page_suremembers-manage-license {
+  background: #fff;
+}
+body.wsm_access_group_page_suremembers-manage-license #wpwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.wsm_access_group_page_suremembers-manage-license #wpcontent {
+  width: 100%;
+}
+body.wsm_access_group_page_suremembers-manage-license #wpbody {
+  padding: 0;
+}
+body.wsm_access_group_page_suremembers-manage-license .wrap h1 {
+  display: none;
+}
+body.wsm_access_group_page_suremembers-manage-license .wrap .notice.notice-error {
+  color: rgb(245, 8, 8);
+}
+body.wsm_access_group_page_suremembers-manage-license .notice.notice-success {
+  color: rgb(24, 146, 24);
+}
+body.wsm_access_group_page_suremembers-manage-license #wpbody-content {
+  padding-bottom: 0;
+}
+body.wsm_access_group_page_suremembers-manage-license .wrap {
+  margin: 0;
+}
+body.wsm_access_group_page_suremembers-manage-license .wrap .notice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none !important;
+  width: 100%;
+  max-width: 615px;
+  box-shadow: none;
+  padding: 0 0 15px 0;
+  margin: 0 auto;
+}
+body.wsm_access_group_page_suremembers-manage-license .wrap .notice p {
+  margin: 0;
+}
+body.wsm_access_group_page_suremembers-manage-license .wrap .notice .notice-dismiss {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.wsm_access_group_page_suremembers-manage-license .suremembers-form-container form {
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+  .auto-fold #wpcontent,
+  .auto-fold #wpfooter {
+    margin-left: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,190 @@
+.suremember-login-container-popup {
+	background: #000000b3;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99999999;
+	display: none;
+	max-width: unset !important;
+}
+
+.suremembers-open-login-popup {
+	margin-left: 20px;
+	text-decoration: none !important;
+}
+
+.suremember-login-container-popup.active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.suremember-login-wrapper {
+	display: flex;
+	width: 380px;
+	height: max-content;
+	max-width: 80%;
+	max-height: 80%;
+	align-items: center;
+	justify-content: center;
+	padding: 34px 30px;
+	box-shadow: 0 3px 6px rgb( 0 0 0 / 30% );
+	overflow: auto;
+	position: relative;
+	background-color: #fff;
+	border-radius: 3px;
+}
+.suremember-login-form-container {
+	width: 100%;
+}
+.suremember-user-login-form {
+	display: flex;
+	flex-direction: column;
+	grid-gap: 15px;
+}
+
+.suremember-user-login-form a {
+	text-decoration: none;
+}
+
+.suremember-turnstile-wrap {
+	display: flex;
+}
+
+.suremember-turnstile-wrap .cf-turnstile,
+.suremember-turnstile-wrap .cf-turnstile-manual {
+	max-width: 100%;
+}
+
+.suremember-login-container-popup .suremember-login-heading {
+	font-size: 30px;
+	font-weight: 600;
+	color: #1d2327;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+.suremember-user-login-form label:not( [for="rememberme"] ) {
+	font-family: inherit;
+	line-height: 16px;
+	color: #1d2327;
+	font-size: 16px;
+	font-weight: 400;
+}
+.suremember-user-login-form input[type="text"],
+.suremember-user-login-form input[type="password"] {
+	font-family: inherit;
+	width: 100%;
+	border-radius: 3px;
+	min-height: 40px;
+	max-width: -webkit-fill-available;
+	padding: 0.75em;
+	border: 1px solid #e2e8f0;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+.suremember-login-wp-pwd {
+	position: relative;
+}
+.suremember-user-login-form .suremember-login-wp-pwd input[type="password"] {
+	padding-right: 37px;
+}
+.suremember-login-wp-pwd .suremembers-hide-if-no-js {
+	position: absolute !important;
+	top: 0;
+	right: 0;
+	color: #959595;
+	cursor: pointer;
+	padding: 5px 9px;
+	height: 100%;
+	background: transparent;
+	border: none;
+}
+.suremember-login-container-popup .suremember-user-form-submit {
+	padding: 0.75em;
+	font-weight: 500;
+	border-radius: 3px;
+	width: 100%;
+	border: 1px solid #046bd2;
+	background-color: #046bd2;
+	color: #fff;
+	cursor: pointer;
+}
+
+.suremember-login-container-popup .suremember-user-form-submit:hover {
+	opacity: 0.9;
+}
+
+.suremember-login-container-popup .suremember-user-form-submit.submit-loading {
+	pointer-events: none;
+	position: relative;
+	opacity: 0.6;
+}
+.suremember-login-container-popup .suremember-user-form-submit.submit-loading::before {
+	content: "";
+	width: 24px;
+	height: 24px;
+	border: 4px solid #000;
+	border-top-color: #fff;
+	transform: translate( -50%, -50% );
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation: submitloading 1s forwards infinite linear;
+	border-radius: 50%;
+}
+.suremember-login-container-popup .remember-me-wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 12px;
+}
+.suremember-login-container-popup .remember-me {
+	display: flex;
+	font-size: 12px;
+	align-items: center;
+	grid-gap: 5px;
+	cursor: pointer;
+}
+.suremember-login-container-popup .remember-me input {
+	border-radius: 3px;
+}
+.suremember-login-container-popup .field-error {
+	border-left: 4px solid #ef4444;
+	padding: 5px 12px;
+	margin-bottom: 20px;
+	background-color: #fee2e2;
+	box-shadow: 0 1px 1px 0 rgb( 0 0 0 / 10% );
+	display: block;
+	color: #ef4444;
+	line-height: 1.4;
+}
+.suremember-login-container-popup span.field-error::before {
+	content: "\f348";
+	font-family: dashicons;
+	margin-right: 4px;
+	color: #ef4444;
+	display: inline-block;
+	transform: translateY( 2px );
+}
+.suremember-login-wrapper-close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+
+.suremembers-button {
+	text-decoration: none !important;
+}
+@keyframes submitloading {
+	0% {
+		transform: translate( -50%, -50% ) rotate( 0deg );
+	}
+
+	100% {
+		transform: translate( -50%, -50% ) rotate( 360deg );
+	}
+}

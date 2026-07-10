@@ -1,0 +1,35 @@
+*** SureMembers Core Changelog ***
+
+= 2026-07-08 - version 1.2.2 =
+* Improvement: Added the missing Analytics link in the admin sidebar so the Analytics page can be opened directly from the menu.
+* Improvement: Switched the admin bar restriction script to WordPress's built-in element library for better compatibility and a smaller footprint.
+* Fix: Fixed a security issue where redirect URL suggestions could render unsafe HTML; titles are now decoded and displayed safely.
+* Fix: Fixed an issue where a membership's relative expiration date shown on the WordPress user profile screen could differ from the date shown in SureMembers and from when access actually ends.
+
+= 2026-06-29 - version 1.2.1 =
+* New: A new Analytics tab with membership growth insights, recent activity, upcoming expirations, and per-membership snapshots.
+* Improvement: Improved membership status handling by automatically checking and updating expired memberships in the background.
+* Improvement: Draft memberships now appear as disabled in the user details popup and can no longer be granted or revoked.
+* Fix: Fixed an issue where some blocks, including Gravity Forms blocks, could show errors when used with SureMembers.
+* Fix: Fixed an issue that could cause redirect loops in certain protected page settings.
+* Fix: Fixed an issue on Multisite networks where viewing a user's profile could silently remove their membership assignments from other sites in the network.
+* Fix: Fixed an issue where the expiration date set from the user details popup was not getting saved.
+
+= 2026-06-17 - version 1.2.0 =
+* New: Introduced WordPress Abilities support for managing memberships and accessing membership analytics, along with new MCP settings integration.
+* New: Added the suremembers_list_members shortcode to display members from specific Access Groups directly on pages and posts.
+* Improvement: Enhanced overall UI/UX across the plugin for a smoother and more intuitive user experience.
+
+= 2026-06-08 - version 1.1.0 =
+* New: Added a Learn tab to help users complete setup and configure the plugin more easily.
+* Improvement: Added French, Dutch, and Polish language translations for improved localization support.
+* Fix: Improved security by ensuring access restrictions are properly enforced across all post types, REST API requests, and SureDash content access.
+
+= 2026-06-03 - version 1.0.2 =
+* Fix: Resolved a JavaScript console error on admin pages caused by a missing UI styles dependency.
+
+= 2026-06-02 - version 1.0.1 =
+* Fix: Handled onboarding redirection while installing plugins through the onboarding process.
+
+= 2026-06-02 - version 1.0.0 =
+* Initial release of SureMembers Core, the free version of SureMembers.
