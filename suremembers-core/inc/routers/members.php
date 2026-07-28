@@ -565,4 +565,95 @@ class Members {
 				500
 			);
 	}
+
+	/**
+	 * Duplicate a membership (access group) as a draft.
+	 *
+	 * Clones the source post (title, content) plus all of its meta and taxonomy
+	 * terms into a new draft, so an admin can tweak it (e.g. a different team
+	 * size) without affecting the original.
+	 *
+	 * @param \WP_REST_Request $request Request object.
+	 *
+	 * @since x.x.x
+	 *
+	 * @return \WP_REST_Response
+	 */
+	public function duplicate_membership( $request ) {
+		// Nonce verification.
+		$nonce = (string) $request->get_header( 'X-WP-Nonce' );
+		if ( ! wp_verify_nonce( sanitize_text_field( $nonce ), 'wp_rest' ) ) {
+			return new \WP_REST_Response(
+				[
+					'success' => false,
+					'message' => __( 'Nonce validation failed', 'suremembers-core' ),
+				],
+				403
+			);
+		}
+
+		$id     = absint( $request->get_param( 'id' ) ?? 0 );
+		$source = $id ? get_post( $id ) : null;
+
+		if ( ! $source instanceof \WP_Post || $source->post_type !== SUREMEMBERS_POST_TYPE ) {
+			return new \WP_REST_Response(
+				[
+					'success' => false,
+					'message' => __( 'Membership not found.', 'suremembers-core' ),
+				],
+				404
+			);
+		}
+
+		// Create the copy as a draft.
+		$new_id = wp_insert_post(
+			[
+				'post_type'    => SUREMEMBERS_POST_TYPE,
+				'post_status'  => 'draft',
+				/* translators: %s: original membership title. */
+				'post_title'   => sprintf( __( '%s (Copy)', 'suremembers-core' ), $source->post_title ),
+				'post_content' => $source->post_content,
+				'post_excerpt' => $source->post_excerpt,
+			],
+			true
+		);
+
+		if ( is_wp_error( $new_id ) || ! $new_id ) {
+			return new \WP_REST_Response(
+				[
+					'success' => false,
+					'message' => __( 'Failed to duplicate membership.', 'suremembers-core' ),
+				],
+				500
+			);
+		}
+
+		// Copy all meta (skip WordPress internal edit locks).
+		$skip = [ '_edit_lock', '_edit_last' ];
+		foreach ( get_post_meta( $id ) as $meta_key => $meta_values ) {
+			if ( in_array( $meta_key, $skip, true ) ) {
+				continue;
+			}
+			foreach ( $meta_values as $meta_value ) {
+				add_post_meta( $new_id, $meta_key, maybe_unserialize( $meta_value ) );
+			}
+		}
+
+		// Copy taxonomy terms, if the post type uses any.
+		foreach ( get_object_taxonomies( SUREMEMBERS_POST_TYPE ) as $taxonomy ) {
+			$terms = wp_get_object_terms( $id, $taxonomy, [ 'fields' => 'ids' ] );
+			if ( ! is_wp_error( $terms ) && ! empty( $terms ) ) {
+				wp_set_object_terms( $new_id, $terms, $taxonomy );
+			}
+		}
+
+		return new \WP_REST_Response(
+			[
+				'success' => true,
+				'message' => __( 'Membership duplicated as a draft.', 'suremembers-core' ),
+				'data'    => [ 'id' => (int) $new_id ],
+			],
+			200
+		);
+	}
 }

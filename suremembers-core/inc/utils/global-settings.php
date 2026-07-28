@@ -46,6 +46,10 @@ class Global_Settings {
 		foreach ( $defaults as $key => $default_values ) {
 			$db_value         = get_option( $key, [] );
 			$settings[ $key ] = self::parse_args( $db_value, $default_values );
+
+			if ( SUREMEMBERS_LOGIN_RESTRICTIONS_SETTINGS === $key ) {
+				$settings[ $key ] = self::normalize_login_restrictions( $settings[ $key ] );
+			}
 		}
 
 		// Decrypt sensitive keys.
@@ -64,7 +68,7 @@ class Global_Settings {
 	 * Get a specific setting by key.
 	 *
 	 * @param string $key Setting key (option name).
-	 * @return array<string, mixed> Setting value merged with defaults.
+	 * @return array<int|string, mixed> Setting value merged with defaults.
 	 * @since 2.0.0
 	 */
 	public static function get_setting( $key ) {
@@ -75,7 +79,59 @@ class Global_Settings {
 		}
 
 		$db_value = get_option( $key, [] );
-		return self::parse_args( $db_value, $defaults[ $key ] );
+		$setting  = self::parse_args( $db_value, $defaults[ $key ] );
+
+		if ( SUREMEMBERS_LOGIN_RESTRICTIONS_SETTINGS === $key ) {
+			return self::normalize_login_restrictions( $setting );
+		}
+
+		return $setting;
+	}
+
+	/**
+	 * Normalize login restrictions data to the current list format.
+	 *
+	 * Older versions stored a single flat array [ 'enable' => bool, 'limit' => int,
+	 * 'action' => string ] while the current format is a list of restriction rows.
+	 * This converts legacy data on read so the UI and runtime always receive rows;
+	 * the next save then persists the data in the new format.
+	 *
+	 * @param mixed $data Raw login restrictions data from the database.
+	 *
+	 * @return array<int, array<string, mixed>> List of restriction rows.
+	 *
+	 * @since x.x.x
+	 */
+	public static function normalize_login_restrictions( $data ) {
+		if ( ! is_array( $data ) || empty( $data ) ) {
+			return [];
+		}
+
+		// Legacy flat format: [ 'enable' => bool, 'limit' => int, 'action' => string ].
+		if ( isset( $data['enable'] ) || isset( $data['limit'] ) || isset( $data['action'] ) ) {
+			if ( empty( $data['enable'] ) ) {
+				return [];
+			}
+
+			$action = isset( $data['action'] ) && is_string( $data['action'] ) ? $data['action'] : 'block';
+
+			return [
+				[
+					'user_roles'        => [
+						[
+							'value' => 'all',
+							'label' => __( 'All Roles', 'suremembers-core' ),
+						],
+					],
+					'max_active_logins' => max( 1, absint( $data['limit'] ?? 1 ) ),
+					'login_logic'       => in_array( $action, [ 'block', 'allow' ], true ) ? $action : 'block',
+					'allow_logout_all'  => false,
+				],
+			];
+		}
+
+		// Current format: keep only valid rows and reindex.
+		return array_values( array_filter( $data, 'is_array' ) );
 	}
 
 	/**

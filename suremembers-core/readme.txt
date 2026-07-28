@@ -4,7 +4,7 @@ Tags: membership, content restriction, members only, paywall, access control
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.2.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,6 +135,13 @@ We take plugin security seriously. Report vulnerabilities through our [Bug Bount
 * [Support](https://suremembers.com/support)
 
 == Changelog ==
+
+= 2026-07-28 - version 1.3.0 =
+* New: Team (Corporate) Accounts — manage teams per membership, with team registration and management on the frontend. Requires SureMembers (Pro).
+* Improvement: Improved the user details popup.
+* Improvement: UI enhancements across the admin dashboard.
+* Improvement: Added groundwork in the codebase to support upcoming features such as payments.
+* Fix: Fixed an issue where unauthenticated visitors to wp-admin could be redirected to a restricted membership page instead of the login form when a custom login URL was set, locking administrators out.
 
 = 2026-07-08 - version 1.2.2 =
 * Improvement: Added the missing Analytics link in the admin sidebar so the Analytics page can be opened directly from the menu.

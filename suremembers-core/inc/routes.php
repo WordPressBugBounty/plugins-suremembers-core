@@ -138,6 +138,11 @@ class Routes {
 					'callback'            => [ MembersRoute::get_instance(), 'delete_membership' ],
 					'permission_callback' => 'admin',
 				],
+				'duplicate-membership'         => [
+					'method'              => 'POST',
+					'callback'            => [ MembersRoute::get_instance(), 'duplicate_membership' ],
+					'permission_callback' => 'admin',
+				],
 				// Users endpoints.
 				'get-users-data'               => [
 					'method'              => 'POST',

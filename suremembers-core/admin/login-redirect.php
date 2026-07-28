@@ -117,13 +117,20 @@ class Login_Redirect {
 		$request = isset( $_SERVER['REQUEST_URI'] ) ? wp_parse_url( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) ) : '';
 
 		if ( $this->allow_login_redirect_customization( $pagenow, $request ) ) {
-			$rules = Settings::get_setting( 'suremembers_login_form_settings' );
+			/**
+			 * Send unauthenticated wp-admin visitors to the (custom) login form with a
+			 * redirect_to back to the originally requested admin URL, mirroring WordPress
+			 * core's auth_redirect()/wp_login_url() contract.
+			 *
+			 * Previously this redirected to the "Redirect URL" setting ( login_redirect_url,
+			 * default slug "404" ). When that slug resolved to a real, membership-protected
+			 * page, Template_Redirect::processed_content() applied the membership restriction
+			 * instead of showing a login form, locking admins out of wp-admin ( see #125 ).
+			 */
+			$requested_url = isset( $_SERVER['REQUEST_URI'] ) ? esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : admin_url();
+			$login_url     = add_query_arg( 'redirect_to', $requested_url, $this->sm_login_redirect() );
 
-			if ( isset( $rules['login_redirect_url'] ) ) {
-				wp_safe_redirect( '/' . $rules['login_redirect_url'] );
-				exit;
-			}
-			wp_safe_redirect( '/' );
+			wp_safe_redirect( $login_url );
 			exit;
 		}
 

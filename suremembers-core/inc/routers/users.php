@@ -176,8 +176,10 @@ class Users {
 
 			$all_memberships[] = $membership_data;
 
-			// Check if active.
-			if ( $membership_data['status'] === 'active' ) {
+			// Only published memberships count as "active". A draft/unpublished
+			// membership can still carry an "active" access status internally, but it
+			// isn't grantable/usable, so it must not inflate the active count.
+			if ( $membership_data['status'] === 'active' && ( $membership_data['post_status'] ?? '' ) === 'publish' ) {
 				$active_memberships[] = $membership_data;
 			}
 		}
@@ -202,6 +204,18 @@ class Users {
 					'active_memberships' => $active_memberships,
 					'memberships_count'  => count( $all_memberships ),
 					'active_count'       => count( $active_memberships ),
+					/**
+					 * Filters the team accounts a user is tied to (owner/member).
+					 *
+					 * Filled by SureMembers Pro's Team Accounts module; empty when Pro
+					 * is inactive. Used by the User Details popup's Team Accounts table.
+					 *
+					 * @since 2.0.0
+					 *
+					 * @param array<int, array<string, mixed>> $teams   Team account rows.
+					 * @param int                              $user_id User ID.
+					 */
+					'team_accounts'      => apply_filters( 'suremembers_user_team_accounts', [], $user_id ),
 				],
 			],
 			200
@@ -645,8 +659,9 @@ class Users {
 
 			$all_memberships[] = $membership_data;
 
-			// Check if active.
-			if ( $status === 'active' ) {
+			// Only published memberships count as "active" — a draft membership must
+			// not inflate the active count even if its access status is "active".
+			if ( $status === 'active' && $membership_post->post_status === 'publish' ) {
 				$active_memberships[] = $membership_data;
 			}
 		}
@@ -838,6 +853,13 @@ class Users {
 	private function get_integration_icon( $integration ) {
 		if ( empty( $integration ) ) {
 			return '';
+		}
+
+		// Team (corporate) memberships are surfaced under the SureMembers brand: the
+		// source stays "corporate-account" internally, but the UI shows the SureMembers
+		// icon (with a "Team account" tooltip) rather than a distinct corporate logo.
+		if ( $integration === 'corporate-account' ) {
+			$integration = 'suremembers';
 		}
 
 		$logo_url = \SureMembersCore\Inc\Utils::integration_icons( $integration );

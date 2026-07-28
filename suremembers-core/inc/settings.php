@@ -9,6 +9,8 @@
 
 namespace SureMembersCore\Inc;
 
+use SureMembersCore\Inc\Utils\Global_Settings;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -44,6 +46,11 @@ class Settings {
 		$global_defaults = self::global_defaults();
 
 		$setting = self::parse_args( $db_data, $global_defaults[ $key ] );
+
+		if ( SUREMEMBERS_LOGIN_RESTRICTIONS_SETTINGS === $key ) {
+			return Global_Settings::normalize_login_restrictions( $setting );
+		}
+
 		return ! empty( $setting ) ? $setting : [];
 	}
 

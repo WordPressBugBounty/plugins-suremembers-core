@@ -169,7 +169,7 @@ class Admin_Menu {
 			'manage_options',
 			'suremembers',
 			[ $this, 'render' ],
-			'data:image/svg+xml;base64,' . $logo, //phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
+			$logo, // Already a full `data:image/svg+xml;base64,…` URI.
 			30
 		);
 
@@ -192,7 +192,17 @@ class Admin_Menu {
 			[ $this, 'render' ]
 		);
 
-			// Add users submenu.
+		// Add Team Accounts submenu (Corporate Accounts feature; Pro-gated in the UI).
+		add_submenu_page(
+			'suremembers',
+			__( 'Team Accounts', 'suremembers-core' ),
+			__( 'Team Accounts', 'suremembers-core' ),
+			'manage_options',
+			'suremembers&tab=team-accounts',
+			[ $this, 'render' ]
+		);
+
+		// Add users submenu.
 		add_submenu_page(
 			'suremembers',
 			__( 'Members', 'suremembers-core' ),
@@ -212,6 +222,16 @@ class Admin_Menu {
 			[ $this, 'render' ]
 		);
 
+		// Add Email submenu.
+		add_submenu_page(
+			'suremembers',
+			__( 'Email', 'suremembers-core' ),
+			__( 'Email', 'suremembers-core' ),
+			'manage_options',
+			'suremembers&tab=email',
+			[ $this, 'render' ]
+		);
+
 		// Add settings submenu.
 		add_submenu_page(
 			'suremembers',
@@ -222,17 +242,7 @@ class Admin_Menu {
 			[ $this, 'render' ]
 		);
 
-		// Add settings submenu.
-		add_submenu_page(
-			'suremembers',
-			__( 'SureDash', 'suremembers-core' ),
-			__( 'SureDash', 'suremembers-core' ),
-			'manage_options',
-			'suremembers&tab=suredash',
-			[ $this, 'render' ]
-		);
-
-		// Add hidden onboarding page (similar to SureDash).
+		// Add hidden onboarding page.
 		add_submenu_page(
 			'suremembers',
 			'SureMembers ' . __( 'Onboarding', 'suremembers-core' ),
@@ -477,6 +487,7 @@ class Admin_Menu {
 			'woocommerce_active'        => function_exists( 'WC' ),
 			'home_url'                  => home_url( '/' ),
 			'username'                  => wp_get_current_user()->display_name,
+			'current_user_email'        => wp_get_current_user()->user_email,
 			'user_login'                => wp_get_current_user()->user_login,
 			'sureforms_status'          => $this->get_plugin_status( 'sureforms/sureforms.php' ),
 			'surecart_status'           => $this->get_plugin_status( 'surecart/surecart.php' ),
@@ -490,6 +501,7 @@ class Admin_Menu {
 			'pro_promo_image'           => SUREMEMBERS_CORE_URL . 'admin/assets/images/onboarding.png',
 			'learn_dismissed'           => $learn_dismissed,
 			'learn_has_new_steps'       => $learn_has_new_steps,
+			'email_template_defaults'   => \SureMembersCore\Inc\Services\Email_Templates::registered(),
 			'site_url'                  => untrailingslashit( site_url() ),
 			'mcp_adapter_status'        => \SureMembersCore\Inc\Modules\MCP\Module::get_adapter_status(),
 		];
@@ -562,11 +574,6 @@ class Admin_Menu {
 	public function admin_menu_css() {
 
 			echo '<style>
-				/* Hide SureDash submenu under SureMembers */
-				li a[href="admin.php?page=suremembers&tab=suredash"] {
-					display: none !important;
-				}
-				
 				/* Add separator lines between menu items (like SureDash) */
 				#toplevel_page_suremembers li {
 					clear: both;
@@ -579,11 +586,11 @@ class Admin_Menu {
 					content: "";
 					width: calc(100% + 26px);
 				}
-				/* Remove separator after Memberships (grouped with Settings) */
-				#toplevel_page_suremembers li:not(:last-child) a[href^="admin.php?page=suremembers&tab=memberships"]:after {
-					content: none;
-				}
-				/* Remove separator after Users (last item) */
+				/* Group into: [Dashboard] | [Memberships, Team Accounts, Members] | [Analytics] | [Email, Settings].
+				   Separators fall after Dashboard, Members and Analytics; suppress them on the rest. */
+				#toplevel_page_suremembers li:not(:last-child) a[href^="admin.php?page=suremembers&tab=memberships"]:after,
+				#toplevel_page_suremembers li:not(:last-child) a[href^="admin.php?page=suremembers&tab=team-accounts"]:after,
+				#toplevel_page_suremembers li:not(:last-child) a[href^="admin.php?page=suremembers&tab=email"]:after,
 				#toplevel_page_suremembers li:not(:last-child) a[href^="admin.php?page=suremembers&tab=settings"]:after {
 					content: none;
 				}
