@@ -2,9 +2,9 @@
 Contributors: brainstormforce
 Tags: membership, content restriction, members only, paywall, access control
 Requires at least: 6.6
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,6 +135,13 @@ We take plugin security seriously. Report vulnerabilities through our [Bug Bount
 * [Support](https://suremembers.com/support)
 
 == Changelog ==
+
+= 2026-08-17 - version 1.4.0 =
+* New: SureForms integration — automatically grant memberships when a SureForms payment completes, and revoke them when the subscription is cancelled or the payment is fully refunded. Requires SureForms.
+* Improvement: Redesigned the Edit Membership and Email screens with a cleaner, tabbed settings layout.
+* Improvement: Expanded WordPress Abilities support with new abilities to read and update a membership's configuration, view and manage its protected content, and duplicate an existing membership. Ability responses now include a result schema so connected MCP clients get a clear, predictable output contract.
+* Improvement: Improved content protection and drip content selection on the Edit Membership screen.
+* Fix: Fixed an issue where the membership assigned (Joined) date shown in the members list could be off by the site's timezone offset.
 
 = 2026-07-28 - version 1.3.0 =
 * New: Team (Corporate) Accounts — manage teams per membership, with team registration and management on the frontend. Requires SureMembers (Pro).

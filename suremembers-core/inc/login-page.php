@@ -281,8 +281,24 @@ class Login_Page {
 	 * @since 1.10.11
 	 */
 	public function verify_turnstile( $user, $username, $password ) {
-		// Check request coming from the login form.
-		if ( ! absint( $_POST['suremembers-login-form'] ?? 0 ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- This runs on wp_authenticate filter; WP login form doesn't provide a nonce at this stage.
+		// Only enforce on interactive wp-login.php form submissions — the surface where
+		// our Turnstile widget is actually rendered (add_turnstile_field() is hooked to
+		// 'login_form'). Programmatic auth (XML-RPC, REST application passwords) and other
+		// contexts render no widget/token and must not be blocked here. We deliberately do
+		// NOT gate on a client-supplied marker field: an attacker could simply omit it to
+		// skip verification, which was the bypass this replaces.
+		$pagenow        = isset( $GLOBALS['pagenow'] ) ? (string) $GLOBALS['pagenow'] : '';
+		$request_method = isset( $_SERVER['REQUEST_METHOD'] ) ? strtoupper( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) ) : '';
+		if ( 'wp-login.php' !== $pagenow || 'POST' !== $request_method ) {
+			return $user;
+		}
+
+		// Escape hatch for sites whose login is a custom form that posts to
+		// wp-login.php WITHOUT rendering our widget — add_turnstile_field() only
+		// outputs on the 'login_form' hook, so such forms carry no token and would
+		// otherwise be blocked here. Returning false from this filter lets a site
+		// scope or disable enforcement for those flows instead of locking users out.
+		if ( ! apply_filters( 'suremembers_enforce_turnstile', true, $username ) ) {
 			return $user;
 		}
 
@@ -307,8 +323,11 @@ class Login_Page {
 
 		$login_page_settings = Settings::get_setting( SUREMEMBERS_LOGIN_FORM_SETTINGS );
 		$secret_key          = $login_page_settings['turnstile_secret_key'] ?? '';
+		$site_key            = $login_page_settings['turnstile_site_key'] ?? '';
 
-		if ( empty( $secret_key ) ) {
+		// If the widget cannot render (keys not configured) do not enforce — otherwise a
+		// misconfiguration would lock every user out of wp-login.php.
+		if ( empty( $secret_key ) || empty( $site_key ) ) {
 			return $user;
 		}
 

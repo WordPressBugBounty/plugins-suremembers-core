@@ -118,7 +118,7 @@ class Create_Membership extends Ability {
 	 * @since 1.1.0
 	 */
 	public function get_instructions(): string {
-		return 'Creates an empty access group in draft status by default. Returns membership_id. The new group has no restrictions until configured in the admin UI.';
+		return 'Creates an empty access group in draft status by default. Returns membership_id. Configure its restrictions with manage-protected-content, then publish it with update-membership.';
 	}
 
 	/**

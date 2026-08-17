@@ -42,6 +42,7 @@ msgstr "https://www.brainstormforce.com"
 #: admin/admin-menu.php:168
 #: integrations/buddyboss/buddyboss.php:60
 #: integrations/surecart-integration.php:54
+#: integrations/sureforms-integration.php:194
 #: integrations/woocommerce.php:396
 #: lib/suremembers-nps.php:87
 msgid "SureMembers"
@@ -57,6 +58,7 @@ msgstr "Painel"
 #: admin/admin-menu.php:189
 #: admin/rules-engine.php:57
 #: admin/user-access-table.php:39
+#: integrations/sureforms-integration.php:232
 #: admin/assets/build/restrict_block.js:385
 #: assets/build/suremembers.js:1
 #: assets/build/suremembers.js:36
@@ -68,6 +70,8 @@ msgstr "Assinaturas"
 #: admin/admin-menu.php:239
 #: assets/build/suremembers.js:1
 #: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:32
+#: assets/build/suremembers.js:33
 msgid "Settings"
 msgstr "Configurações"
 
@@ -299,6 +303,7 @@ msgid "Search Memberships"
 msgstr "Pesquisar Assinaturas"
 
 #: admin/rules-engine.php:58
+#: assets/build/suremembers.js:54
 msgid "Edit Membership"
 msgstr "Editar Assinatura"
 
@@ -510,6 +515,7 @@ msgstr "Este e-mail foi enviado de %1$s"
 
 #: admin/user-access-table.php:38
 #: admin/user-access-table.php:232
+#: integrations/sureforms-integration.php:201
 #: assets/build/suremembers.js:33
 #: assets/build/suremembers.js:34
 #: assets/build/suremembers.js:47
@@ -1256,6 +1262,8 @@ msgstr "Restrições de bloco"
 
 #: assets/build/suremembers.js:1
 #: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:33
 msgid "Drip Content"
 msgstr "Conteúdo em gotejamento"
 
@@ -2519,10 +2527,6 @@ msgid "Choose Action"
 msgstr "Escolher Ação"
 
 #: assets/build/suremembers.js:25
-msgid "Select an action"
-msgstr "Selecione uma ação"
-
-#: assets/build/suremembers.js:25
 msgid "In Content"
 msgstr "No Conteúdo"
 
@@ -2587,10 +2591,6 @@ msgid "None"
 msgstr "Nenhum"
 
 #: assets/build/suremembers.js:25
-msgid "Releasing content to users in stages over a set period of time."
-msgstr "Liberando conteúdo para usuários em etapas ao longo de um período definido."
-
-#: assets/build/suremembers.js:25
 msgid "Add Drip Content"
 msgstr "Adicionar Conteúdo em Drip"
 
@@ -2647,12 +2647,9 @@ msgid "Release content over time to keep your members engaged. Schedule when con
 msgstr "Liberar conteúdo ao longo do tempo para manter seus membros engajados. Agende quando o conteúdo se tornará disponível após um membro se inscrever."
 
 #: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:30
 msgid "Downloads"
 msgstr "Downloads"
-
-#: assets/build/suremembers.js:25
-msgid "Add downloadable items that are available only to these particular members."
-msgstr "Adicione itens para download que estão disponíveis apenas para esses membros específicos."
 
 #: assets/build/suremembers.js:25
 msgid "Add Downloads"
@@ -4194,6 +4191,7 @@ msgstr "Novos Membros por Associação"
 #: admin/admin-menu.php:199
 #: assets/build/suremembers.js:1
 #: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:30
 #: assets/build/suremembers.js:33
 #: assets/build/suremembers.js:47
 #: assets/build/suremembers.js:49
@@ -4366,11 +4364,6 @@ msgstr "Este conteúdo é restrito. Por favor, atualize seu plano para obter ace
 #: assets/build/suremembers.js:32
 msgid "Content managed by the parent membership"
 msgstr "Conteúdo gerenciado pela associação principal"
-
-#. translators: %s: parent membership title.
-#: assets/build/suremembers.js:33
-msgid "This is a variation of \"%s\". Its protected content, drip, downloads, roles and access rules are inherited from the parent and stay in sync automatically. Only the team settings below can be changed here."
-msgstr "Esta é uma variação de \"%s\". Seu conteúdo protegido, gotejamento, downloads, funções e regras de acesso são herdados do pai e permanecem sincronizados automaticamente. Somente as configurações da equipe abaixo podem ser alteradas aqui."
 
 #: assets/build/suremembers.js:33
 msgid "This is a variation membership. Its protected content, drip, downloads, roles and access rules are inherited from its parent and stay in sync automatically. Only the team settings can be changed here."
@@ -4881,6 +4874,84 @@ msgstr "Adicionar assentos a esta associação"
 #: assets/build/suremembers.js:27
 msgid "Turn this membership itself into a team with its own seats. Leave off to keep it an individual membership and use it only as the base for variations."
 msgstr "Transforme esta associação em uma equipe com seus próprios assentos. Deixe desmarcado para mantê-la como uma associação individual e usá-la apenas como base para variações."
+
+#: integrations/sureforms-integration.php:169
+msgid "SureMembers is connected. Memberships will be granted automatically when the payment for this form completes, and revoked on cancellation or full refund."
+msgstr "SureMembers está conectado. As associações serão concedidas automaticamente quando o pagamento por este formulário for concluído e revogadas em caso de cancelamento ou reembolso total."
+
+#: integrations/sureforms-integration.php:202
+msgid "Grant SureMembers memberships when a SureForms payment completes, and revoke them on cancellation or refund."
+msgstr "Conceda associações do SureMembers quando um pagamento do SureForms for concluído e revogue-as em caso de cancelamento ou reembolso."
+
+#: integrations/sureforms-integration.php:221
+msgid "Grant the selected memberships when a payment for this form completes. Access is revoked automatically when the subscription is cancelled or the payment is fully refunded."
+msgstr "Conceda as associações selecionadas quando um pagamento por este formulário for concluído. O acesso é revogado automaticamente quando a assinatura é cancelada ou o pagamento é totalmente reembolsado."
+
+#: integrations/sureforms-integration.php:235
+msgid "Select memberships"
+msgstr "Selecionar associações"
+
+#: integrations/sureforms-integration.php:236
+msgid "Members gain access to these memberships after a successful payment, and lose it when the subscription is cancelled or the payment is fully refunded."
+msgstr "Os membros ganham acesso a essas associações após um pagamento bem-sucedido e o perdem quando a assinatura é cancelada ou o pagamento é totalmente reembolsado."
+
+#: assets/build/suremembers.js:25
+msgid "Select the content this membership protects. Only its members will be able to view it."
+msgstr "Selecione o conteúdo que esta associação protege. Somente seus membros poderão visualizá-lo."
+
+#: assets/build/suremembers.js:25
+msgid "Search content…"
+msgstr "Pesquisar conteúdo…"
+
+#: assets/build/suremembers.js:25
+msgid "Choose what visitors without access see when they try to open protected content."
+msgstr "Escolha o que os visitantes sem acesso veem quando tentam abrir conteúdo protegido."
+
+#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:33
+msgid "Release the protected content to members in stages over a set period of time."
+msgstr "Liberte o conteúdo protegido para os membros em etapas ao longo de um período definido."
+
+#: assets/build/suremembers.js:25
+msgid "Add downloadable files that are available only to members of this membership."
+msgstr "Adicione arquivos para download que estão disponíveis apenas para membros desta associação."
+
+#: assets/build/suremembers.js:25
+msgid "Automatically end membership access after a duration or on a specific date."
+msgstr "Finalize automaticamente o acesso à associação após um período ou em uma data específica."
+
+#: assets/build/suremembers.js:25
+msgid "Role syncing, rule priority and shortcodes for this membership."
+msgstr "Sincronização de funções, prioridade de regras e códigos de acesso para esta associação."
+
+#: assets/build/suremembers.js:26
+msgid "Let a buyer of this membership invite team members who inherit the same access."
+msgstr "Permita que um comprador desta associação convide membros da equipe que herdam o mesmo acesso."
+
+#: assets/build/suremembers.js:30
+msgid "Access"
+msgstr "Acesso"
+
+#: assets/build/suremembers.js:30
+msgid "Advanced"
+msgstr "Avançado"
+
+#: assets/build/suremembers.js:30
+msgid "Content"
+msgstr "Conteúdo"
+
+#. translators: %s: parent membership title.
+#: assets/build/suremembers.js:33
+msgid "This is a variation of \"%s\". Its protected content, drip, downloads, roles and access rules are inherited from the parent and stay in sync automatically. Only the team settings can be changed here."
+msgstr "Esta é uma variação de \"%s\". Seu conteúdo protegido, gotejamento, downloads, funções e regras de acesso são herdados do pai e permanecem sincronizados automaticamente. Somente as configurações da equipe podem ser alteradas aqui."
+
+#: assets/build/suremembers.js:33
+msgid "Select content under Protected Content first, then configure when it should be released to members."
+msgstr "Selecione o conteúdo sob Conteúdo Protegido primeiro, depois configure quando ele deve ser liberado para os membros."
+
+#: assets/build/suremembers.js:52
+msgid "Email Settings"
+msgstr "Configurações de Email"
 
 #: admin/rules-engine.php:53
 msgctxt "plan general name"

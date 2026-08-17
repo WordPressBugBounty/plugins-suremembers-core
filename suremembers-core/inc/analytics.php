@@ -10,6 +10,7 @@
 namespace SureMembersCore\Inc;
 
 use SureMembersCore\Inc\Traits\Get_Instance;
+use SureMembersCore\Inc\Services\Abilities\Abilities_Settings;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -271,6 +272,7 @@ class Analytics {
 		$this->track_onboarding_events( $events );
 		$this->track_content_restriction_events( $events );
 		$this->track_integration_events( $events );
+		$this->track_abilities_events( $events );
 		$this->track_learn_events( $events );
 
 		/**
@@ -423,6 +425,34 @@ class Analytics {
 				'integration_enabled',
 				implode( ',', $enabled )
 			);
+		}
+	}
+
+	/**
+	 * Track WordPress Abilities API and MCP server adoption.
+	 *
+	 * Mirrors SureDash: emits one event per surface when its toggle is on, so
+	 * the analytics backend can see how many sites expose SureMembers actions
+	 * to AI agents (Abilities API) and to external MCP clients (MCP server).
+	 *
+	 *  - abilities_api_enabled — master toggle, defaults on.
+	 *  - mcp_server_enabled    — MCP server, defaults off.
+	 *
+	 * @param \BSF_Analytics_Events $events Event tracker.
+	 * @return void
+	 * @since 1.4.0
+	 */
+	private function track_abilities_events( $events ): void {
+		if ( ! class_exists( Abilities_Settings::class ) ) {
+			return;
+		}
+
+		if ( Abilities_Settings::get( Abilities_Settings::OPTION_MASTER, true ) ) {
+			$events->track( 'abilities_api_enabled', 'yes' );
+		}
+
+		if ( Abilities_Settings::get( Abilities_Settings::OPTION_MCP, false ) ) {
+			$events->track( 'mcp_server_enabled', 'yes' );
 		}
 	}
 

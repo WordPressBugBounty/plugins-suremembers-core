@@ -18,6 +18,32 @@ defined( 'ABSPATH' ) || exit;
  */
 class Access {
 	/**
+	 * Convert a stored membership timestamp to a true UTC unix timestamp for display.
+	 *
+	 * Membership `created`/`modified` values are stored via current_time('timestamp'),
+	 * i.e. the real UTC epoch shifted by the site's GMT offset (a local wall-clock
+	 * pseudo-timestamp). JavaScript consumers compare against Date.now() (true UTC),
+	 * so the stored value must have the offset removed before it is sent to them.
+	 *
+	 * The conversion assumes the site's current GMT offset. It is exact only when the
+	 * timezone has not changed since the record was written — the offset in effect at
+	 * write time was never persisted, so it cannot be recovered without a migration.
+	 * This matches the behavior of every other timestamp consumer in the plugin, which
+	 * all assume the current offset.
+	 *
+	 * @since 1.3.1
+	 * @param int $timestamp Stored timestamp value.
+	 * @return int UTC unix timestamp, or 0 when the input is empty/invalid.
+	 */
+	public static function to_utc_timestamp( $timestamp ) {
+		$timestamp = intval( $timestamp );
+		if ( $timestamp <= 0 ) {
+			return 0;
+		}
+		return intval( $timestamp - ( floatval( get_option( 'gmt_offset', 0 ) ) * HOUR_IN_SECONDS ) );
+	}
+
+	/**
 	 * Grants access to provided access groups
 	 *
 	 * @param int                  $user_id current user.

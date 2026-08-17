@@ -185,6 +185,13 @@ class Registry {
 				'permission_callback' => [ $ability, 'check_permission' ],
 			];
 
+			// Forward the ability's declared return schema so MCP clients get a
+			// result contract. Only set it when the ability defines one.
+			$output_schema = $ability->get_returns();
+			if ( ! empty( $output_schema ) ) {
+				$args['output_schema'] = $output_schema;
+			}
+
 			$meta = [
 				'show_in_rest' => true,
 				'mcp'          => [
@@ -233,11 +240,18 @@ class Registry {
 			new Handlers\Get_Member_Details(),
 			new Handlers\Get_Members_By_Status(),
 
+			// Membership configuration reads (read-only, free).
+			new Handlers\Get_Membership_Config(),
+			new Handlers\Get_Protected_Content(),
+
 			// Membership mutations (gated).
 			new Handlers\Grant_Membership(),
 			new Handlers\Revoke_Membership(),
 			new Handlers\Update_Membership_Expiration(),
 			new Handlers\Create_Membership(),
+			new Handlers\Update_Membership(),
+			new Handlers\Manage_Protected_Content(),
+			new Handlers\Duplicate_Membership(),
 			new Handlers\Delete_Membership(),
 		];
 

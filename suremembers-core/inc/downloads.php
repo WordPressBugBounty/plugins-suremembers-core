@@ -329,7 +329,14 @@ class Downloads {
 
 		if ( $download_id && $token ) {
 			$associated_access_groups = Access_Groups::by_download_id( $download_id );
-			$check_user_has_access    = Access_Groups::check_if_user_has_access( $associated_access_groups );
+
+			// Fail closed: a private download must be protected by at least one
+			// PUBLISHED access group. When none exist — the attachment is not referenced
+			// by any group, or every referencing group is trashed/draft/pending — deny
+			// access instead of falling through the empty-set "unrestricted" default in
+			// check_if_user_has_access(), which would otherwise stream the file to anyone.
+			$active_access_groups  = Access_Groups::filter_active_access_groups( $associated_access_groups );
+			$check_user_has_access = ! empty( $active_access_groups ) && Access_Groups::check_if_user_has_access( $active_access_groups );
 
 			if ( current_user_can( 'administrator' ) || $check_user_has_access ) {
 				// Load File.
@@ -350,7 +357,11 @@ class Downloads {
 				$restriction_meta = get_post_meta( $get_priority_id, SUREMEMBERS_PLAN_RULES, true );
 				$restriction_data = is_array( $restriction_meta ) && isset( $restriction_meta['restrict'] ) ? $restriction_meta['restrict'] : [];
 
-				switch ( $restriction_data['unauthorized_action'] ) {
+				// May be empty when access was denied because no published group protects
+				// the download (fail-closed path above); guard against an undefined key.
+				$unauthorized_action = is_array( $restriction_data ) && isset( $restriction_data['unauthorized_action'] ) ? $restriction_data['unauthorized_action'] : '';
+
+				switch ( $unauthorized_action ) {
 					case 'redirect':
 						$redirect_url = Utils::maybe_append_url_params( esc_url( trim( $restriction_data['redirect_url'] ) ) );
 						if ( ! empty( $redirect_url ) ) {
@@ -370,7 +381,15 @@ class Downloads {
 						break;
 
 					default:
-						break;
+						// No explicit unauthorized action to perform — reached on the
+						// fail-closed path when no published group protects this download.
+						// Return an explicit 403 rather than a blank response so the
+						// visitor gets a clear (non-enumerating) message.
+						wp_die(
+							esc_html__( 'You do not have permission to access this resource.', 'suremembers-core' ),
+							esc_html__( 'Access Denied', 'suremembers-core' ),
+							[ 'response' => 403 ]
+						);
 				}
 			}
 		}

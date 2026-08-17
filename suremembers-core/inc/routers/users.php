@@ -895,21 +895,28 @@ class Users {
 			? $plan_details['status']
 			: 'unknown';
 
-		// Get created and modified timestamps.
-		$created  = is_array( $plan_details ) && isset( $plan_details['created'] )
+		// Get raw stored created and modified timestamps. These are local wall-clock
+		// pseudo-timestamps (current_time('timestamp')); keep them as-is for the
+		// expiration math below, which relies on that representation.
+		$created_raw  = is_array( $plan_details ) && isset( $plan_details['created'] )
 			? intval( $plan_details['created'] )
 			: 0;
-		$modified = is_array( $plan_details ) && isset( $plan_details['modified'] )
+		$modified_raw = is_array( $plan_details ) && isset( $plan_details['modified'] )
 			? intval( $plan_details['modified'] )
-			: $created;
+			: $created_raw;
 
 		// Get integration.
 		$integration = is_array( $plan_details ) && isset( $plan_details['integration'] )
 			? $plan_details['integration']
 			: '';
 
-		// Get expiration date.
-		$expire_date = $this->calculate_membership_expiration( $user_id, $membership_id, $created, $modified );
+		// Get expiration date (uses the raw local wall-clock timestamps).
+		$expire_date = $this->calculate_membership_expiration( $user_id, $membership_id, $created_raw, $modified_raw );
+
+		// Normalize to true UTC for the React popup, which formats relative time
+		// against Date.now() (true UTC). See Access::to_utc_timestamp() for caveats.
+		$created  = \SureMembersCore\Inc\Access::to_utc_timestamp( $created_raw );
+		$modified = \SureMembersCore\Inc\Access::to_utc_timestamp( $modified_raw );
 
 		// Get integration icon.
 		$integration_icon = $this->get_integration_icon( $integration );

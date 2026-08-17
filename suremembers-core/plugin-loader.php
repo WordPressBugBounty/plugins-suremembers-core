@@ -43,6 +43,7 @@ use SureMembersCore\Inc\Updates;
 use SureMembersCore\Integrations\Buddyboss\Buddyboss;
 use SureMembersCore\Integrations\Surecart_Integration;
 use SureMembersCore\Integrations\Suredash;
+use SureMembersCore\Integrations\Sureforms_Integration;
 use SureMembersCore\Integrations\Woocommerce;
 use SureMembersCore\Modules\Learndash\Learndash;
 use SureMembersCore\Modules\Tutorlms\Tutorlms;
@@ -303,6 +304,12 @@ class Plugin_Loader {
 		Expiration_Sweep::get_instance();
 		if ( defined( 'SURECART_APP_URL' ) ) {
 			( new Surecart_Integration() )->bootstrap();
+		}
+
+		// SureForms payments integration. The form ↔ access-group mapping UI lives
+		// in SureForms Pro's native integrations, so gate on the Pro constant.
+		if ( defined( 'SRFM_PRO_VER' ) ) {
+			Sureforms_Integration::get_instance();
 		}
 
 		if ( defined( 'SUREDASHBOARD_VER' ) ) {

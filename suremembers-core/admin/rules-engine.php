@@ -179,6 +179,14 @@ class Rules_Engine {
 		$password   = isset( $_POST['pwd'] ) ? wp_unslash( $_POST['pwd'] ) : ''; //phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$rememberme = ! empty( $_POST['rememberme'] ) ? sanitize_text_field( $_POST['rememberme'] ) : '';
 
+		// Reject early when this IP has exceeded the failed-login threshold. This gives
+		// the unauthenticated AJAX login vector the same brute-force resistance expected
+		// on wp-login.php, since WAF/hide-login/rate-limit rules scoped to wp-login.php
+		// do not cover admin-ajax.php.
+		if ( $this->is_login_locked_out() ) {
+			wp_send_json_error( [ 'result' => [ 'message' => __( 'Too many failed login attempts. Please try again later.', 'suremembers-core' ) ] ] );
+		}
+
 		$user_data = wp_signon(
 			[
 				'user_login'    => $username,
@@ -189,22 +197,90 @@ class Rules_Engine {
 		);
 
 		if ( is_wp_error( $user_data ) ) {
-			$message = '';
-			if ( isset( $user_data->errors['invalid_email'][0] ) || isset( $user_data->errors['invalid_username'][0] ) ) {
-				// translators: %s will be entered user's name.
-				$message = sprintf( __( 'The username <strong>%s</strong> is not registered on this site. If you are unsure of your username, try your email address instead.', 'suremembers-core' ), $username );
-			} elseif ( isset( $user_data->errors['incorrect_password'][0] ) ) {
-				// translators: %s will be entered user's name.
-				$message = sprintf( __( 'The password you entered for the username <strong>%s</strong> is incorrect.', 'suremembers-core' ), $username );
+			// Return a single generic message for all credential errors so the response
+			// cannot be used to tell whether a given username/email exists on the site
+			// (user enumeration). Non-credential errors keep their specific message.
+			$credential_error_codes = [ 'invalid_email', 'invalid_username', 'incorrect_password', 'incorrect_password_email', 'invalidcombo', 'authentication_failed' ];
+			if ( array_intersect( $user_data->get_error_codes(), $credential_error_codes ) ) {
+				$message = __( 'The username or password you entered is incorrect. Please try again.', 'suremembers-core' );
 			} else {
 				$message = $user_data->get_error_message();
 			}
+
+			// Fire the standard failed-login hook so brute-force/lockout plugins that
+			// harden wp-login.php also observe attempts against this AJAX endpoint.
+			do_action( 'wp_login_failed', $username, $user_data );
+
+			$this->register_failed_login_attempt();
 			wp_send_json_error( [ 'result' => [ 'message' => $message ] ] );
 		} else {
+			$this->clear_failed_login_attempts();
 			wp_set_current_user( $user_data->ID, $username );
 			do_action( 'wp_login', $user_data->user_login, $user_data );
 			wp_send_json_success();
 		}
+	}
+
+	/**
+	 * Build the transient key used to throttle failed logins for the caller's IP.
+	 *
+	 * Uses REMOTE_ADDR only (never client-supplied forwarding headers, which are
+	 * spoofable). Requests without a valid IP share a single fallback bucket.
+	 *
+	 * @since x.x.x
+	 *
+	 * @return string Transient key.
+	 */
+	private function get_login_lock_key() {
+		$remote_ip = '';
+		// phpcs:disable WordPressVIPMinimum.Variables.ServerVariables.UserControlledHeaders, WordPressVIPMinimum.Variables.RestrictedVariables.cache_constraints___SERVER__REMOTE_ADDR__
+		if ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
+			$candidate = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
+			if ( filter_var( $candidate, FILTER_VALIDATE_IP ) ) {
+				$remote_ip = $candidate;
+			}
+		}
+		// phpcs:enable WordPressVIPMinimum.Variables.ServerVariables.UserControlledHeaders, WordPressVIPMinimum.Variables.RestrictedVariables.cache_constraints___SERVER__REMOTE_ADDR__
+
+		return 'suremembers_login_attempts_' . md5( 'no-ip' === $remote_ip || '' === $remote_ip ? 'no-ip' : $remote_ip );
+	}
+
+	/**
+	 * Whether the caller's IP has exceeded the failed-login threshold.
+	 *
+	 * @since x.x.x
+	 *
+	 * @return bool True when the caller is currently locked out.
+	 */
+	private function is_login_locked_out() {
+		$max_attempts = (int) apply_filters( 'suremembers_login_max_attempts', 10 );
+		$attempts     = (int) get_transient( $this->get_login_lock_key() );
+		return $attempts >= $max_attempts;
+	}
+
+	/**
+	 * Increment the failed-login counter for the caller's IP within a rolling window.
+	 *
+	 * @since x.x.x
+	 *
+	 * @return void
+	 */
+	private function register_failed_login_attempt() {
+		$window   = (int) apply_filters( 'suremembers_login_lockout_window', 15 * MINUTE_IN_SECONDS );
+		$key      = $this->get_login_lock_key();
+		$attempts = (int) get_transient( $key );
+		set_transient( $key, $attempts + 1, $window );
+	}
+
+	/**
+	 * Clear the failed-login counter after a successful authentication.
+	 *
+	 * @since x.x.x
+	 *
+	 * @return void
+	 */
+	private function clear_failed_login_attempts() {
+		delete_transient( $this->get_login_lock_key() );
 	}
 
 	/**

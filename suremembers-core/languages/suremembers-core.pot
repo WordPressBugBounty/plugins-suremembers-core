@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: SureMembers Core 1.3.0\n"
+"Project-Id-Version: SureMembers Core 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/suremembers-core\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-27T05:54:05+00:00\n"
+"POT-Creation-Date: 2026-07-28T11:12:46+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: suremembers-core\n"
@@ -43,6 +43,7 @@ msgstr ""
 #: admin/admin-menu.php:168
 #: integrations/buddyboss/buddyboss.php:60
 #: integrations/surecart-integration.php:54
+#: integrations/sureforms-integration.php:194
 #: integrations/woocommerce.php:396
 #: lib/suremembers-nps.php:87
 msgid "SureMembers"
@@ -58,6 +59,7 @@ msgstr ""
 #: admin/admin-menu.php:189
 #: admin/rules-engine.php:57
 #: admin/user-access-table.php:39
+#: integrations/sureforms-integration.php:232
 #: admin/assets/build/restrict_block.js:385
 #: assets/build/suremembers.js:1
 #: assets/build/suremembers.js:36
@@ -69,6 +71,7 @@ msgstr ""
 #: admin/admin-menu.php:199
 #: assets/build/suremembers.js:1
 #: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:30
 #: assets/build/suremembers.js:33
 #: assets/build/suremembers.js:47
 #: assets/build/suremembers.js:49
@@ -103,6 +106,8 @@ msgstr ""
 #: admin/admin-menu.php:239
 #: assets/build/suremembers.js:1
 #: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:32
+#: assets/build/suremembers.js:33
 msgid "Settings"
 msgstr ""
 
@@ -344,6 +349,7 @@ msgid "Search Memberships"
 msgstr ""
 
 #: admin/rules-engine.php:58
+#: assets/build/suremembers.js:54
 msgid "Edit Membership"
 msgstr ""
 
@@ -560,6 +566,7 @@ msgstr ""
 
 #: admin/user-access-table.php:38
 #: admin/user-access-table.php:232
+#: integrations/sureforms-integration.php:201
 #: assets/build/suremembers.js:33
 #: assets/build/suremembers.js:34
 #: assets/build/suremembers.js:47
@@ -1300,6 +1307,26 @@ msgstr ""
 msgid "Links with Sure Members Membership on Product Purchase"
 msgstr ""
 
+#: integrations/sureforms-integration.php:169
+msgid "SureMembers is connected. Memberships will be granted automatically when the payment for this form completes, and revoked on cancellation or full refund."
+msgstr ""
+
+#: integrations/sureforms-integration.php:202
+msgid "Grant SureMembers memberships when a SureForms payment completes, and revoke them on cancellation or refund."
+msgstr ""
+
+#: integrations/sureforms-integration.php:221
+msgid "Grant the selected memberships when a payment for this form completes. Access is revoked automatically when the subscription is cancelled or the payment is fully refunded."
+msgstr ""
+
+#: integrations/sureforms-integration.php:235
+msgid "Select memberships"
+msgstr ""
+
+#: integrations/sureforms-integration.php:236
+msgid "Members gain access to these memberships after a successful payment, and lose it when the subscription is cancelled or the payment is fully refunded."
+msgstr ""
+
 #: integrations/woocommerce.php:106
 msgid "Add Memberships"
 msgstr ""
@@ -1575,6 +1602,8 @@ msgstr ""
 
 #: assets/build/suremembers.js:1
 #: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:33
 msgid "Drip Content"
 msgstr ""
 
@@ -2860,6 +2889,14 @@ msgid "Please add at least 1 character to search"
 msgstr ""
 
 #: assets/build/suremembers.js:25
+msgid "Select the content this membership protects. Only its members will be able to view it."
+msgstr ""
+
+#: assets/build/suremembers.js:25
+msgid "Search content…"
+msgstr ""
+
+#: assets/build/suremembers.js:25
 msgid "Select.."
 msgstr ""
 
@@ -2912,11 +2949,11 @@ msgid "Unauthorized Access"
 msgstr ""
 
 #: assets/build/suremembers.js:25
-msgid "Choose Action"
+msgid "Choose what visitors without access see when they try to open protected content."
 msgstr ""
 
 #: assets/build/suremembers.js:25
-msgid "Select an action"
+msgid "Choose Action"
 msgstr ""
 
 #: assets/build/suremembers.js:25
@@ -2992,7 +3029,8 @@ msgid "None"
 msgstr ""
 
 #: assets/build/suremembers.js:25
-msgid "Releasing content to users in stages over a set period of time."
+#: assets/build/suremembers.js:33
+msgid "Release the protected content to members in stages over a set period of time."
 msgstr ""
 
 #: assets/build/suremembers.js:25
@@ -3001,10 +3039,6 @@ msgstr ""
 
 #: assets/build/suremembers.js:25
 msgid "Show this content"
-msgstr ""
-
-#: assets/build/suremembers.js:25
-msgid "Date Type"
 msgstr ""
 
 #: assets/build/suremembers.js:25
@@ -3052,11 +3086,12 @@ msgid "Release content over time to keep your members engaged. Schedule when con
 msgstr ""
 
 #: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:30
 msgid "Downloads"
 msgstr ""
 
 #: assets/build/suremembers.js:25
-msgid "Add downloadable items that are available only to these particular members."
+msgid "Add downloadable files that are available only to members of this membership."
 msgstr ""
 
 #: assets/build/suremembers.js:25
@@ -3096,6 +3131,10 @@ msgid "Enable Membership Expiration"
 msgstr ""
 
 #: assets/build/suremembers.js:25
+msgid "Date Type"
+msgstr ""
+
+#: assets/build/suremembers.js:25
 msgid "Relative Date"
 msgstr ""
 
@@ -3117,6 +3156,10 @@ msgstr ""
 
 #: assets/build/suremembers.js:25
 msgid " Days"
+msgstr ""
+
+#: assets/build/suremembers.js:25
+msgid "Automatically end membership access after a duration or on a specific date."
 msgstr ""
 
 #: assets/build/suremembers.js:25
@@ -3142,6 +3185,10 @@ msgstr ""
 
 #: assets/build/suremembers.js:25
 msgid "Options"
+msgstr ""
+
+#: assets/build/suremembers.js:25
+msgid "Role syncing, rule priority and shortcodes for this membership."
 msgstr ""
 
 #: assets/build/suremembers.js:25
@@ -3207,6 +3254,10 @@ msgstr ""
 #: assets/build/suremembers.js:26
 #: assets/build/suremembers.js:30
 msgid "Team Account Settings"
+msgstr ""
+
+#: assets/build/suremembers.js:26
+msgid "Let a buyer of this membership invite team members who inherit the same access."
 msgstr ""
 
 #: assets/build/suremembers.js:26
@@ -3290,6 +3341,18 @@ msgstr ""
 
 #: assets/build/suremembers.js:30
 msgid "Sell this access group as a team plan. Buyers become team owners and can invite members who inherit the same access — perfect for businesses and bulk licenses."
+msgstr ""
+
+#: assets/build/suremembers.js:30
+msgid "Access"
+msgstr ""
+
+#: assets/build/suremembers.js:30
+msgid "Advanced"
+msgstr ""
+
+#: assets/build/suremembers.js:30
+msgid "Content"
 msgstr ""
 
 #: assets/build/suremembers.js:30
@@ -3406,7 +3469,7 @@ msgstr ""
 
 #. translators: %s: parent membership title.
 #: assets/build/suremembers.js:33
-msgid "This is a variation of \"%s\". Its protected content, drip, downloads, roles and access rules are inherited from the parent and stay in sync automatically. Only the team settings below can be changed here."
+msgid "This is a variation of \"%s\". Its protected content, drip, downloads, roles and access rules are inherited from the parent and stay in sync automatically. Only the team settings can be changed here."
 msgstr ""
 
 #: assets/build/suremembers.js:33
@@ -3415,6 +3478,10 @@ msgstr ""
 
 #: assets/build/suremembers.js:33
 msgid "Edit parent membership"
+msgstr ""
+
+#: assets/build/suremembers.js:33
+msgid "Select content under Protected Content first, then configure when it should be released to members."
 msgstr ""
 
 #: assets/build/suremembers.js:33
@@ -4320,6 +4387,30 @@ msgid "Customize every email SureMembers sends — member onboarding, password r
 msgstr ""
 
 #: assets/build/suremembers.js:52
+msgid "Sender Details"
+msgstr ""
+
+#: assets/build/suremembers.js:52
+msgid "The name and address all SureMembers emails are sent from."
+msgstr ""
+
+#: assets/build/suremembers.js:52
+msgid "From Name"
+msgstr ""
+
+#: assets/build/suremembers.js:52
+msgid "Enter sender name"
+msgstr ""
+
+#: assets/build/suremembers.js:52
+msgid "From Email"
+msgstr ""
+
+#: assets/build/suremembers.js:52
+msgid "Enter sender email"
+msgstr ""
+
+#: assets/build/suremembers.js:52
 msgid "Owner — sent when their team account is created"
 msgstr ""
 
@@ -4364,27 +4455,7 @@ msgid "Please enter a valid email to send the test."
 msgstr ""
 
 #: assets/build/suremembers.js:52
-msgid "Sender Details"
-msgstr ""
-
-#: assets/build/suremembers.js:52
-msgid "The name and address all SureMembers emails are sent from."
-msgstr ""
-
-#: assets/build/suremembers.js:52
-msgid "From Name"
-msgstr ""
-
-#: assets/build/suremembers.js:52
-msgid "Enter sender name"
-msgstr ""
-
-#: assets/build/suremembers.js:52
-msgid "From Email"
-msgstr ""
-
-#: assets/build/suremembers.js:52
-msgid "Enter sender email"
+msgid "Email Settings"
 msgstr ""
 
 #: assets/build/suremembers.js:52
