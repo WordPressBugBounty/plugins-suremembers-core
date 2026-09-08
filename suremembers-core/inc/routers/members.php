@@ -575,7 +575,7 @@ class Members {
 	 *
 	 * @param \WP_REST_Request $request Request object.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return \WP_REST_Response
 	 */

@@ -3,7 +3,7 @@
  * Update Membership Ability.
  *
  * @package SureMembersCore
- * @since x.x.x
+ * @since 1.4.1
  */
 
 namespace SureMembersCore\Inc\Services\Abilities\Handlers;
@@ -19,13 +19,13 @@ defined( 'ABSPATH' ) || exit;
  * Renames a membership and/or changes its status (draft/publish/archive),
  * completing CRUD support for memberships.
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 * @var string
 	 */
 	protected string $gated = 'suremembers_abilities_api_edit';
@@ -33,7 +33,7 @@ class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_id(): string {
 		return 'update-membership';
@@ -42,7 +42,7 @@ class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_name(): string {
 		return __( 'Update Membership', 'suremembers-core' );
@@ -51,7 +51,7 @@ class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_description(): string {
 		return __( 'Updates a membership: rename it and/or change its status (draft, publish or archive). Provide only the fields you want to change.', 'suremembers-core' );
@@ -60,7 +60,7 @@ class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_category(): string {
 		return 'memberships';
@@ -69,7 +69,7 @@ class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_parameters(): array {
 		return [
@@ -95,7 +95,7 @@ class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_returns(): array {
 		return [
@@ -107,7 +107,7 @@ class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_annotations(): array {
 		return [
@@ -120,7 +120,7 @@ class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_instructions(): string {
 		return 'Only supplied fields change. Setting status to "publish" makes the membership live; "draft" or "suremembers_archive" takes it offline.';
@@ -129,7 +129,7 @@ class Update_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param array<string, mixed> $params Validated parameters.
 	 */

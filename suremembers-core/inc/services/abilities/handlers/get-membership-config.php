@@ -3,7 +3,7 @@
  * Get Membership Config Ability.
  *
  * @package SureMembersCore
- * @since x.x.x
+ * @since 1.4.1
  */
 
 namespace SureMembersCore\Inc\Services\Abilities\Handlers;
@@ -20,13 +20,13 @@ defined( 'ABSPATH' ) || exit;
  * protected content, redirect, expiration, drip, downloads, roles, priority
  * and status — so a membership can be audited or replicated programmatically.
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 class Get_Membership_Config extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_id(): string {
 		return 'get-membership-config';
@@ -35,7 +35,7 @@ class Get_Membership_Config extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_name(): string {
 		return __( 'Get Membership Config', 'suremembers-core' );
@@ -44,7 +44,7 @@ class Get_Membership_Config extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_description(): string {
 		return __( 'Returns the complete configuration of a membership (access group): protected content rules, excluded content, redirect/unauthorized-access settings, expiration, drip, downloads, synced roles, priority, status and active member count.', 'suremembers-core' );
@@ -53,7 +53,7 @@ class Get_Membership_Config extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_category(): string {
 		return 'memberships';
@@ -62,7 +62,7 @@ class Get_Membership_Config extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_parameters(): array {
 		return [
@@ -77,7 +77,7 @@ class Get_Membership_Config extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_returns(): array {
 		return [
@@ -89,7 +89,7 @@ class Get_Membership_Config extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_annotations(): array {
 		return [
@@ -102,7 +102,7 @@ class Get_Membership_Config extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_instructions(): string {
 		return 'Read-only. Use this to audit a membership before duplicating or editing it. Pair with manage-protected-content and update-membership to change it.';
@@ -111,7 +111,7 @@ class Get_Membership_Config extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param array<string, mixed> $params Validated parameters.
 	 */

@@ -4,7 +4,7 @@ Tags: membership, content restriction, members only, paywall, access control
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,30 +42,82 @@ You stay in control of your content, your members, and your business. Pair it wi
 
 == Free Features ==
 
+**Memberships & Content Protection**
+
 * Unlimited memberships: create as many access groups as you need
-* Content protection for posts, pages, and custom post types
-* Unauthorized access handling with custom redirects
-* LMS integrations for popular learning platforms
-* Redirection rules for login, logout, and restricted content
-* Login customizer to brand your login page
+* Protect the entire website, any post type (posts, pages, and custom post types), taxonomy and term archives, or hand-picked posts, pages and terms
+* Restrict by URL, including regular expression matching, for anything that is not a post
+* Exclude specific content from a rule so you can protect broadly and open up exceptions
+* Inline content gating with the `[suremembers_restrict]` shortcode
+* Unauthorized access handling: redirect, show a custom message or teaser, or send visitors to a specific page
+* Rule priority when several memberships protect the same content
+* Restricted content stays restricted on the REST API, in search results, and inside SureDash spaces
+* Hide navigation menu items from visitors who do not have access
+* Restrict the WordPress admin dashboard and admin bar by user role
+* Restrict the current page in one click from the front-end admin bar, and see restriction status right in the block editor
+
+**Members & Access Management**
+
+* Members screen with search, plus filters by user role and by membership
+* Grant or revoke memberships, and set or change expiration dates, from the members list or the WordPress user profile screen
+* Membership expiration dates with an automatic background sweep that revokes access on time
+* Auto-grant a membership when a new user registers
+* Duplicate an existing membership to reuse its rules
+* Display members of specific memberships on any page with the `[suremembers_list_members]` shortcode
+
+**Analytics**
+
+* Analytics tab with new member counts, growth and trends, upcoming expirations, and recent activity
+* Per-membership snapshot and a breakdown of where members came from (SureCart, SureForms, WooCommerce, LearnDash, TutorLMS, manual, and more)
+* Access log of every grant and revoke event
+
+**AI & Automation**
+
+* Built on the WordPress Abilities API, with an optional MCP server so AI clients like Claude Desktop, Claude Code, Cursor, VS Code Copilot and Continue can work with your memberships
+* Abilities to create, read, update, duplicate and delete memberships, manage protected content, grant and revoke access, and read member lists and analytics
+* Read-only by default; editing and deleting are separate opt-in toggles
+* WP-CLI support for listing and running abilities
+
+**Login & Branding**
+
+* Login page customizer: logo, colors, background image, transparent form, and more
+* Custom login URL with a redirect for the default WordPress login page
+* Redirection rules for login and logout
+* Customizable restriction and login messages
+
+**Integrations**
+
+* SureCart: grant and revoke memberships automatically on purchase, refund or cancellation
+* SureForms: grant memberships when a payment completes, revoke them on cancellation or full refund
+* WooCommerce: grant access on order and subscription status changes, plus members-only coupons
+* LearnDash: protect courses, groups and lessons
+* TutorLMS: protect courses and lessons
+* BuddyBoss: assign a membership when an account is activated, and use SureMembers as the access control provider
+* SureDash: control access to portals, spaces and member search
+* Jetpack compatibility
+
+**Everything Else**
+
+* Guided onboarding wizard and a Learn tab that walks you through setup
 * Clean, intuitive admin dashboard
 * Works with any WordPress theme
+* Multisite friendly
 * Lightweight and fast, no bloat
 * Mobile-friendly responsive design
-* Translation-ready
+* Translation-ready, with German, Spanish, French, Dutch, Polish and Brazilian Portuguese included
 
 == SureMembers Premium ==
 
 Take your membership site further with SureMembers Premium:
 
-* **User Role Sync**: Automatically sync WordPress user roles with membership access groups
-* **Block-Level Restrictions**: Restrict individual blocks within posts and pages
-* **Drip Content**: Schedule when members get access to specific content
-* **Downloads Protection**: Protect file downloads behind membership levels
-* **Login Restrictions**: Control login attempts, session limits, and access rules
-* **Email Templates**: Customize member onboarding and notification emails
-* **Import Users via CSV**: Bulk import existing users into access groups
-* **Advanced Protected Content**: Protect all posts, archives, CPTs, and URL-based content
+* **User Role Sync**: Create custom user roles, assign them to memberships, and keep WordPress roles in sync automatically
+* **Block-Level Restrictions**: Restrict individual blocks inside posts and pages, right from the block editor
+* **Drip Content**: Release content over time, scheduled from the day a member joins
+* **Protected Downloads**: Serve files from a private folder so only members can download them
+* **Login Restrictions**: Limit concurrent login sessions per user role, block or allow new logins when the limit is reached, and let members log out of other devices
+* **Email Templates**: Branded welcome, password reset and access expiration emails, with merge tags, optional WooCommerce styling, and test sends
+* **Import Users via CSV**: Bulk import users, assign memberships and expiration dates, and send welcome emails
+* **Team (Corporate) Accounts**: Sell team plans with per-team seat limits, shareable invite links, membership variations, manual or CSV member management, and front-end team pages. Members inherit the owner's access automatically
 
 [Learn more about SureMembers Premium](https://suremembers.com)
 
@@ -74,8 +126,11 @@ Take your membership site further with SureMembers Premium:
 SureMembers is part of a growing WordPress ecosystem:
 
 * **[SureCart](https://surecart.com/)**: Sell memberships, courses, and digital products. SureCart pairs perfectly with SureMembers to power your entire membership business.
+* **[SureForms](https://sureforms.com/)**: Collect payments through a form and grant the matching membership automatically.
 * **[SureDash](https://suredash.com/)**: Build a community right inside WordPress with discussion spaces, courses, and member dashboards. Use SureMembers to control access to portals and spaces.
 * **[Astra Theme](https://wpastra.com/)**: The most popular WordPress theme, fully compatible with SureMembers.
+
+It also works with WooCommerce, LearnDash, TutorLMS and BuddyBoss out of the box.
 
 Each plugin works independently, but together they give you a complete membership and community business, all on WordPress.
 
@@ -110,7 +165,7 @@ Yes. SureMembers is designed to work with any standard WordPress theme. It does 
 
 = Can I sell memberships with SureMembers? =
 
-SureMembers handles content restriction. To sell memberships, pair it with SureCart or any compatible payment plugin. SureMembers will automatically grant access when a customer purchases.
+SureMembers handles content restriction. To take payments, pair it with SureCart, SureForms, WooCommerce or any compatible payment plugin. SureMembers grants access automatically when the purchase completes and revokes it when the subscription is cancelled or refunded.
 
 = Can I have multiple membership levels? =
 
@@ -124,6 +179,18 @@ Yes. SureMembers integrates with popular LMS plugins so you can protect lessons 
 
 Your data stays on your WordPress site. SureMembers does not store member information on external servers. You own everything.
 
+= Does it work with WooCommerce? =
+
+Yes. SureMembers grants access when a WooCommerce order or subscription becomes active and revokes it when the order is refunded, cancelled or deleted. You can also create members-only coupons.
+
+= Can AI assistants manage my memberships? =
+
+Yes. SureMembers registers WordPress abilities and can expose an MCP server, so clients like Claude Desktop, Claude Code, Cursor and VS Code Copilot can read your membership data and, if you allow it, create or update memberships. Everything is read-only until you turn on the edit and delete toggles under Settings > AI Abilities.
+
+= Can I sell team or corporate memberships? =
+
+Team Accounts are part of SureMembers Premium. They let a buyer become a team owner, invite members through a shareable link or CSV, and manage seats, while members inherit the owner's access.
+
 = How can I report a security bug? =
 
 We take plugin security seriously. Report vulnerabilities through our [Bug Bounty Program](https://brainstormforce.com/bug-bounty-program/). We collaborate with Patchstack to validate and triage security issues responsibly.
@@ -135,6 +202,12 @@ We take plugin security seriously. Report vulnerabilities through our [Bug Bount
 * [Support](https://suremembers.com/support)
 
 == Changelog ==
+
+= 2026-09-08 - version 1.4.1 =
+* Fix: Fixed an issue where a user's synced role was not always removed when their membership access was revoked or the membership itself was deleted, leaving the role assigned.
+* Fix: Fixed an issue where the Bulk Edit action on the Users screen did nothing on WordPress 7.1 and above.
+* Fix: Fixed an issue where the unauthorized access "Message" page appeared unstyled on block (full site editing) themes.
+* Fix: Fixed an issue where percent-encoded characters were stripped from the redirect URL, breaking links such as SureCart checkout URLs.
 
 = 2026-08-17 - version 1.4.0 =
 * New: SureForms integration — automatically grant memberships when a SureForms payment completes, and revoke them when the subscription is cancelled or the payment is fully refunded. Requires SureForms.

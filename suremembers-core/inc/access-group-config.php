@@ -10,7 +10,7 @@
  * membership programmatically without going through the admin UI.
  *
  * @package SureMembersCore
- * @since x.x.x
+ * @since 1.4.1
  */
 
 namespace SureMembersCore\Inc;
@@ -20,13 +20,13 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Access_Group_Config class.
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 class Access_Group_Config {
 	/**
 	 * Post statuses an access group may hold.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 * @var array<int, string>
 	 */
 	public const ALLOWED_STATUSES = [ 'publish', 'draft', SUREMEMBERS_ARCHIVE ];
@@ -34,7 +34,7 @@ class Access_Group_Config {
 	/**
 	 * Check whether an ID refers to an existing access group post.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param int $group_id Access group (membership) post ID.
 	 * @return bool
@@ -51,7 +51,7 @@ class Access_Group_Config {
 	 * `suremembers_access_group_config_meta_keys` filter so a duplicated group
 	 * carries their settings too.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return array<int, string>
 	 */
@@ -71,7 +71,7 @@ class Access_Group_Config {
 		/**
 		 * Filters the access group config meta keys.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.1
 		 *
 		 * @param array<int, string> $keys Meta keys that constitute an access group's configuration.
 		 */
@@ -81,7 +81,7 @@ class Access_Group_Config {
 	/**
 	 * Read the full, normalized configuration of an access group.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param int $group_id Access group (membership) post ID.
 	 * @return array<string, mixed>|\WP_Error Normalized config, or WP_Error when the group is missing.
@@ -127,7 +127,7 @@ class Access_Group_Config {
 		 * Lets Pro features append their own config sections (e.g. variation,
 		 * corporate/team, native payments) to the read payload.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.1
 		 *
 		 * @param array<string, mixed> $config   Normalized config.
 		 * @param int                  $group_id Access group post ID.
@@ -140,7 +140,7 @@ class Access_Group_Config {
 	 *
 	 * Only the provided fields are changed; pass null to leave a field as-is.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param int         $group_id Access group post ID.
 	 * @param string|null $title    New title, or null to keep the current one.
@@ -205,7 +205,7 @@ class Access_Group_Config {
 	 * starts with no members. Pro data is copied via the config meta-keys
 	 * filter and the `suremembers_access_group_duplicated` action.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param int    $source_id Access group to clone.
 	 * @param string $title     Title for the new group. Empty uses "<source> copy".
@@ -261,7 +261,7 @@ class Access_Group_Config {
 		 * Lets Pro features copy any additional data keyed by group ID that
 		 * isn't captured by the config meta keys.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.1
 		 *
 		 * @param int $new_id    The newly created access group ID.
 		 * @param int $source_id The access group that was cloned.
@@ -274,7 +274,7 @@ class Access_Group_Config {
 	/**
 	 * Add, remove, or replace protected content items on an access group.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param int                                     $group_id  Access group post ID.
 	 * @param array<int, array<string, mixed>|string> $items     Content items — each an object
@@ -355,7 +355,7 @@ class Access_Group_Config {
 	 * Accepts either a raw identifier string (returned as-is after validation)
 	 * or an array: { type: post|postchild|taxonomy, id: int, taxonomy?: string, scope?: single|archive }.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param array<string, mixed>|string $item Item definition or raw identifier.
 	 * @return string|\WP_Error Identifier such as "post-42-|" or "tax-7-single-category".
@@ -403,7 +403,7 @@ class Access_Group_Config {
 	 * Mirrors the admin table's include/exclude resolution so the shapes match
 	 * what the UI shows.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param array<int, string> $identifiers Content identifiers.
 	 * @return array<int, array<string, mixed>>
@@ -474,7 +474,7 @@ class Access_Group_Config {
 	 * Produce a title that does not collide with an existing membership,
 	 * appending " copy N" as needed (matching the admin save behavior).
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param string $title Desired title.
 	 * @return string Unique title.
@@ -494,7 +494,7 @@ class Access_Group_Config {
 	/**
 	 * Whether an access group with the exact given title already exists.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param string $title Title to check.
 	 * @return bool

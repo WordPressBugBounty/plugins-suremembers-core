@@ -144,7 +144,7 @@ class Email_Templates {
 	 * @param string $body Resolved HTML body (tags already replaced).
 	 * @param string $key  Template key, passed to the filter for per-template control.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return string Wrapped HTML body, or the original body when wrapping is disabled.
 	 */
@@ -152,7 +152,7 @@ class Email_Templates {
 		/**
 		 * Filters whether the branded email wrapper is applied to a templated email.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.1
 		 *
 		 * @param bool   $use_wrapper Default true.
 		 * @param string $key         Template key.

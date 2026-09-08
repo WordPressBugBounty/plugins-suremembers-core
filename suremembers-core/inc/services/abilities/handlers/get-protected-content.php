@@ -3,7 +3,7 @@
  * Get Protected Content Ability.
  *
  * @package SureMembersCore
- * @since x.x.x
+ * @since 1.4.1
  */
 
 namespace SureMembersCore\Inc\Services\Abilities\Handlers;
@@ -19,13 +19,13 @@ defined( 'ABSPATH' ) || exit;
  * Lists the content items (posts, pages, custom post types and taxonomy
  * scopes) a membership protects, resolved to titles and types.
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 class Get_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_id(): string {
 		return 'get-protected-content';
@@ -34,7 +34,7 @@ class Get_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_name(): string {
 		return __( 'Get Protected Content', 'suremembers-core' );
@@ -43,7 +43,7 @@ class Get_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_description(): string {
 		return __( 'Lists the content items attached to a membership\'s Protected Content list, resolved to their titles and types, along with the excluded content items.', 'suremembers-core' );
@@ -52,7 +52,7 @@ class Get_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_category(): string {
 		return 'memberships';
@@ -61,7 +61,7 @@ class Get_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_parameters(): array {
 		return [
@@ -76,7 +76,7 @@ class Get_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_returns(): array {
 		return [
@@ -88,7 +88,7 @@ class Get_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_annotations(): array {
 		return [
@@ -101,7 +101,7 @@ class Get_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_instructions(): string {
 		return 'Read-only. Each item includes an "identifier" you can pass back to manage-protected-content to remove it.';
@@ -110,7 +110,7 @@ class Get_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param array<string, mixed> $params Validated parameters.
 	 */

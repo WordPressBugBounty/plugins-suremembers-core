@@ -100,7 +100,7 @@ class Global_Settings {
 	 *
 	 * @return array<int, array<string, mixed>> List of restriction rows.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public static function normalize_login_restrictions( $data ) {
 		if ( ! is_array( $data ) || empty( $data ) ) {

@@ -206,7 +206,9 @@ window.wp = window.wp || {};
 			 *
 			 * Get the selected posts based on the checked checkboxes in the post table.
 			 */
-			$( 'tbody th.check-column input[type="checkbox"]' ).each( function () {
+			// The checkbox column is a `th` before WordPress 7.1 and a `td` from 7.1
+			// onward, so match on the `check-column` class alone to support both.
+			$( 'tbody .check-column input[type="checkbox"]' ).each( function () {
 				// If the checkbox for a post is selected, add the post to the edit list.
 				if ( $( this ).prop( 'checked' ) ) {
 					c = false;

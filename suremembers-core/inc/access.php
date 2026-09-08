@@ -171,12 +171,12 @@ class Access {
 			$access_group_data = get_user_meta( $user_id, SUREMEMBERS_USER_META . '_' . $ag_id, true );
 
 			if ( empty( $access_group_data ) || ! is_array( $access_group_data ) || empty( $ag_id ) ) {
-				return;
+				continue;
 			}
 
 			if ( ! empty( $access_group_data['status'] ) && self::is_access_status_same( $access_group_data['status'], 'revoked' ) ) {
 				do_action( 'suremembers_process_aborted_same_status', 'revoke', $access_group_data, $ag_id );
-				return;
+				continue;
 			}
 
 			$access_group_data = array_merge(
@@ -195,6 +195,138 @@ class Access {
 			self::update_user_role_revoke_grant_access( $ag_id, $user_id, 'revoke' );
 			do_action( 'suremembers_user_access_group_revoked', $user_id, absint( $ag_id ), $access_group_ids );
 			do_action( 'suremembers_after_access_revoke', $user_id, $access_group_ids );
+		}
+	}
+
+	/**
+	 * Completely removes a membership record from a user.
+	 *
+	 * Unlike revoke(), which keeps the record and flips its status to `revoked`,
+	 * this erases the membership from the user altogether. It still performs the
+	 * full revoke side effects — un-syncing WordPress roles and emitting the
+	 * revoke actions — so role sync, access logging and dependent integrations
+	 * (e.g. the Corporate Accounts cascade) behave the same as a revoke.
+	 *
+	 * @param int   $user_id          Current user.
+	 * @param mixed $access_group_ids Array of multiple access groups or a single access group.
+	 * @param mixed $synced_roles     Optional. Pre-resolved role slugs keyed by access group ID,
+	 *                                or a flat slug array when a single group is passed. Required
+	 *                                only when the membership post (and therefore its role meta)
+	 *                                is already gone or about to be deleted. Default null.
+	 *
+	 * @since 1.4.1
+	 *
+	 * @return void
+	 */
+	public static function remove( $user_id, $access_group_ids, $synced_roles = null ) {
+		$user_id = absint( $user_id );
+
+		if ( empty( $user_id ) || empty( $access_group_ids ) ) {
+			return;
+		}
+
+		if ( ! is_array( $access_group_ids ) ) {
+			$ag_id = intval( $access_group_ids );
+			if ( empty( $ag_id ) ) {
+				return;
+			}
+			$access_group_ids = [ $ag_id ];
+			// A flat slug array is accepted for the single-group form; normalise it to the keyed shape.
+			if ( is_array( $synced_roles ) && ! isset( $synced_roles[ $ag_id ] ) ) {
+				$synced_roles = [ $ag_id => $synced_roles ];
+			}
+		} else {
+			$access_group_ids = Utils::sanitize_recursively( 'absint', $access_group_ids );
+		}
+
+		$access_group_ids = array_values( array_filter( array_map( 'absint', $access_group_ids ) ) );
+		if ( empty( $access_group_ids ) ) {
+			return;
+		}
+
+		$access_groups = get_user_meta( $user_id, SUREMEMBERS_USER_META, true );
+		if ( ! is_array( $access_groups ) ) {
+			$access_groups = [];
+		}
+
+		$listed_group_ids = array_map( 'absint', $access_groups );
+
+		// Drop the removed groups from the user's membership list.
+		$access_groups = array_values(
+			array_filter(
+				$access_groups,
+				static function ( $ag_id ) use ( $access_group_ids ) {
+					return ! in_array( absint( $ag_id ), $access_group_ids, true );
+				}
+			)
+		);
+
+		update_user_meta( $user_id, SUREMEMBERS_USER_META, $access_groups );
+
+		$user_expire   = get_user_meta( $user_id, SUREMEMBERS_USER_EXPIRATION, true );
+		$expire_edited = false;
+
+		foreach ( $access_group_ids as $ag_id ) {
+			$access_group_data = get_user_meta( $user_id, SUREMEMBERS_USER_META . "_{$ag_id}", true );
+			$has_record        = ! empty( $access_group_data ) && is_array( $access_group_data );
+
+			// Nothing to take away: the user neither has a record for this group nor
+			// lists it. Bail before touching roles, so removing a membership a user
+			// never held cannot strip a role they hold for another reason.
+			if ( ! $has_record && ! in_array( $ag_id, $listed_group_ids, true ) ) {
+				continue;
+			}
+
+			$roles_override = is_array( $synced_roles ) && isset( $synced_roles[ $ag_id ] ) ? $synced_roles[ $ag_id ] : null;
+
+			// Drop the detail record first so the group cannot count itself as an
+			// active holder of its own roles in the shared-role check below.
+			delete_user_meta( $user_id, SUREMEMBERS_USER_META . "_{$ag_id}" );
+
+			if ( is_array( $user_expire ) && isset( $user_expire[ $ag_id ] ) ) {
+				unset( $user_expire[ $ag_id ] );
+				$expire_edited = true;
+			}
+
+			self::set_update_required( $ag_id );
+			self::update_user_role_revoke_grant_access( $ag_id, $user_id, 'revoke', $roles_override );
+
+			// Announce the revoke only for access the user still actually held, so
+			// listeners (access logs, cascades) do not double-record a membership
+			// that was already revoked.
+			$was_active = $has_record && ! self::is_access_status_same( $access_group_data['status'] ?? '', 'revoked' );
+
+			if ( $was_active ) {
+				/**
+				 * Fires when a user loses access to a membership.
+				 *
+				 * Emitted for removals as well as revokes — the access is gone
+				 * either way, so dependent logic must run in both cases.
+				 *
+				 * @since 1.0.0
+				 *
+				 * @param int             $user_id          User ID.
+				 * @param int             $ag_id            Access group ID.
+				 * @param array<int, int> $access_group_ids All access group IDs in this operation.
+				 */
+				do_action( 'suremembers_user_access_group_revoked', $user_id, absint( $ag_id ), $access_group_ids );
+				do_action( 'suremembers_after_access_revoke', $user_id, $access_group_ids );
+			}
+
+			/**
+			 * Fires after a membership record has been erased from a user.
+			 *
+			 * @since 1.4.1
+			 *
+			 * @param int             $user_id          User ID.
+			 * @param int             $ag_id            Access group ID.
+			 * @param array<int, int> $access_group_ids All access group IDs in this operation.
+			 */
+			do_action( 'suremembers_user_access_group_removed', $user_id, absint( $ag_id ), $access_group_ids );
+		}
+
+		if ( $expire_edited ) {
+			update_user_meta( $user_id, SUREMEMBERS_USER_EXPIRATION, $user_expire );
 		}
 	}
 
@@ -218,14 +350,21 @@ class Access {
 	/**
 	 * Update users user role associated with access group.
 	 *
+	 * On revoke, a role is only taken away when no other membership the user
+	 * still holds syncs that same role — otherwise revoking one membership would
+	 * strip a role another active membership is entitled to grant.
+	 *
 	 * @param int    $access_group_id Access group id.
 	 * @param int    $user_id User id.
 	 * @param string $action Revoke or grant.
+	 * @param mixed  $roles Optional. Role slugs to act on, overriding the access group's
+	 *                      own meta. Needed when the access group post is being deleted and
+	 *                      its role meta can no longer be read. Default null.
 	 *
 	 * @since 1.1.0
 	 */
-	public static function update_user_role_revoke_grant_access( $access_group_id, $user_id, $action ) {
-		$get_assign_roles = get_post_meta( $access_group_id, SUREMEMBERS_USER_ROLES, true );
+	public static function update_user_role_revoke_grant_access( $access_group_id, $user_id, $action, $roles = null ) {
+		$get_assign_roles = $roles === null ? get_post_meta( $access_group_id, SUREMEMBERS_USER_ROLES, true ) : $roles;
 		if ( empty( $get_assign_roles ) || ! is_array( $get_assign_roles ) ) {
 			return;
 		}
@@ -233,17 +372,82 @@ class Access {
 		if ( ! is_array( $get_current_user->roles ) ) {
 			return;
 		}
+
+		$roles_held_elsewhere = $action === 'grant' ? [] : self::get_roles_synced_by_other_memberships( $user_id, $access_group_id );
+
 		foreach ( $get_assign_roles as $roles_value ) {
+			if ( ! is_string( $roles_value ) || $roles_value === '' ) {
+				continue;
+			}
+
 			if ( $action === 'grant' ) {
 				if ( ! in_array( $roles_value, $get_current_user->roles, true ) ) {
 					$get_current_user->add_role( $roles_value );
 				}
 			} else {
+				if ( in_array( $roles_value, $roles_held_elsewhere, true ) ) {
+					continue;
+				}
+
 				if ( in_array( $roles_value, $get_current_user->roles, true ) ) {
 					$get_current_user->remove_role( $roles_value );
 				}
 			}
 		}
+	}
+
+	/**
+	 * Collect the roles a user is still entitled to through their other memberships.
+	 *
+	 * Only memberships that are currently published, hold an `active` record and
+	 * have not expired are counted — anything else no longer grants its roles.
+	 *
+	 * @param int $user_id         User ID.
+	 * @param int $exclude_group_id Access group being revoked/removed, which must not vouch for its own roles.
+	 *
+	 * @since 1.4.1
+	 *
+	 * @return array<int, string> Role slugs.
+	 */
+	public static function get_roles_synced_by_other_memberships( $user_id, $exclude_group_id ) {
+		$access_group_ids = get_user_meta( absint( $user_id ), SUREMEMBERS_USER_META, true );
+
+		if ( empty( $access_group_ids ) || ! is_array( $access_group_ids ) ) {
+			return [];
+		}
+
+		$exclude_group_id = absint( $exclude_group_id );
+		$roles            = [];
+
+		foreach ( $access_group_ids as $ag_id ) {
+			$ag_id = absint( $ag_id );
+
+			if ( empty( $ag_id ) || $ag_id === $exclude_group_id ) {
+				continue;
+			}
+
+			$detail = get_user_meta( absint( $user_id ), SUREMEMBERS_USER_META . "_{$ag_id}", true );
+
+			if ( ! is_array( $detail ) || ( $detail['status'] ?? '' ) !== 'active' ) {
+				continue;
+			}
+
+			if ( ! Access_Groups::is_active_access_group( $ag_id ) ) {
+				continue;
+			}
+
+			if ( Access_Groups::is_expired( $ag_id, absint( $user_id ) ) ) {
+				continue;
+			}
+
+			$group_roles = get_post_meta( $ag_id, SUREMEMBERS_USER_ROLES, true );
+
+			if ( ! empty( $group_roles ) && is_array( $group_roles ) ) {
+				$roles = array_merge( $roles, $group_roles );
+			}
+		}
+
+		return array_values( array_unique( array_filter( $roles, 'is_string' ) ) );
 	}
 
 	/**

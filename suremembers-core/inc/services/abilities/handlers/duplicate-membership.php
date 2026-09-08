@@ -3,7 +3,7 @@
  * Duplicate Membership Ability.
  *
  * @package SureMembersCore
- * @since x.x.x
+ * @since 1.4.1
  */
 
 namespace SureMembersCore\Inc\Services\Abilities\Handlers;
@@ -20,13 +20,13 @@ defined( 'ABSPATH' ) || exit;
  * into a new one. Members are not copied. Useful for creating variations
  * (e.g. Monthly to Lifetime) from a proven configuration.
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 * @var string
 	 */
 	protected string $gated = 'suremembers_abilities_api_edit';
@@ -34,7 +34,7 @@ class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_id(): string {
 		return 'duplicate-membership';
@@ -43,7 +43,7 @@ class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_name(): string {
 		return __( 'Duplicate Membership', 'suremembers-core' );
@@ -52,7 +52,7 @@ class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_description(): string {
 		return __( 'Creates a new membership by cloning an existing one, preserving all settings and content restrictions. Members are not copied; the clone starts empty and in draft status by default.', 'suremembers-core' );
@@ -61,7 +61,7 @@ class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_category(): string {
 		return 'memberships';
@@ -70,7 +70,7 @@ class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_parameters(): array {
 		return [
@@ -97,7 +97,7 @@ class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_returns(): array {
 		return [
@@ -109,7 +109,7 @@ class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_annotations(): array {
 		return [
@@ -122,7 +122,7 @@ class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_instructions(): string {
 		return 'Returns the new membership_id. The clone is created in draft by default so you can review it before publishing with update-membership.';
@@ -131,7 +131,7 @@ class Duplicate_Membership extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param array<string, mixed> $params Validated parameters.
 	 */

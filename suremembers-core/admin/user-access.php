@@ -457,35 +457,9 @@ class User_Access {
 		} elseif ( $action === 'remove_access' ) {
 			// Handle both single access group and array of access groups.
 			$access_ids_to_remove = is_array( $access_id ) ? $access_id : [ $access_id ];
-			$access_ids_to_remove = Utils::sanitize_recursively( 'absint', $access_ids_to_remove );
 
-			// Completely remove access groups from user.
-			$access_groups = get_user_meta( $user_id, SUREMEMBERS_USER_META, true );
-			if ( is_array( $access_groups ) ) {
-				$access_groups = array_filter(
-					$access_groups,
-					static function ( $ag_id ) use ( $access_ids_to_remove ) {
-						return ! in_array( $ag_id, $access_ids_to_remove, true );
-					}
-				);
-				update_user_meta( $user_id, SUREMEMBERS_USER_META, $access_groups );
-			}
-
-			// Remove detailed access group meta for each access group.
-			foreach ( $access_ids_to_remove as $ag_id ) {
-				delete_user_meta( $user_id, SUREMEMBERS_USER_META . "_{$ag_id}" );
-			}
-
-			// Remove expiration data if exists.
-			$user_expire = get_user_meta( $user_id, SUREMEMBERS_USER_EXPIRATION, true );
-			if ( is_array( $user_expire ) ) {
-				foreach ( $access_ids_to_remove as $ag_id ) {
-					if ( isset( $user_expire[ $ag_id ] ) ) {
-						unset( $user_expire[ $ag_id ] );
-					}
-				}
-				update_user_meta( $user_id, SUREMEMBERS_USER_EXPIRATION, $user_expire );
-			}
+			// Erases the memberships, un-syncs their roles and emits the revoke actions.
+			Access::remove( $user_id, $access_ids_to_remove );
 		}
 
 		wp_send_json_success();

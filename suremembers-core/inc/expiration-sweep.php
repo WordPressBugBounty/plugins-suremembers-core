@@ -19,7 +19,7 @@
  *
  * @package SureMembersCore
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 
 namespace SureMembersCore\Inc;
@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Class Expiration_Sweep.
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 class Expiration_Sweep {
 	use Get_Instance;
@@ -39,28 +39,28 @@ class Expiration_Sweep {
 	/**
 	 * Recurring sweep hook. Fans work out into per-group batches.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public const CRON_HOOK = 'suremembers_expiration_check';
 
 	/**
 	 * Async per-group batch hook.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public const GROUP_HOOK = 'suremembers_expiration_check_group';
 
 	/**
 	 * Action Scheduler group label.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public const AS_GROUP = 'suremembers-expiration';
 
 	/**
 	 * Constructor: register handlers and ensure the sweep is scheduled.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function __construct() {
 		add_action( self::CRON_HOOK, [ $this, 'run_check' ] );
@@ -77,7 +77,7 @@ class Expiration_Sweep {
 	/**
 	 * Schedule the recurring expiration check if it is not already scheduled.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -87,7 +87,7 @@ class Expiration_Sweep {
 				/**
 				 * Filter the interval (in seconds) between expiration sweeps.
 				 *
-				 * @since x.x.x
+				 * @since 1.4.1
 				 *
 				 * @param int $interval Interval in seconds. Default 12 hours.
 				 */
@@ -111,7 +111,7 @@ class Expiration_Sweep {
 			 *
 			 * Must be a valid registered cron schedule (see wp_get_schedules()).
 			 *
-			 * @since x.x.x
+			 * @since 1.4.1
 			 *
 			 * @param string $recurrence Cron schedule slug. Default 'twicedaily'.
 			 */
@@ -124,7 +124,7 @@ class Expiration_Sweep {
 	/**
 	 * Clear all scheduled expiration work (plugin deactivation).
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -140,7 +140,7 @@ class Expiration_Sweep {
 	/**
 	 * Recurring entry point: fan the sweep out into per-group batches.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -168,7 +168,7 @@ class Expiration_Sweep {
 		/**
 		 * Fires after an expiration sweep has been dispatched.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.1
 		 *
 		 * @param array<int, int> $group_ids Access group IDs that were swept.
 		 */
@@ -181,7 +181,7 @@ class Expiration_Sweep {
 	 * Revokes any member of the batch whose membership has expired, then queues
 	 * the next batch when the page was full (Action Scheduler path only).
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param int $ag_id  Access group ID.
 	 * @param int $offset Member query offset.
@@ -204,7 +204,7 @@ class Expiration_Sweep {
 	/**
 	 * Whether Action Scheduler is loaded and usable.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return bool
 	 */
@@ -217,7 +217,7 @@ class Expiration_Sweep {
 	/**
 	 * Revoke any expired members in a single batch.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param int $ag_id  Access group ID.
 	 * @param int $offset Member query offset.
@@ -245,7 +245,7 @@ class Expiration_Sweep {
 	/**
 	 * Number of members processed per batch.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return int
 	 */
@@ -253,7 +253,7 @@ class Expiration_Sweep {
 		/**
 		 * Filter the number of members inspected per expiration batch.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.1
 		 *
 		 * @param int $size Batch size. Default 100.
 		 */
@@ -263,7 +263,7 @@ class Expiration_Sweep {
 	/**
 	 * Get the IDs of published access groups that have expiration enabled.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return array<int, int> Access group post IDs.
 	 */
@@ -297,7 +297,7 @@ class Expiration_Sweep {
 	 * Pagination is on the raw membership query; the active-status check happens
 	 * in process_group() so the page size stays predictable for batch chaining.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param int $ag_id  Access group ID.
 	 * @param int $limit  Maximum members to return.

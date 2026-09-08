@@ -3,7 +3,7 @@
  * Manage Protected Content Ability.
  *
  * @package SureMembersCore
- * @since x.x.x
+ * @since 1.4.1
  */
 
 namespace SureMembersCore\Inc\Services\Abilities\Handlers;
@@ -19,13 +19,13 @@ defined( 'ABSPATH' ) || exit;
  * Adds, removes, or replaces the content items on a membership's Protected
  * Content list — enabling fully automated membership setup without the admin UI.
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 * @var string
 	 */
 	protected string $gated = 'suremembers_abilities_api_edit';
@@ -33,7 +33,7 @@ class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_id(): string {
 		return 'manage-protected-content';
@@ -42,7 +42,7 @@ class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_name(): string {
 		return __( 'Manage Protected Content', 'suremembers-core' );
@@ -51,7 +51,7 @@ class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_description(): string {
 		return __( 'Adds, removes, or replaces the content items protected by a membership. Content items are posts, pages, custom post types (by post ID) or taxonomy term scopes.', 'suremembers-core' );
@@ -60,7 +60,7 @@ class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_category(): string {
 		return 'memberships';
@@ -69,7 +69,7 @@ class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_parameters(): array {
 		return [
@@ -96,7 +96,7 @@ class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_returns(): array {
 		return [
@@ -108,7 +108,7 @@ class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_annotations(): array {
 		return [
@@ -121,7 +121,7 @@ class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_instructions(): string {
 		return 'Use "add" to append content, "remove" to detach it, or "set" to replace the whole list. For specific posts/pages use { type: "post", id: <postID> }. Call get-protected-content first to see current items and their identifiers.';
@@ -130,7 +130,7 @@ class Manage_Protected_Content extends Ability {
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @param array<string, mixed> $params Validated parameters.
 	 */

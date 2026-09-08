@@ -1524,9 +1524,14 @@ class Admin_Menu {
 		// Preserve HTML markup for restricted URL text.
 		$redirect_url_text = isset( $suremembers_post['restricted_url'] ) ? wp_filter_post_kses( $suremembers_post['restricted_url'] ) : '';
 
-		// Decode and sanitize redirect URL if present.
+		// Decode and sanitize redirect URL if present. Saved separately and restored
+		// after the recursive sanitize below, because sanitize_text_field() strips
+		// percent-encoded octets (e.g. %5B, %5D) and would corrupt encoded query args
+		// such as SureCart checkout links (line_items%5B0%5D%5Bprice_id%5D).
+		$redirect_url_to_save = '';
 		if ( isset( $suremembers_post['restrict']['redirect_url'] ) ) {
-			$suremembers_post['restrict']['redirect_url'] = esc_url_raw( urldecode( $suremembers_post['restrict']['redirect_url'] ) );
+			$redirect_url_to_save                         = esc_url_raw( urldecode( $suremembers_post['restrict']['redirect_url'] ) );
+			$suremembers_post['restrict']['redirect_url'] = $redirect_url_to_save;
 		}
 
 		// Save switch values BEFORE remove_blank_array (which removes empty strings and '0' values).
@@ -1668,6 +1673,12 @@ class Admin_Menu {
 		$post_data['restrict']['excerpt']         = $excerpt_to_save;
 		$post_data['restrict']['in_content']      = $in_content_to_save;
 		$post_data['restrict']['enablelogin']     = $enablelogin_to_save;
+
+		// Restore the redirect URL sanitized with esc_url_raw() so percent-encoded
+		// characters survive the recursive sanitize_text_field() pass above.
+		if ( '' !== $redirect_url_to_save ) {
+			$post_data['restrict']['redirect_url'] = $redirect_url_to_save;
+		}
 
 		update_post_meta( $suremembers_post_id, SUREMEMBERS_PLAN_RULES, $post_data );
 

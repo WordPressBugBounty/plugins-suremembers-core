@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: SureMembers Core 1.4.0\n"
+"Project-Id-Version: SureMembers Core 1.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/suremembers-core\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-28T11:12:46+00:00\n"
+"POT-Creation-Date: 2026-09-02T11:09:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: suremembers-core\n"
@@ -123,6 +123,7 @@ msgstr ""
 
 #. translators: %s title.
 #. translators: %s label.
+#. translators: %s: parent content title.
 #: admin/admin-menu.php:735
 #: admin/admin-menu.php:784
 #: admin/admin-menu.php:999
@@ -132,19 +133,22 @@ msgstr ""
 #: admin/admin-menu.php:1180
 #: admin/admin-menu.php:1212
 #: admin/admin-menu.php:1244
-#: admin/admin-menu.php:1925
-#: admin/admin-menu.php:1945
+#: admin/admin-menu.php:1936
+#: admin/admin-menu.php:1956
+#: inc/access-group-config.php:436
 #: inc/utils.php:168
 #: modules/base-module.php:249
 msgid "Child of %s"
 msgstr ""
 
 #. translators: %s term name.
+#. translators: %s: taxonomy term name.
 #: admin/admin-menu.php:757
 #: admin/admin-menu.php:806
 #: admin/admin-menu.php:1021
 #: admin/admin-menu.php:1070
 #: admin/admin-menu.php:1123
+#: inc/access-group-config.php:455
 #: inc/utils.php:158
 #: modules/base-module.php:239
 msgid "All singulars from %s"
@@ -171,7 +175,7 @@ msgstr ""
 #: admin/admin-menu.php:1194
 #: admin/admin-menu.php:1226
 #: admin/admin-menu.php:1258
-#: admin/admin-menu.php:1828
+#: admin/admin-menu.php:1839
 #: inc/utils.php:140
 #: modules/base-module.php:225
 msgid "All %s"
@@ -224,7 +228,7 @@ msgid "Missing Post status data."
 msgstr ""
 
 #: admin/admin-menu.php:1471
-#: admin/admin-menu.php:1863
+#: admin/admin-menu.php:1874
 #: admin/gutenberg-admin-bar.php:113
 #: admin/menu-restriction.php:130
 #: admin/restrictions.php:213
@@ -233,14 +237,14 @@ msgstr ""
 #: admin/settings-screen.php:274
 #: admin/settings-screen.php:312
 #: admin/user-access.php:434
-#: admin/user-access.php:506
-#: admin/user-access.php:586
-#: admin/user-access.php:617
-#: admin/user-access.php:652
+#: admin/user-access.php:480
+#: admin/user-access.php:560
+#: admin/user-access.php:591
+#: admin/user-access.php:626
 #: inc/admin-bar.php:133
-#: inc/downloads.php:448
+#: inc/downloads.php:467
 #: inc/routers/members.php:154
-#: inc/routers/users.php:531
+#: inc/routers/users.php:507
 #: modules/base-module.php:59
 msgid "Current user does not have required permission."
 msgstr ""
@@ -251,48 +255,48 @@ msgid "No post available for this post type."
 msgstr ""
 
 #: admin/admin-menu.php:1517
-#: admin/admin-menu.php:1705
+#: admin/admin-menu.php:1716
 msgid "No data received."
 msgstr ""
 
-#: admin/admin-menu.php:1548
+#: admin/admin-menu.php:1553
 msgid "Title can't be empty."
 msgstr ""
 
-#: admin/admin-menu.php:1601
+#: admin/admin-menu.php:1606
 msgid "Invalid post ID returned."
 msgstr ""
 
-#: admin/admin-menu.php:1691
+#: admin/admin-menu.php:1702
 msgid "Rule saved successfully."
 msgstr ""
 
-#: admin/admin-menu.php:1735
+#: admin/admin-menu.php:1746
 msgid "Basic"
 msgstr ""
 
-#: admin/admin-menu.php:1737
+#: admin/admin-menu.php:1748
 msgid "Entire Website"
 msgstr ""
 
-#: admin/admin-menu.php:1775
+#: admin/admin-menu.php:1786
 msgid "Specific Target"
 msgstr ""
 
-#: admin/admin-menu.php:1777
+#: admin/admin-menu.php:1788
 msgid "Specific Pages / Posts / Taxonomies, etc."
 msgstr ""
 
-#: admin/admin-menu.php:1783
+#: admin/admin-menu.php:1794
 msgid "Specific Url"
 msgstr ""
 
-#: admin/admin-menu.php:1785
+#: admin/admin-menu.php:1796
 msgid "URL matching"
 msgstr ""
 
 #. translators: %s taxonomy label
-#: admin/admin-menu.php:1836
+#: admin/admin-menu.php:1847
 msgid "All %s Archive"
 msgstr ""
 
@@ -379,22 +383,22 @@ msgstr ""
 
 #: admin/rules-engine.php:104
 #: admin/rules-engine.php:167
-#: admin/rules-engine.php:219
+#: admin/rules-engine.php:295
 msgid "Something wrong is happening.."
 msgstr ""
 
 #: admin/rules-engine.php:124
-#: inc/login-page.php:320
+#: inc/login-page.php:339
 msgid "Please complete the Turnstile verification."
 msgstr ""
 
 #: admin/rules-engine.php:152
-#: inc/login-page.php:347
+#: inc/login-page.php:366
 msgid "Unable to verify Turnstile. Please try again."
 msgstr ""
 
 #: admin/rules-engine.php:159
-#: inc/login-page.php:353
+#: inc/login-page.php:372
 msgid "Turnstile verification failed. Please try again."
 msgstr ""
 
@@ -406,27 +410,25 @@ msgstr ""
 msgid "The username field is empty."
 msgstr ""
 
-#. translators: %s will be entered user's name.
-#: admin/rules-engine.php:195
-msgid "The username <strong>%s</strong> is not registered on this site. If you are unsure of your username, try your email address instead."
+#: admin/rules-engine.php:187
+msgid "Too many failed login attempts. Please try again later."
 msgstr ""
 
-#. translators: %s will be entered user's name.
-#: admin/rules-engine.php:198
-msgid "The password you entered for the username <strong>%s</strong> is incorrect."
+#: admin/rules-engine.php:205
+msgid "The username or password you entered is incorrect. Please try again."
 msgstr ""
 
-#: admin/rules-engine.php:227
+#: admin/rules-engine.php:303
 msgid "Something went wrong. Reload the page and try again."
 msgstr ""
 
-#: admin/rules-engine.php:397
+#: admin/rules-engine.php:473
 msgctxt "suremembers archive post label"
 msgid "Archive"
 msgstr ""
 
 #. Translators: post count
-#: admin/rules-engine.php:399
+#: admin/rules-engine.php:475
 msgid "Archive <span class=\"count\">(%s)</span>"
 msgid_plural "Archive <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -524,7 +526,7 @@ msgid "Choose memberships to assign to this user."
 msgstr ""
 
 #: admin/templates.php:131
-#: admin/user-access.php:685
+#: admin/user-access.php:659
 msgid "Bulk Edit"
 msgstr ""
 
@@ -539,13 +541,13 @@ msgstr ""
 
 #: admin/templates.php:163
 #: admin/user-access-table.php:118
-#: admin/user-access.php:562
+#: admin/user-access.php:536
 msgid "Grant Access"
 msgstr ""
 
 #: admin/templates.php:164
 #: admin/user-access-table.php:115
-#: admin/user-access.php:562
+#: admin/user-access.php:536
 msgid "Revoke Access"
 msgstr ""
 
@@ -587,13 +589,13 @@ msgstr ""
 
 #. translators:  %1$s Time created.
 #: admin/user-access-table.php:85
-#: admin/user-access.php:558
+#: admin/user-access.php:532
 msgid "Created %1$s ago"
 msgstr ""
 
 #. translators:  %1$s Time modified.
 #: admin/user-access-table.php:93
-#: admin/user-access.php:560
+#: admin/user-access.php:534
 msgid "Updated %1$s ago"
 msgstr ""
 
@@ -651,18 +653,18 @@ msgid "Filter"
 msgstr ""
 
 #: admin/user-access.php:429
-#: admin/user-access.php:502
-#: admin/user-access.php:581
-#: admin/user-access.php:621
-#: admin/user-access.php:645
+#: admin/user-access.php:476
+#: admin/user-access.php:555
+#: admin/user-access.php:595
+#: admin/user-access.php:619
 msgid "AJAX validation failed"
 msgstr ""
 
 #: admin/user-access.php:442
-#: admin/user-access.php:512
-#: admin/user-access.php:595
-#: admin/user-access.php:630
-#: admin/user-access.php:661
+#: admin/user-access.php:486
+#: admin/user-access.php:569
+#: admin/user-access.php:604
+#: admin/user-access.php:635
 msgid "Missing required parameters."
 msgstr ""
 
@@ -670,11 +672,11 @@ msgstr ""
 msgid "Invalid access group ID."
 msgstr ""
 
-#: admin/user-access.php:606
+#: admin/user-access.php:580
 msgid "Invalid data format."
 msgstr ""
 
-#: admin/user-access.php:648
+#: admin/user-access.php:622
 #: inc/routers/analytics.php:44
 #: inc/routers/analytics.php:142
 #: inc/routers/analytics.php:194
@@ -690,8 +692,56 @@ msgstr ""
 #: inc/routers/settings.php:37
 #: inc/routers/settings.php:89
 #: inc/routers/settings.php:179
-#: inc/routers/users.php:521
+#: inc/routers/users.php:497
 msgid "Nonce validation failed"
+msgstr ""
+
+#: inc/access-group-config.php:93
+#: inc/access-group-config.php:154
+#: inc/access-group-config.php:289
+msgid "No membership found for the given ID."
+msgstr ""
+
+#: inc/access-group-config.php:165
+msgid "A membership title cannot be empty."
+msgstr ""
+
+#. translators: %s: comma-separated list of allowed statuses.
+#: inc/access-group-config.php:177
+msgid "Invalid status. Allowed values: %s"
+msgstr ""
+
+#: inc/access-group-config.php:188
+msgid "Nothing to update: provide a title and/or status."
+msgstr ""
+
+#: inc/access-group-config.php:219
+msgid "No membership found for the given source ID."
+msgstr ""
+
+#. translators: %s: source membership title.
+#: inc/access-group-config.php:230
+msgid "%s copy"
+msgstr ""
+
+#: inc/access-group-config.php:296
+msgid "Operation must be one of: add, remove, set."
+msgstr ""
+
+#: inc/access-group-config.php:367
+msgid "Empty content identifier."
+msgstr ""
+
+#: inc/access-group-config.php:373
+msgid "A content item must be an object or identifier string."
+msgstr ""
+
+#: inc/access-group-config.php:380
+msgid "A content item requires a positive integer \"id\"."
+msgstr ""
+
+#: inc/access-group-config.php:390
+msgid "A taxonomy content item requires a \"taxonomy\"."
 msgstr ""
 
 #: inc/access-logs.php:575
@@ -738,11 +788,11 @@ msgstr ""
 msgid "Edit Membership "
 msgstr ""
 
-#: inc/analytics.php:77
+#: inc/analytics.php:78
 msgid "Quick Feedback"
 msgstr ""
 
-#: inc/analytics.php:79
+#: inc/analytics.php:80
 msgid "If you have a moment, please share why you are deactivating SureMembers:"
 msgstr ""
 
@@ -759,19 +809,27 @@ msgstr ""
 msgid "Private: "
 msgstr ""
 
-#: inc/downloads.php:420
+#: inc/downloads.php:389
+msgid "You do not have permission to access this resource."
+msgstr ""
+
+#: inc/downloads.php:390
+msgid "Access Denied"
+msgstr ""
+
+#: inc/downloads.php:439
 msgid "Irks! Error when creating a new private folder for private media"
 msgstr ""
 
-#: inc/downloads.php:444
+#: inc/downloads.php:463
 msgid "Security check failed."
 msgstr ""
 
-#: inc/downloads.php:454
+#: inc/downloads.php:473
 msgid "No files found for upload."
 msgstr ""
 
-#: inc/downloads.php:481
+#: inc/downloads.php:500
 msgid "Files uploaded successfully"
 msgstr ""
 
@@ -1209,11 +1267,11 @@ msgstr ""
 msgid "Expiration date updated successfully."
 msgstr ""
 
-#: inc/routers/users.php:479
+#: inc/routers/users.php:455
 msgid "Membership removed successfully."
 msgstr ""
 
-#: inc/routers/users.php:498
+#: inc/routers/users.php:474
 #: assets/build/suremembers.js:47
 msgid "This membership is in draft and cannot be modified."
 msgstr ""
@@ -2886,6 +2944,10 @@ msgstr ""
 
 #: assets/build/suremembers.js:25
 msgid "Please add at least 1 character to search"
+msgstr ""
+
+#: assets/build/suremembers.js:25
+msgid "No protected content available to drip."
 msgstr ""
 
 #: assets/build/suremembers.js:25

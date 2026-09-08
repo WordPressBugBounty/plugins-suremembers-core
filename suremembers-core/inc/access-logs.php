@@ -9,7 +9,7 @@
  *
  * @package suremembers
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 
 namespace SureMembersCore\Inc;
@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Access Logs.
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 class Access_Logs {
 	use Get_Instance;
@@ -29,35 +29,35 @@ class Access_Logs {
 	/**
 	 * Option storing backfill state: '' (never ran), 'pending' or 'done'.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public const BACKFILL_OPTION = 'suremembers_access_log_backfill';
 
 	/**
 	 * Action Scheduler hook used to process one backfill batch.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public const BACKFILL_ACTION = 'suremembers_access_log_backfill_batch';
 
 	/**
 	 * Action Scheduler group for all SureMembers actions.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public const AS_GROUP = 'suremembers';
 
 	/**
 	 * Number of user meta rows processed per backfill batch.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public const BATCH_SIZE = 200;
 
 	/**
 	 * Constructor.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function __construct() {
 		add_action( 'suremembers_user_access_group_granted', [ $this, 'log_grant' ], 10, 2 );
@@ -69,7 +69,7 @@ class Access_Logs {
 	/**
 	 * Get the access logs table name with the site prefix.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return string
 	 */
@@ -81,7 +81,7 @@ class Access_Logs {
 	/**
 	 * Create the access logs table. Safe to call repeatedly (dbDelta).
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -110,7 +110,7 @@ class Access_Logs {
 	/**
 	 * Whether the access logs table exists.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return bool
 	 */
@@ -124,7 +124,7 @@ class Access_Logs {
 	 * Install the table and flag the backfill as pending. Runs once ever —
 	 * called from both Activator (new installs) and Updates (upgrades).
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -146,7 +146,7 @@ class Access_Logs {
 	 * @param string $source          Integration source ('default', 'surecart', 'sureforms', ...).
 	 * @param string $created_at      MySQL datetime in site timezone. Defaults to now.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -176,7 +176,7 @@ class Access_Logs {
 	 * @param int $user_id         User ID.
 	 * @param int $access_group_id Access group ID.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -196,7 +196,7 @@ class Access_Logs {
 	 * @param int $user_id         User ID.
 	 * @param int $access_group_id Access group ID.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -208,7 +208,7 @@ class Access_Logs {
 	 * Enqueue the first backfill batch when pending and not already queued.
 	 * Self-healing: re-queues if a previous run died before completion.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -244,7 +244,7 @@ class Access_Logs {
 	 *
 	 * @param int $last_umeta_id Process rows with umeta_id greater than this.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -322,7 +322,7 @@ class Access_Logs {
 	 *     @type string $interval        Bucket size: 'day', 'week' or 'month'.
 	 * }
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return array<int, array<string, mixed>> Series of [ period, grants, revokes ] rows.
 	 */
@@ -392,7 +392,7 @@ class Access_Logs {
 	 *
 	 * @param array<string, mixed> $args Same arguments as get_stats().
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return array<string, mixed>
 	 */
@@ -474,7 +474,7 @@ class Access_Logs {
 	 *     @type string $to              End date (Y-m-d, inclusive).
 	 * }
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return array<int, array<string, int>> Rows of [ access_group_id, grants, revokes ].
 	 */
@@ -537,7 +537,7 @@ class Access_Logs {
 	 *
 	 * @param int $limit Maximum number of events to return.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return array<int, array<string, mixed>>
 	 */
@@ -591,7 +591,7 @@ class Access_Logs {
 	 * @param int    $access_group_id Access group ID.
 	 * @param string $status          Status to count: 'active' or 'revoked'.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return int
 	 */
@@ -621,7 +621,7 @@ class Access_Logs {
 	 * @param string $source          Integration source.
 	 * @param string $created_at      Site-local MySQL datetime of the original event.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */

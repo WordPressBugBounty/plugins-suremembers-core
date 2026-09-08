@@ -1,5 +1,11 @@
 *** SureMembers Core Changelog ***
 
+= 2026-09-08 - version 1.4.1 =
+* Fix: Fixed an issue where a user's synced role was not always removed when their membership access was revoked or the membership itself was deleted, leaving the role assigned.
+* Fix: Fixed an issue where the Bulk Edit action on the Users screen did nothing on WordPress 7.1 and above.
+* Fix: Fixed an issue where the unauthorized access "Message" page appeared unstyled on block (full site editing) themes.
+* Fix: Fixed an issue where percent-encoded characters were stripped from the redirect URL, breaking links such as SureCart checkout URLs.
+
 = 2026-08-17 - version 1.4.0 =
 * New: SureForms integration — automatically grant memberships when a SureForms payment completes, and revoke them when the subscription is cancelled or the payment is fully refunded. Requires SureForms.
 * Improvement: Redesigned the Edit Membership and Email screens with a cleaner, tabbed settings layout.

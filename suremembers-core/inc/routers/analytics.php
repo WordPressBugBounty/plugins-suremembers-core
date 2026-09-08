@@ -4,7 +4,7 @@
  *
  * @package SureMembers\Inc\Routers
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 
 namespace SureMembersCore\Inc\Routers;
@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Class Analytics Router.
  *
- * @since x.x.x
+ * @since 1.4.1
  */
 class Analytics {
 	use Get_Instance;
@@ -32,7 +32,7 @@ class Analytics {
 	 * @param \WP_REST_Request $request Request object.
 	 *
 	 * @return \WP_REST_Response
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_analytics( $request ) {
 		// Nonce verification.
@@ -130,7 +130,7 @@ class Analytics {
 	 * @param \WP_REST_Request $request Request object.
 	 *
 	 * @return \WP_REST_Response
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_recent_activity( $request ) {
 		// Nonce verification.
@@ -182,7 +182,7 @@ class Analytics {
 	 * @param \WP_REST_Request $request Request object.
 	 *
 	 * @return \WP_REST_Response
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	public function get_expiring_memberships( $request ) {
 		// Nonce verification.
@@ -251,7 +251,7 @@ class Analytics {
 	 * pulled for free (including via the WP Abilities / MCP surface).
 	 *
 	 * @return \WP_REST_Response|null Error response when Pro is inactive, null otherwise.
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	private function require_premium() {
 		if ( apply_filters( 'suremembers_is_premium_active', false ) ) {

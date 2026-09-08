@@ -30,6 +30,7 @@ use SureMembersCore\Inc\Downloads;
 use SureMembersCore\Inc\Expiration_Sweep;
 use SureMembersCore\Inc\Login_Page;
 use SureMembersCore\Inc\Member_List;
+use SureMembersCore\Inc\Membership_Deletion;
 use SureMembersCore\Inc\Menu_Items;
 use SureMembersCore\Inc\Modules\Learn\Learn;
 use SureMembersCore\Inc\Modules\MCP\Module as MCP_Module;
@@ -302,6 +303,7 @@ class Plugin_Loader {
 		Learn::get_instance();
 		Rest_Restriction::get_instance();
 		Expiration_Sweep::get_instance();
+		Membership_Deletion::get_instance();
 		if ( defined( 'SURECART_APP_URL' ) ) {
 			( new Surecart_Integration() )->bootstrap();
 		}

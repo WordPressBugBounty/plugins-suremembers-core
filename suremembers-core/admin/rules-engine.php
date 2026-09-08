@@ -227,7 +227,7 @@ class Rules_Engine {
 	 * Uses REMOTE_ADDR only (never client-supplied forwarding headers, which are
 	 * spoofable). Requests without a valid IP share a single fallback bucket.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return string Transient key.
 	 */
@@ -248,7 +248,7 @@ class Rules_Engine {
 	/**
 	 * Whether the caller's IP has exceeded the failed-login threshold.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return bool True when the caller is currently locked out.
 	 */
@@ -261,7 +261,7 @@ class Rules_Engine {
 	/**
 	 * Increment the failed-login counter for the caller's IP within a rolling window.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */
@@ -275,7 +275,7 @@ class Rules_Engine {
 	/**
 	 * Clear the failed-login counter after a successful authentication.
 	 *
-	 * @since x.x.x
+	 * @since 1.4.1
 	 *
 	 * @return void
 	 */

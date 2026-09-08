@@ -853,7 +853,7 @@ class Sureforms_Integration {
 	 * @param array<string, mixed> $payment  Succeeded payment row.
 	 * @param int                  $entry_id Entry (submission) ID, 0 when unknown.
 	 * @return int Resolved or newly created user ID, or 0 when none could be obtained.
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	private function resolve_or_create_user_id( $payment, $entry_id ) {
 		$user_id = $this->resolve_user_id( $payment, $entry_id );
@@ -874,7 +874,7 @@ class Sureforms_Integration {
 	 *
 	 * @param array<string, mixed> $payment Succeeded payment row (carries `customer_email` and `customer_name`).
 	 * @return int New user ID, or 0 when a user could not be created.
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	private function create_user_from_payment( $payment ) {
 		if ( ! is_array( $payment ) ) {
@@ -935,7 +935,7 @@ class Sureforms_Integration {
 		 *
 		 * @param int                  $user_id New user ID.
 		 * @param array<string, mixed> $payment Payment row the user was created from.
-		 * @since x.x.x
+		 * @since 1.4.1
 		 */
 		do_action( 'suremembers_sureforms_guest_user_created', $user_id, $payment );
 
@@ -951,7 +951,7 @@ class Sureforms_Integration {
 	 * @param string $email     Customer email.
 	 * @param string $full_name Customer full name, may be empty.
 	 * @return string Unique user login.
-	 * @since x.x.x
+	 * @since 1.4.1
 	 */
 	private function generate_unique_username( $email, $full_name ) {
 		$local = strstr( $email, '@', true );

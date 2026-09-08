@@ -446,32 +446,8 @@ class Users {
 			);
 		}
 
-		// Get user's access groups.
-		$access_groups = get_user_meta( $user_id, SUREMEMBERS_USER_META, true );
-		if ( ! is_array( $access_groups ) ) {
-			$access_groups = [];
-		}
-
-		// Remove membership from access groups array.
-		$access_groups = array_filter(
-			$access_groups,
-			static function ( $ag_id ) use ( $membership_id ) {
-				return absint( $ag_id ) !== $membership_id;
-			}
-		);
-
-		// Update user meta.
-		update_user_meta( $user_id, SUREMEMBERS_USER_META, $access_groups );
-
-		// Remove detailed access group meta.
-		delete_user_meta( $user_id, SUREMEMBERS_USER_META . "_{$membership_id}" );
-
-		// Remove expiration data if exists.
-		$user_expire = get_user_meta( $user_id, SUREMEMBERS_USER_EXPIRATION, true );
-		if ( is_array( $user_expire ) && isset( $user_expire[ $membership_id ] ) ) {
-			unset( $user_expire[ $membership_id ] );
-			update_user_meta( $user_id, SUREMEMBERS_USER_EXPIRATION, $user_expire );
-		}
+		// Erase the membership, un-sync its roles and emit the revoke actions.
+		\SureMembersCore\Inc\Access::remove( $user_id, $membership_id );
 
 		return new \WP_REST_Response(
 			[

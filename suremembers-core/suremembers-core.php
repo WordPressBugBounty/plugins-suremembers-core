@@ -3,7 +3,7 @@
  * Plugin Name: SureMembers Core
  * Plugin URI: https://suremembers.com
  * Description: A simple yet powerful way to add content restriction to your website.
- * Version: 1.4.0
+ * Version: 1.4.1
  * Author: Brainstorm Force
  * Author URI: https://www.brainstormforce.com
  * License: GPLv2 or later
@@ -150,7 +150,7 @@ if ( ! defined( 'SUREMEMBERS_EMAIL_TEMPLATE_SETTINGS' ) ) {
 	define( 'SUREMEMBERS_EMAIL_TEMPLATE_SETTINGS', 'suremembers_email_template_settings' );
 }
 
-define( 'SUREMEMBERS_CORE_VER', '1.4.0' );
+define( 'SUREMEMBERS_CORE_VER', '1.4.1' );
 
 // Minimum SureMembers (Pro) version compatible with this Core build.
 if ( ! defined( 'SUREMEMBERS_PRO_MINIMUM_VER' ) ) {
