@@ -4,7 +4,7 @@ Tags: membership, content restriction, members only, paywall, access control
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -202,6 +202,9 @@ We take plugin security seriously. Report vulnerabilities through our [Bug Bount
 * [Support](https://suremembers.com/support)
 
 == Changelog ==
+
+= 2026-11-20 - version 1.4.2 =
+* Improvement: UI improvements.
 
 = 2026-09-08 - version 1.4.1 =
 * Fix: Fixed an issue where a user's synced role was not always removed when their membership access was revoked or the membership itself was deleted, leaving the role assigned.

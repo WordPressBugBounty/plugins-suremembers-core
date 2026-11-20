@@ -2,16 +2,16 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: SureMembers Core 1.4.1\n"
+"Project-Id-Version: SureMembers Core 1.4.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/suremembers-core\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-02T11:09:44+00:00\n"
+"POT-Creation-Date: 2026-11-17T11:45:29+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: suremembers-core\n"
 
 #. Plugin Name of the plugin
@@ -62,52 +62,52 @@ msgstr ""
 #: integrations/sureforms-integration.php:232
 #: admin/assets/build/restrict_block.js:385
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:50
 msgid "Memberships"
 msgstr ""
 
 #: admin/admin-menu.php:198
 #: admin/admin-menu.php:199
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:19
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:22
 #: assets/build/suremembers.js:33
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:49
+#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:50
 #: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Team Accounts"
 msgstr ""
 
 #: admin/admin-menu.php:208
 #: admin/admin-menu.php:209
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Members"
 msgstr ""
 
 #: admin/admin-menu.php:218
 #: admin/admin-menu.php:219
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Analytics"
 msgstr ""
 
 #: admin/admin-menu.php:228
 #: admin/admin-menu.php:229
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:52
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:55
+#: assets/build/suremembers.js:57
 msgid "Email"
 msgstr ""
 
 #: admin/admin-menu.php:238
 #: admin/admin-menu.php:239
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:19
-#: assets/build/suremembers.js:32
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:35
+#: assets/build/suremembers.js:36
 msgid "Settings"
 msgstr ""
 
@@ -115,55 +115,57 @@ msgstr ""
 msgid "Onboarding"
 msgstr ""
 
-#: admin/admin-menu.php:564
+#: admin/admin-menu.php:565
 #: admin/settings-screen.php:113
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Administrator"
 msgstr ""
 
 #. translators: %s title.
 #. translators: %s label.
 #. translators: %s: parent content title.
-#: admin/admin-menu.php:735
-#: admin/admin-menu.php:784
-#: admin/admin-menu.php:999
-#: admin/admin-menu.php:1048
-#: admin/admin-menu.php:1101
-#: admin/admin-menu.php:1148
-#: admin/admin-menu.php:1180
-#: admin/admin-menu.php:1212
-#: admin/admin-menu.php:1244
-#: admin/admin-menu.php:1936
-#: admin/admin-menu.php:1956
+#: admin/admin-menu.php:736
+#: admin/admin-menu.php:785
+#: admin/admin-menu.php:1000
+#: admin/admin-menu.php:1049
+#: admin/admin-menu.php:1102
+#: admin/admin-menu.php:1149
+#: admin/admin-menu.php:1181
+#: admin/admin-menu.php:1213
+#: admin/admin-menu.php:1245
+#: admin/admin-menu.php:1937
+#: admin/admin-menu.php:1957
 #: inc/access-group-config.php:436
 #: inc/utils.php:168
 #: modules/base-module.php:249
+#, php-format
 msgid "Child of %s"
 msgstr ""
 
 #. translators: %s term name.
 #. translators: %s: taxonomy term name.
-#: admin/admin-menu.php:757
-#: admin/admin-menu.php:806
-#: admin/admin-menu.php:1021
-#: admin/admin-menu.php:1070
-#: admin/admin-menu.php:1123
+#: admin/admin-menu.php:758
+#: admin/admin-menu.php:807
+#: admin/admin-menu.php:1022
+#: admin/admin-menu.php:1071
+#: admin/admin-menu.php:1124
 #: inc/access-group-config.php:455
 #: inc/utils.php:158
 #: modules/base-module.php:239
+#, php-format
 msgid "All singulars from %s"
 msgstr ""
 
-#: admin/admin-menu.php:891
-#: admin/admin-menu.php:932
+#: admin/admin-menu.php:892
+#: admin/admin-menu.php:933
 msgid "Insufficient permissions."
 msgstr ""
 
-#: admin/admin-menu.php:939
+#: admin/admin-menu.php:940
 msgid "Post ID is required."
 msgstr ""
 
-#: admin/admin-menu.php:947
+#: admin/admin-menu.php:948
 msgid "Post not found."
 msgstr ""
 
@@ -171,64 +173,65 @@ msgstr ""
 #. translators: %s post label
 #. translators: %1$s: Post type name.
 #. Translators: %s Post Type Label
-#: admin/admin-menu.php:1162
-#: admin/admin-menu.php:1194
-#: admin/admin-menu.php:1226
-#: admin/admin-menu.php:1258
-#: admin/admin-menu.php:1839
+#: admin/admin-menu.php:1163
+#: admin/admin-menu.php:1195
+#: admin/admin-menu.php:1227
+#: admin/admin-menu.php:1259
+#: admin/admin-menu.php:1840
 #: inc/utils.php:140
 #: modules/base-module.php:225
+#, php-format
 msgid "All %s"
 msgstr ""
 
-#: admin/admin-menu.php:1366
+#: admin/admin-menu.php:1367
 msgid "Invalid post id."
 msgstr ""
 
-#: admin/admin-menu.php:1373
-#: admin/admin-menu.php:1475
+#: admin/admin-menu.php:1374
+#: admin/admin-menu.php:1476
 #: inc/routers/members.php:42
 msgid "Invalid data."
 msgstr ""
 
-#: admin/admin-menu.php:1384
+#: admin/admin-menu.php:1385
 msgid "Published successfully"
 msgstr ""
 
-#: admin/admin-menu.php:1395
+#: admin/admin-menu.php:1396
 msgid "Updating failed"
 msgstr ""
 
-#: admin/admin-menu.php:1397
+#: admin/admin-menu.php:1398
 msgid "Archived successfully"
 msgstr ""
 
-#: admin/admin-menu.php:1404
+#: admin/admin-menu.php:1405
 msgid "Deleted successfully"
 msgstr ""
 
-#: admin/admin-menu.php:1406
+#: admin/admin-menu.php:1407
 msgid "Delete operation failed"
 msgstr ""
 
-#: admin/admin-menu.php:1411
+#: admin/admin-menu.php:1412
 msgid "Invalid status."
 msgstr ""
 
-#: admin/admin-menu.php:1427
+#: admin/admin-menu.php:1428
 msgid "Status updating failed"
 msgstr ""
 
-#: admin/admin-menu.php:1439
+#: admin/admin-menu.php:1440
 msgid "Missing Post ID."
 msgstr ""
 
-#: admin/admin-menu.php:1443
+#: admin/admin-menu.php:1444
 msgid "Missing Post status data."
 msgstr ""
 
-#: admin/admin-menu.php:1471
-#: admin/admin-menu.php:1874
+#: admin/admin-menu.php:1472
+#: admin/admin-menu.php:1875
 #: admin/gutenberg-admin-bar.php:113
 #: admin/menu-restriction.php:130
 #: admin/restrictions.php:213
@@ -249,54 +252,55 @@ msgstr ""
 msgid "Current user does not have required permission."
 msgstr ""
 
-#: admin/admin-menu.php:1488
+#: admin/admin-menu.php:1489
 #: inc/routers/members.php:61
 msgid "No post available for this post type."
 msgstr ""
 
-#: admin/admin-menu.php:1517
-#: admin/admin-menu.php:1716
+#: admin/admin-menu.php:1518
+#: admin/admin-menu.php:1717
 msgid "No data received."
 msgstr ""
 
-#: admin/admin-menu.php:1553
+#: admin/admin-menu.php:1554
 msgid "Title can't be empty."
 msgstr ""
 
-#: admin/admin-menu.php:1606
+#: admin/admin-menu.php:1607
 msgid "Invalid post ID returned."
 msgstr ""
 
-#: admin/admin-menu.php:1702
+#: admin/admin-menu.php:1703
 msgid "Rule saved successfully."
 msgstr ""
 
-#: admin/admin-menu.php:1746
+#: admin/admin-menu.php:1747
 msgid "Basic"
 msgstr ""
 
-#: admin/admin-menu.php:1748
+#: admin/admin-menu.php:1749
 msgid "Entire Website"
 msgstr ""
 
-#: admin/admin-menu.php:1786
+#: admin/admin-menu.php:1787
 msgid "Specific Target"
 msgstr ""
 
-#: admin/admin-menu.php:1788
+#: admin/admin-menu.php:1789
 msgid "Specific Pages / Posts / Taxonomies, etc."
 msgstr ""
 
-#: admin/admin-menu.php:1794
+#: admin/admin-menu.php:1795
 msgid "Specific Url"
 msgstr ""
 
-#: admin/admin-menu.php:1796
+#: admin/admin-menu.php:1797
 msgid "URL matching"
 msgstr ""
 
 #. translators: %s taxonomy label
-#: admin/admin-menu.php:1847
+#: admin/admin-menu.php:1848
+#, php-format
 msgid "All %s Archive"
 msgstr ""
 
@@ -353,7 +357,7 @@ msgid "Search Memberships"
 msgstr ""
 
 #: admin/rules-engine.php:58
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Edit Membership"
 msgstr ""
 
@@ -363,8 +367,8 @@ msgstr ""
 
 #: admin/rules-engine.php:60
 #: admin/rules-engine.php:62
-#: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:49
+#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:52
 msgid "Add New"
 msgstr ""
 
@@ -429,6 +433,7 @@ msgstr ""
 
 #. Translators: post count
 #: admin/rules-engine.php:475
+#, php-format
 msgid "Archive <span class=\"count\">(%s)</span>"
 msgid_plural "Archive <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -552,99 +557,102 @@ msgid "Revoke Access"
 msgstr ""
 
 #: admin/templates.php:165
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:25
-#: assets/build/suremembers.js:32
-#: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:28
+#: assets/build/suremembers.js:35
+#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:57
 msgid "Cancel"
 msgstr ""
 
 #. translators: %1$s main website URL.
 #: admin/templates.php:234
+#, php-format
 msgid "This e-mail was sent from %1$s"
 msgstr ""
 
 #: admin/user-access-table.php:38
 #: admin/user-access-table.php:232
 #: integrations/sureforms-integration.php:201
-#: assets/build/suremembers.js:33
-#: assets/build/suremembers.js:34
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:37
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:55
 msgid "Membership"
 msgstr ""
 
 #: admin/user-access-table.php:68
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
 msgid "Edit"
 msgstr ""
 
 #: admin/user-access-table.php:69
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:55
 msgid "Remove"
 msgstr ""
 
 #. translators:  %1$s Time created.
 #: admin/user-access-table.php:85
 #: admin/user-access.php:532
+#, php-format
 msgid "Created %1$s ago"
 msgstr ""
 
 #. translators:  %1$s Time modified.
 #: admin/user-access-table.php:93
 #: admin/user-access.php:534
+#, php-format
 msgid "Updated %1$s ago"
 msgstr ""
 
 #: admin/user-access-table.php:233
-#: assets/build/suremembers.js:33
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:52
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:55
+#: assets/build/suremembers.js:57
 msgid "Status"
 msgstr ""
 
 #: admin/user-access-table.php:234
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Created On"
 msgstr ""
 
 #: admin/user-access-table.php:235
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Updated On"
 msgstr ""
 
 #: admin/user-access-table.php:236
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Integration"
 msgstr ""
 
 #: admin/user-access-table.php:237
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:55
 msgid "Action"
 msgstr ""
 
 #: admin/user-access-table.php:238
-#: assets/build/suremembers.js:25
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:28
+#: assets/build/suremembers.js:50
 msgid "Expiration"
 msgstr ""
 
 #: admin/user-access.php:131
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Active Memberships"
 msgstr ""
 
 #: admin/user-access.php:157
 #: inc/admin-bar.php:258
 #: inc/admin-bar.php:266
-#: assets/build/suremembers.js:22
-#: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:53
+#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:56
 msgid "All Memberships"
 msgstr ""
 
@@ -708,6 +716,7 @@ msgstr ""
 
 #. translators: %s: comma-separated list of allowed statuses.
 #: inc/access-group-config.php:177
+#, php-format
 msgid "Invalid status. Allowed values: %s"
 msgstr ""
 
@@ -721,6 +730,7 @@ msgstr ""
 
 #. translators: %s: source membership title.
 #: inc/access-group-config.php:230
+#, php-format
 msgid "%s copy"
 msgstr ""
 
@@ -750,6 +760,7 @@ msgstr ""
 
 #. translators: %1$s Current content type.
 #: inc/admin-bar.php:106
+#, php-format
 msgid "Restrict this %1$s"
 msgstr ""
 
@@ -764,6 +775,7 @@ msgstr ""
 
 #. translators: %1$s Post type singular label.
 #: inc/admin-bar.php:253
+#, php-format
 msgid "%1$s is not restricted"
 msgstr ""
 
@@ -883,9 +895,9 @@ msgstr ""
 
 #: inc/modules/learn/chapters.php:75
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:22
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:57
 msgid "Create Membership"
 msgstr ""
 
@@ -1003,7 +1015,7 @@ msgstr ""
 
 #: inc/modules/learn/chapters.php:180
 #: inc/modules/learn/chapters.php:187
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Create User Roles"
 msgstr ""
 
@@ -1023,7 +1035,7 @@ msgstr ""
 
 #: inc/modules/learn/chapters.php:194
 #: inc/modules/learn/chapters.php:201
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Import Users"
 msgstr ""
 
@@ -1103,6 +1115,87 @@ msgstr ""
 msgid "Failed to encode subscription payload."
 msgstr ""
 
+#: inc/promotion.php:93
+msgid "first year"
+msgstr ""
+
+#: inc/promotion.php:97
+msgid "or"
+msgstr ""
+
+#: inc/promotion.php:106
+#: inc/promotion.php:156
+msgid "lifetime"
+msgstr ""
+
+#: inc/promotion.php:123
+msgid "Live now"
+msgstr ""
+
+#: inc/promotion.php:127
+msgid "Black Friday Super Sale"
+msgstr ""
+
+#: inc/promotion.php:133
+msgid "Up to 43% OFF"
+msgstr ""
+
+#: inc/promotion.php:136
+msgid "every SureMembers plan"
+msgstr ""
+
+#: inc/promotion.php:138
+msgid "Starter"
+msgstr ""
+
+#: inc/promotion.php:139
+#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:57
+msgid "Pro"
+msgstr ""
+
+#: inc/promotion.php:140
+msgid "Business"
+msgstr ""
+
+#: inc/promotion.php:141
+#: inc/promotion.php:158
+msgid "Creator's Suite"
+msgstr ""
+
+#: inc/promotion.php:142
+msgid "Agency Suite"
+msgstr ""
+
+#: inc/promotion.php:145
+msgid "Grab the Deal"
+msgstr ""
+
+#: inc/promotion.php:152
+msgid "Black Friday"
+msgstr ""
+
+#: inc/promotion.php:153
+msgid "33% OFF"
+msgstr ""
+
+#: inc/promotion.php:157
+msgid "Save $300"
+msgstr ""
+
+#: inc/promotion.php:159
+msgid "SureMembers, SureDash, Presto Player & Presto Capture Pro · Up to 10 sites"
+msgstr ""
+
+#: inc/promotion.php:161
+#: assets/build/suremembers.js:4
+msgid "Upgrade Now"
+msgstr ""
+
+#: inc/promotion.php:164
+msgid "Black Friday price ends in"
+msgstr ""
+
 #: inc/rest-restriction.php:198
 msgid "Sorry, you are not allowed to view this content."
 msgstr ""
@@ -1122,6 +1215,7 @@ msgstr ""
 #. translators: %d: access group ID.
 #: inc/routers/analytics.php:100
 #: inc/routers/analytics.php:158
+#, php-format
 msgid "Membership #%d"
 msgstr ""
 
@@ -1169,6 +1263,7 @@ msgstr ""
 
 #. translators: %d: number of memberships
 #: inc/routers/members.php:517
+#, php-format
 msgid "%d membership deleted successfully"
 msgid_plural "%d memberships deleted successfully"
 msgstr[0] ""
@@ -1176,6 +1271,7 @@ msgstr[1] ""
 
 #. translators: 1: deleted count, 2: failed count
 #: inc/routers/members.php:540
+#, php-format
 msgid "%1$d membership(s) deleted successfully, %2$d failed"
 msgstr ""
 
@@ -1191,6 +1287,7 @@ msgstr ""
 
 #. translators: %s: original membership title.
 #: inc/routers/members.php:614
+#, php-format
 msgid "%s (Copy)"
 msgstr ""
 
@@ -1199,7 +1296,7 @@ msgid "Failed to duplicate membership."
 msgstr ""
 
 #: inc/routers/members.php:653
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Membership duplicated as a draft."
 msgstr ""
 
@@ -1216,7 +1313,7 @@ msgid "Invalid setting key."
 msgstr ""
 
 #: inc/routers/settings.php:149
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Settings saved successfully."
 msgstr ""
 
@@ -1272,7 +1369,7 @@ msgid "Membership removed successfully."
 msgstr ""
 
 #: inc/routers/users.php:474
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "This membership is in draft and cannot be modified."
 msgstr ""
 
@@ -1353,7 +1450,7 @@ msgid "Minute"
 msgstr ""
 
 #: inc/utils/global-settings.php:123
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "All Roles"
 msgstr ""
 
@@ -1459,21 +1556,22 @@ msgstr ""
 
 #. translators: $1$s All Posts Label
 #: modules/base-module.php:73
+#, php-format
 msgid "All %1$s"
 msgstr ""
 
 #: modules/learndash/learndash.php:141
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "LearnDash"
 msgstr ""
 
 #: modules/learndash/learndash.php:143
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "LearnDash Courses"
 msgstr ""
 
 #: modules/learndash/learndash.php:144
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "LearnDash Groups"
 msgstr ""
 
@@ -1482,12 +1580,12 @@ msgid "Tutor LMS"
 msgstr ""
 
 #: modules/tutorlms/tutorlms.php:135
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Tutor LMS Courses"
 msgstr ""
 
 #: modules/tutorlms/tutorlms.php:136
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Tutor LMS Lessons"
 msgstr ""
 
@@ -1509,6 +1607,7 @@ msgstr ""
 
 #. translators: 1: SureMembers Core plugin name, 2: SureMembers Pro plugin name, 3: minimum required Pro version.
 #: suremembers-core.php:190
+#, php-format
 msgid "%1$s requires %2$s version %3$s or higher. Please update the SureMembers add-on to keep all features working."
 msgstr ""
 
@@ -1551,29 +1650,24 @@ msgid "What's New?"
 msgstr ""
 
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:19
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:57
 msgid "Unsaved Changes"
 msgstr ""
 
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:19
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:57
 msgid "You have unsaved changes. Are you sure you want to leave without saving?"
 msgstr ""
 
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Learn"
 msgstr ""
 
 #: assets/build/suremembers.js:1
 msgid "Upgrade"
-msgstr ""
-
-#: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:54
-msgid "Pro"
 msgstr ""
 
 #: assets/build/suremembers.js:1
@@ -1593,7 +1687,7 @@ msgid "Support ticket"
 msgstr ""
 
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Welcome to SureMembers!"
 msgstr ""
 
@@ -1602,9 +1696,9 @@ msgid "We’re excited to help you build and grow your membership. SureMembers m
 msgstr ""
 
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:22
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:57
 msgid "Learn More"
 msgstr ""
 
@@ -1637,11 +1731,12 @@ msgid "Video Popup"
 msgstr ""
 
 #: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Premium"
 msgstr ""
 
 #: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "Upgrade to Premium"
 msgstr ""
 
@@ -1649,3389 +1744,3447 @@ msgstr ""
 msgid "Unlock all Premium features with a single upgrade."
 msgstr ""
 
-#: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:25
+#. translators: 1: days, 2: hours.
+#: assets/build/suremembers.js:3
+#, js-format
+msgid "%1$dd %2$dh"
+msgstr ""
+
+#. translators: 1: hours, 2: minutes.
+#: assets/build/suremembers.js:4
+#, js-format
+msgid "%1$dh %2$dm"
+msgstr ""
+
+#: assets/build/suremembers.js:4
+#: assets/build/suremembers.js:28
 msgid "User Role Sync"
 msgstr ""
 
-#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "Block Restrictions"
 msgstr ""
 
-#: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:25
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:4
+#: assets/build/suremembers.js:28
 #: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
 msgid "Drip Content"
 msgstr ""
 
-#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "Downloads Protection"
 msgstr ""
 
-#: assets/build/suremembers.js:1
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:4
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:22
 msgid "Login Restrictions"
 msgstr ""
 
-#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "And Much More…"
 msgstr ""
 
-#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "Unlock Premium Features"
 msgstr ""
 
-#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "Next-Level Memberships, Made Easy"
 msgstr ""
 
-#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "Advanced content protection, drip scheduling, and powerful member management tools - all in one upgrade."
 msgstr ""
 
-#: assets/build/suremembers.js:1
-msgid "Upgrade Now"
-msgstr ""
-
-#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "Ready to unlock premium features?"
 msgstr ""
 
-#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "Upgrade now"
 msgstr ""
 
-#: assets/build/suremembers.js:1
+#: assets/build/suremembers.js:4
 msgid "and unlock the full power of"
 msgstr ""
 
-#. translators: %s: Plugin name
-#: assets/build/suremembers.js:2
-msgid "%s Plugin Activated Successfully!"
-msgstr ""
-
-#. translators: %s: Plugin name
-#: assets/build/suremembers.js:3
-msgid "Failed to activate %s plugin."
-msgstr ""
-
-#: assets/build/suremembers.js:3
-msgid "Plugin installation is not available."
-msgstr ""
-
-#. translators: %s: Plugin name
 #: assets/build/suremembers.js:4
-msgid "Installing %s plugin. Please wait…"
+msgid "Promotion"
+msgstr ""
+
+#: assets/build/suremembers.js:4
+msgid "Dismiss promotion"
+msgstr ""
+
+#: assets/build/suremembers.js:4
+msgid "Dismiss"
 msgstr ""
 
 #. translators: %s: Plugin name
 #: assets/build/suremembers.js:5
-msgid "%s plugin installed successfully."
+#, js-format
+msgid "%s Plugin Activated Successfully!"
 msgstr ""
 
 #. translators: %s: Plugin name
 #: assets/build/suremembers.js:6
+#, js-format
+msgid "Failed to activate %s plugin."
+msgstr ""
+
+#: assets/build/suremembers.js:6
+msgid "Plugin installation is not available."
+msgstr ""
+
+#. translators: %s: Plugin name
+#: assets/build/suremembers.js:7
+#, js-format
+msgid "Installing %s plugin. Please wait…"
+msgstr ""
+
+#. translators: %s: Plugin name
+#: assets/build/suremembers.js:8
+#, js-format
+msgid "%s plugin installed successfully."
+msgstr ""
+
+#. translators: %s: Plugin name
+#: assets/build/suremembers.js:9
+#, js-format
 msgid "Failed to install %s plugin."
 msgstr ""
 
-#: assets/build/suremembers.js:6
+#: assets/build/suremembers.js:9
 msgid "Free"
 msgstr ""
 
-#: assets/build/suremembers.js:6
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:9
+#: assets/build/suremembers.js:55
 msgid "SureForms"
 msgstr ""
 
-#: assets/build/suremembers.js:6
+#: assets/build/suremembers.js:9
 msgid "Launch powerful forms in minutes!"
 msgstr ""
 
-#: assets/build/suremembers.js:6
-#: assets/build/suremembers.js:52
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:9
+#: assets/build/suremembers.js:55
+#: assets/build/suremembers.js:57
 msgid "SureCart"
 msgstr ""
 
-#: assets/build/suremembers.js:6
+#: assets/build/suremembers.js:9
 msgid "The only eCommerce platform youll ever need"
 msgstr ""
 
-#: assets/build/suremembers.js:6
+#: assets/build/suremembers.js:9
 msgid "OttoKit"
 msgstr ""
 
-#: assets/build/suremembers.js:6
+#: assets/build/suremembers.js:9
 msgid "Automate your workflow with OttoKit"
 msgstr ""
 
-#: assets/build/suremembers.js:6
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:9
+#: assets/build/suremembers.js:57
 msgid "SureDash"
 msgstr ""
 
-#: assets/build/suremembers.js:6
+#: assets/build/suremembers.js:9
 msgid "Bring your brand to the WordPress Admin"
 msgstr ""
 
-#: assets/build/suremembers.js:6
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:9
+#: assets/build/suremembers.js:57
 msgid "SureMail"
 msgstr ""
 
-#: assets/build/suremembers.js:6
+#: assets/build/suremembers.js:9
 msgid "Better emails for WordPress"
 msgstr ""
 
 #. translators: %s: user name
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
+#, js-format
 msgid "Howdy, %s"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Another plugin operation is in progress. Please wait."
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:57
 msgid "Install & Activate"
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:34
-#: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:49
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:37
+#: assets/build/suremembers.js:39
 #: assets/build/suremembers.js:52
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:55
+#: assets/build/suremembers.js:57
 msgid "Activate"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Activated"
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:28
 msgid "Search…"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Searching…"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Assign memberships to new registrations"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Type to search memberships…"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Display SureMembers Icon on Block Editor"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Toggle this option to enable/disable the SureMembers icon display on the post/page edit Gutenberg screen."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Restrict content in search result"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Restricting content in search result can be performance intensive. It is recommended to keep search results paginated."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Hide WooCommerce coupon input field"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "If enabled, hides WooCommerce coupon input field on cart / checkout page ."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "User Roles to Decline Admin Access"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Select user roles"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Access to the admin dashboard and admin bar is restricted for users with the selected roles. Attempted access will redirect to a 404 page ."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Selected memberships will be granted to new registrations."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Help shape the future of SureMembers"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Share how you use the plugin so we can build features that matter, fix issues faster, and make smarter decisions."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Loading pages…"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "— Select a page —"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Team Account Pages"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "These pages are created automatically. Choose different pages here to override them."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Team Dashboard Page"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "The page team owners use to manage their members (contains the Team Account Dashboard block)."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Team Registration Page"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "The page invite links point to (contains the Team Invite Registration block)."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Copy to clipboard"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Claude Desktop"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "~/Library/Application Support/Claude/claude_desktop_config.json (macOS) or %APPDATA%\\Claude\\claude_desktop_config.json (Windows)"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Claude Code"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid ".mcp.json (project) or ~/.claude.json (global)"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Cursor"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "~/.cursor/mcp.json"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "VS Code (Copilot)"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid ".vscode/mcp.json (project) or settings.json > mcp.servers (global)"
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:57
 msgid "Continue"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "~/.continue/config.yaml or config.json"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Other"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Your client's MCP configuration file"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Connect Your AI Client"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "AI Client"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Create an Application Password — "
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Open Application Passwords"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Or use this CLI command to add the server quickly (you will still need to set the environment variables):"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Copy the JSON config below into: "
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Replace \"your-application-password\" with the password from Step 1."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "WP_API_URL — your site's MCP endpoint. WP_API_USERNAME — your WordPress username. WP_API_PASSWORD — the application password you generated."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "View setup docs"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Failed to activate MCP Adapter."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Requires the MCP Adapter plugin."
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:57
 msgid "Activating…"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Activate MCP Adapter"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Download MCP Adapter"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enable Abilities"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Register SureMembers abilities with the WordPress Abilities API. When enabled, AI clients can read membership analytics and manage memberships. When disabled, no abilities are registered and AI clients cannot perform any actions. For the full list of available abilities, see the "
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "SureMembers abilities documentation"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enable Edit Abilities"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "When enabled, AI clients can grant and revoke memberships, create access groups, and update expirations. When disabled, AI clients can only read your data."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enable Delete Abilities"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "When enabled, AI clients can permanently delete access groups. Deleted data cannot be recovered. When disabled, delete abilities are unregistered."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enable MCP Server"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Creates a dedicated SureMembers MCP endpoint that AI clients like Claude can connect to. When disabled, the endpoint is removed and external AI clients cannot discover or call SureMembers abilities."
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:34
 msgid "Title can't be empty"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Please provide a title for the role."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "User role created successfully"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "The user role has been created."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Failed to create user role"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Unable to create the user role. Please try again."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Confirm Remove"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Are you sure you want to delete this role?"
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:25
-#: assets/build/suremembers.js:32
-#: assets/build/suremembers.js:34
-#: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:43
-#: assets/build/suremembers.js:44
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:28
+#: assets/build/suremembers.js:35
+#: assets/build/suremembers.js:37
+#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:46
+#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:55
 msgid "Delete"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "User Role Name"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Update Role"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Create Role"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Create custom user roles. Please avoid using special symbols in the user roles."
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:34
 msgid "Please enter a valid URL starting with http:// or https://"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Login Redirect"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Search for a page or post on your site"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Logout Redirect"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Type to search existing posts or paste external URL"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Left Top"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Left Center"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Left Bottom"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Right Top"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Right Center"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Right Bottom"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Center Top"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Center"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Center Bottom"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Repeat"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Repeat X"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Repeat Y"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "No Repeat"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Initial"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Inherit"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Auto"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Cover"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Contain"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Light"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Dark"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Select Image"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Set Image"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Login URL"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Customize Login URL"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Customize your website's login URL from wp-login.php to one of your choosing."
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:28
 msgid "Redirect URL"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Brand Colors"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Primary Color"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "This color will be the primary color."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Secondary Color"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "This color will be used as secondary color."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Text Color"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "This color will be used as text color."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Links Color"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "This color will be used as links color."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Logo Settings"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Disable Logo"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Hide the logo on the login page."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Custom Logo"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Replace the WordPress logo with a custom logo on the login page."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Logo Width"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Logo Height"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Logo Image"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Replace"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Add Logo"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Login Form"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enable Transparent Form"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Remove the background color and border from the login form."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Background Color"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "This color will be the login form background color."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Border Color"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "This color will be used as the login form border color."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Turnstile Settings"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enable Turnstile"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enable Cloudflare Turnstile for spam protection on the login form."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Turnstile Site Key"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enter site key"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Turnstile Secret Key"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enter secret key"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Appearance"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "To enable Cloudflare Turnstile for your form, please follow the steps mentioned"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "here"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Background Settings"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enable Background Image"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enable or disable the login page background image."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Background Repeat:"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Choose repeat option"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Select Position:"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Choose background position"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Background Image Size:"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Choose size option"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Background Image"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Add Background"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "This color will be used as background color."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "License Key"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Enter your license key"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Please enter a license key."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "License activated successfully."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Activation failed."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Activate License"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Please Enter your License Key."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "License Successfully Activated."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "License deactivated."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Deactivation failed."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Deactivate License"
 msgstr ""
 
-#: assets/build/suremembers.js:7
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:28
 msgid "Protected Content"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Login Popup"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Popup Title"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Confirm"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "You can create multiple restrictions based on user role each with their own rules and restrictions."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Delete Restriction?"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Are you sure you want to delete this restriction?"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "User Roles"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Search user roles…"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Login Logic"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Choose \"Allow\" to allow new login by terminating all other old sessions when the limit is reached OR choose \"Block\" to not allow new login if the limit is reached. Users need to wait for the old login sessions to expire."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Select login behavior"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Allow New User Login"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Block New User Login"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Allow Logout"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Toggle this option to allow users to logout from all other devices."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Add Login Restriction"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Import CSV"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Import Users CSV gives you a powerful tool that lets you effortlessly bring in a bunch of users to your WordPress site from a CSV file. It's perfect for times when you need to add multiple users all at once!"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "With this feature, you can easily enroll these users into specific memberships, making it convenient to manage their access."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Required Fields are:"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Username, Email ID"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Optional Fields are:"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Password, First Name, Last Name, Role, Suremember Memberships, Membership Expiration, Generate Password, Website."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "To download the CSV template click here."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Choose CSV File to Import"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Invalid file type"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Please select a CSV file."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Error reading CSV file"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Please check the file format and try again."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Choose CSV file"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Selected:"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Send password reset email to all users"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Users will receive an email to set their password"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Send onboarding email to users"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Users will receive a welcome email with instructions"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Ready to import?"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Click the button below to start importing your users"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "No data to import"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Please upload a CSV file first."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Invalid CSV headers"
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "CSV must include \"Username*\" and \"Email*\" columns. Please check the file format."
 msgstr ""
 
-#: assets/build/suremembers.js:7
+#: assets/build/suremembers.js:10
 msgid "Users imported successfully"
 msgstr ""
 
 #. translators: %d is the number of users imported.
-#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:13
+#, js-format
 msgid "%d users have been imported successfully."
 msgstr ""
 
-#: assets/build/suremembers.js:10
+#: assets/build/suremembers.js:13
 msgid "Import failed"
 msgstr ""
 
 #. translators: %d is the number of users failed.
-#: assets/build/suremembers.js:13
+#: assets/build/suremembers.js:16
+#, js-format
 msgid "Failed to import %d users. Please check the data and try again."
 msgstr ""
 
-#: assets/build/suremembers.js:13
+#: assets/build/suremembers.js:16
 msgid "Import completed with errors"
 msgstr ""
 
 #. translators: %1$d is users created, %2$d is users failed.
-#: assets/build/suremembers.js:16
+#: assets/build/suremembers.js:19
+#, js-format
 msgid "%1$d users imported successfully, %2$d failed."
 msgstr ""
 
-#: assets/build/suremembers.js:16
+#: assets/build/suremembers.js:19
 msgid "Error processing CSV data"
 msgstr ""
 
 #. translators: Error message.
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
+#, js-format
 msgid "Please check the file format. Error: %s"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Unknown error occurred."
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Importing Users…"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Something went wrong."
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Failed to save settings."
 msgstr ""
 
-#: assets/build/suremembers.js:19
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:50
 msgid "Saving…"
 msgstr ""
 
-#: assets/build/suremembers.js:19
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:57
 msgid "Save"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Create unlimited custom user roles"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Assign roles to access groups"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Automatically sync user roles with memberships"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Manage role capabilities"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Create custom user roles to organize your members and control access to different areas of your site. Perfect for membership sites with multiple tiers."
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Limit concurrent login sessions per user"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Configure restrictions by user role"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Block or allow new logins when limit reached"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Allow users to logout from other devices"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Control how many devices a user can be logged in from simultaneously. Prevent credential sharing and protect your premium content."
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Import users from CSV files"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Automatically assign memberships on import"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Send welcome emails to imported users"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Set expiration dates for memberships"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Bulk import users from a CSV file and automatically assign them to memberships. Perfect for migrating from another platform or adding users in bulk."
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "General"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Admin Settings"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Redirection Rules"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Login Customizer"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Text Labels"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Import"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "AI Abilities & MCP"
 msgstr ""
 
-#: assets/build/suremembers.js:19
+#: assets/build/suremembers.js:22
 msgid "Licensing"
 msgstr ""
 
-#: assets/build/suremembers.js:19
-#: assets/build/suremembers.js:44
+#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:47
 msgid "Filters: "
 msgstr ""
 
 #. translators: %d is the number of memberships per page.
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
+#, js-format
 msgid "%d Memberships per page"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "10 Memberships per page"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "25 Memberships per page"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "50 Memberships per page"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "75 Memberships per page"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "100 Memberships per page"
 msgstr ""
 
-#: assets/build/suremembers.js:22
-#: assets/build/suremembers.js:44
+#: assets/build/suremembers.js:25
 #: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:55
 msgid "Clear"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "No Access Groups"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Hi there, let's get you started"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "It looks like you haven't created any membership yet. Start protecting your content with SureMembers and control who can access what in just a few clicks."
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Create unlimited membership for your members."
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Protect posts, pages, and custom content types."
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Control access based on membership levels and user roles."
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Set up drip content and schedule content releases."
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Uploading…"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Files uploaded successfully!"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Upload failed: "
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Unknown error"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Download Files Library"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "Upload Files"
 msgstr ""
 
-#: assets/build/suremembers.js:22
+#: assets/build/suremembers.js:25
 msgid "or drag and drop files to upload"
 msgstr ""
 
 #. translators: %d is the file count
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
+#, js-format
 msgid "Showing %d files"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Search files…"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Loading files…"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "No files found"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Upload files to get started"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Delete file"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Selected Files"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "No files selected"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Add Files"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Delete File"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Are you sure you want to permanently delete this file? This cannot be undone."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Please add at least 1 character to search"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "No protected content available to drip."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Select the content this membership protects. Only its members will be able to view it."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Search content…"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Select.."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Specific Pages / Posts / Taxonomies,etc."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Restrict URL(s)"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Add URL fragment or complete URL to restrict. To add multiple URLs, keep them comma separated or on new lines."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Enter URLs to restrict…"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Regular Expression"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Verify regular expression at regex101.com"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Exclude Pages / Posts / Taxonomies, etc."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Search for a Page or Post…"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Redirect"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Message"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Page/Post"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Unauthorized Access"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Choose what visitors without access see when they try to open protected content."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Choose Action"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "In Content"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Shows the restriction message within the post’s normal layout (title, sidebar, etc.) instead of replacing the entire page. Applies only to single blog posts — pages, archives, and other post types always use the full restriction template."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Enable Excerpt"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "This content will be shown to unauthorized user."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Enter a message for unauthorized users"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Button Text"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "e.g., Get Access"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Button URL"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "https://example.com/pricing"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "https://example.com/login"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Enable Login Button"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Adds a login link below the message that opens a login popup for logged-out visitors. This is independent of the Button Text/URL above and uses the login label set in SureMembers settings."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Select Page/Post to Display"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Select a page or post to display to unauthorized users. The content of the selected page/post (including any Elementor layouts) will be shown."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Select date"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Pick a Date"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Clear Date"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "None"
 msgstr ""
 
-#: assets/build/suremembers.js:25
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:28
+#: assets/build/suremembers.js:36
 msgid "Release the protected content to members in stages over a set period of time."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Add Drip Content"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Show this content"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Select date type"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "After Duration"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Specific Date"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "After"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Days"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "at"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Select time"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "AM"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "PM"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Remove drip"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Release content over time to keep your members engaged. Schedule when content becomes available after a member joins."
 msgstr ""
 
-#: assets/build/suremembers.js:25
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:28
+#: assets/build/suremembers.js:33
 msgid "Downloads"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Add downloadable files that are available only to members of this membership."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Add Downloads"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Selected Files:"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Link copied to clipboard."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Error copying link."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Copy Link"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Remove file"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Protected Downloads"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Protect your digital files and downloads. Only members with access can download your protected files."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Enable Membership Expiration"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Date Type"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Relative Date"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Pick a expiration date for Membership. Users will be removed from the Membership after the request date exceeds the expiration date."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Duration"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Enter the relative duration in Day(s) after the created date for this Membership to expire."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "e.g., 30"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid " Days"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Automatically end membership access after a duration or on a specific date."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Copied to clipboard."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "The shortcode has been copied."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Error copying to clipboard."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Please try again."
 msgstr ""
 
-#: assets/build/suremembers.js:25
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:28
+#: assets/build/suremembers.js:55
 msgid "Copy"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Options"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Role syncing, rule priority and shortcodes for this membership."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Users added to this group will also be given this user role."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Select user roles…"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Priority"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Set priority of Membership. Higher the priority will be executed first."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "e.g., 10"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Restrict Content"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Wrap any content with this shortcode to show or hide it based on this membership’s access. Use the access_group_ids parameter to target one or more memberships (comma-separated)."
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Members List"
 msgstr ""
 
-#: assets/build/suremembers.js:25
+#: assets/build/suremembers.js:28
 msgid "Display a list of members who belong to this membership on any page or post. Parameters: membership_id (required), limit (max members, 0 = all), layout (grid or list), show_avatar, show_email, show_joined and show_expiry (true/false)."
 msgstr ""
 
 #. translators: %d: number of team accounts created.
-#: assets/build/suremembers.js:26
+#: assets/build/suremembers.js:29
+#, js-format
 msgid "Created %d team account(s) for existing members."
 msgstr ""
 
-#: assets/build/suremembers.js:26
+#: assets/build/suremembers.js:29
 msgid "Could not sync existing members."
 msgstr ""
 
-#: assets/build/suremembers.js:26
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:29
+#: assets/build/suremembers.js:37
 msgid "Manual only"
 msgstr ""
 
-#: assets/build/suremembers.js:26
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:29
+#: assets/build/suremembers.js:37
 msgid "Invite link only"
 msgstr ""
 
-#: assets/build/suremembers.js:26
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:29
+#: assets/build/suremembers.js:37
 msgid "Manual & invite link"
 msgstr ""
 
-#: assets/build/suremembers.js:26
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:29
+#: assets/build/suremembers.js:33
 msgid "Team Account Settings"
 msgstr ""
 
-#: assets/build/suremembers.js:26
+#: assets/build/suremembers.js:29
 msgid "Let a buyer of this membership invite team members who inherit the same access."
 msgstr ""
 
-#: assets/build/suremembers.js:26
+#: assets/build/suremembers.js:29
 msgid "Disable team management?"
 msgstr ""
 
 #. translators: %d: number of variations.
-#: assets/build/suremembers.js:27
+#: assets/build/suremembers.js:30
+#, js-format
 msgid "This membership has %d variation(s). Disabling team management will also disable it for them — they will become regular memberships that still share this membership’s content. Continue?"
 msgstr ""
 
-#: assets/build/suremembers.js:27
+#: assets/build/suremembers.js:30
 msgid "Disable"
 msgstr ""
 
-#: assets/build/suremembers.js:27
+#: assets/build/suremembers.js:30
 msgid "Enable Team Management"
 msgstr ""
 
-#: assets/build/suremembers.js:27
+#: assets/build/suremembers.js:30
 msgid "Unlocks team features for this membership so you can create seat-based variations. It does not, on its own, give this membership seats — use “Add seats to this membership” below for that."
 msgstr ""
 
-#: assets/build/suremembers.js:27
+#: assets/build/suremembers.js:30
 msgid "Add seats to this membership"
 msgstr ""
 
-#: assets/build/suremembers.js:27
+#: assets/build/suremembers.js:30
 msgid "Turn this membership itself into a team with its own seats. Leave off to keep it an individual membership and use it only as the base for variations."
 msgstr ""
 
-#: assets/build/suremembers.js:27
+#: assets/build/suremembers.js:30
 msgid "Team management for this variation is controlled by the parent membership. Set its team size below."
 msgstr ""
 
-#: assets/build/suremembers.js:27
+#: assets/build/suremembers.js:30
 msgid "Team management is off (managed by the parent). This variation works as a regular membership sharing the parent’s content."
 msgstr ""
 
-#: assets/build/suremembers.js:27
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:39
 msgid "Maximum Team Members"
 msgstr ""
 
-#: assets/build/suremembers.js:27
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:39
 msgid "Number of members the owner can add (the owner does not count towards this limit)."
 msgstr ""
 
-#: assets/build/suremembers.js:27
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:39
 msgid "How members can be added"
 msgstr ""
 
 #. translators: 1: created so far, 2: total.
-#: assets/build/suremembers.js:28
+#: assets/build/suremembers.js:31
+#, js-format
 msgid "Creating team accounts… %1$d / %2$d"
 msgstr ""
 
-#: assets/build/suremembers.js:28
+#: assets/build/suremembers.js:31
 msgid "Sync existing members"
 msgstr ""
 
 #. translators: %d: number of members.
-#: assets/build/suremembers.js:29
+#: assets/build/suremembers.js:32
+#, js-format
 msgid "%d user(s) already have this membership but no team account. Each will be given their own team account. Continue?"
 msgstr ""
 
-#: assets/build/suremembers.js:29
+#: assets/build/suremembers.js:32
 msgid "Create accounts"
 msgstr ""
 
 #. translators: %d: number of members.
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:33
+#, js-format
 msgid "Sync %d existing member(s)"
 msgstr ""
 
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:33
 msgid "Give users who already have this membership their own team account."
 msgstr ""
 
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:33
 msgid "Sell this access group as a team plan. Buyers become team owners and can invite members who inherit the same access — perfect for businesses and bulk licenses."
 msgstr ""
 
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:33
 msgid "Access"
 msgstr ""
 
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:33
 msgid "Advanced"
 msgstr ""
 
-#: assets/build/suremembers.js:30
+#: assets/build/suremembers.js:33
 msgid "Content"
 msgstr ""
 
-#: assets/build/suremembers.js:30
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:39
 msgid "Membership deleted successfully!"
 msgstr ""
 
-#: assets/build/suremembers.js:30
 #: assets/build/suremembers.js:33
 #: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:51
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:50
 #: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:55
+#: assets/build/suremembers.js:57
 msgid "Active"
 msgstr ""
 
-#: assets/build/suremembers.js:30
 #: assets/build/suremembers.js:33
-#: assets/build/suremembers.js:34
 #: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:40
-#: assets/build/suremembers.js:42
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:37
+#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:43
+#: assets/build/suremembers.js:45
+#: assets/build/suremembers.js:57
 msgid "Draft"
 msgstr ""
 
 #. translators: %s: status label
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
+#, js-format
 msgid "Status changed to %s"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Failed to delete membership."
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Choose an action for unauthorized access"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Message can't be empty"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Button Text can't be empty"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "URL can't be empty"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Please select a Page or Post to display for unauthorized users"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Please select a Page or Post"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Expiration specific date can't be empty"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Expiration relative date value can't be empty"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Expiration relative date value should at least be 1."
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Membership updated successfully!"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Membership added successfully!"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "An error occurred while saving."
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Untitled Membership"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Get Access"
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "This content is restricted. Please upgrade your plan to get access."
 msgstr ""
 
-#: assets/build/suremembers.js:31
+#: assets/build/suremembers.js:34
 msgid "Failed to load membership data"
 msgstr ""
 
-#: assets/build/suremembers.js:31
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:39
 msgid "Confirm Delete"
 msgstr ""
 
 #. translators: 1: line break, 2: empty string for spacing
-#: assets/build/suremembers.js:32
+#: assets/build/suremembers.js:35
+#, js-format
 msgid "Are you sure you want to delete this Membership?%1$s%2$sThis action cannot be undone."
 msgstr ""
 
-#: assets/build/suremembers.js:32
+#: assets/build/suremembers.js:35
 msgid "Content managed by the parent membership"
 msgstr ""
 
 #. translators: %s: parent membership title.
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
+#, js-format
 msgid "This is a variation of \"%s\". Its protected content, drip, downloads, roles and access rules are inherited from the parent and stay in sync automatically. Only the team settings can be changed here."
 msgstr ""
 
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
 msgid "This is a variation membership. Its protected content, drip, downloads, roles and access rules are inherited from its parent and stay in sync automatically. Only the team settings can be changed here."
 msgstr ""
 
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
 msgid "Edit parent membership"
 msgstr ""
 
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
 msgid "Select content under Protected Content first, then configure when it should be released to members."
 msgstr ""
 
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
 msgid "Created Date"
 msgstr ""
 
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
 msgid "Pending Review"
 msgstr ""
 
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
 msgid "Private"
 msgstr ""
 
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
 msgid "Unknown"
 msgstr ""
 
-#: assets/build/suremembers.js:33
+#: assets/build/suremembers.js:36
 msgid "(No Title)"
 msgstr ""
 
 #. translators: %s: parent membership title.
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
+#, js-format
 msgid "Variation of %s"
 msgstr ""
 
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
 msgid "Variation of another membership"
 msgstr ""
 
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
 msgid "ID:"
 msgstr ""
 
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
 msgid "Yes"
 msgstr ""
 
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
 msgid "No"
 msgstr ""
 
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
 msgid "Duplicate"
 msgstr ""
 
-#: assets/build/suremembers.js:34
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:37
+#: assets/build/suremembers.js:39
 msgid "Create variation"
 msgstr ""
 
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
 msgid "Remove its variations before deleting this membership."
 msgstr ""
 
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
 msgid "No results found"
 msgstr ""
 
-#: assets/build/suremembers.js:34
+#: assets/build/suremembers.js:37
 msgid "Try adjusting your filters or search term"
 msgstr ""
 
-#: assets/build/suremembers.js:34
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:37
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:55
 msgid "of"
 msgstr ""
 
-#: assets/build/suremembers.js:34
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:37
+#: assets/build/suremembers.js:55
 msgid "items"
 msgstr ""
 
 #. translators: %s: parent membership title.
-#: assets/build/suremembers.js:35
+#: assets/build/suremembers.js:38
+#, js-format
 msgid "Creates a copy of \"%s\" that shares its protected content and only varies the team size. Content settings stay managed on the parent."
 msgstr ""
 
-#: assets/build/suremembers.js:35
+#: assets/build/suremembers.js:38
 msgid "Variation name"
 msgstr ""
 
 #. translators: 1: parent title, 2: seats.
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
+#, js-format
 msgid "%1$s — %2$d seats"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Leave blank to auto-name it from the parent and seat count."
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Confirm Draft"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Are you sure you want to draft this Membership?"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Membership archived successfully!"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Failed to archive"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "An error occurred while archiving"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Confirm Active"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Are you sure you want to activate this Membership?"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Membership unarchived successfully!"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Failed to unarchive"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "An error occurred while unarchiving"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Are you sure you want to delete this Membership? This action cannot be undone."
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Failed to delete membership"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "An error occurred while deleting"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Failed to duplicate membership"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "An error occurred while duplicating"
 msgstr ""
 
-#: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:50
 msgid "Search memberships…"
 msgstr ""
 
-#: assets/build/suremembers.js:36
-#: assets/build/suremembers.js:51
+#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:54
 msgid "Bulk actions: "
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "memberships selected"
 msgstr ""
 
-#: assets/build/suremembers.js:36
+#: assets/build/suremembers.js:39
 msgid "Confirm Bulk Publish"
 msgstr ""
 
 #. translators: %d: number of memberships
-#: assets/build/suremembers.js:37
+#: assets/build/suremembers.js:40
+#, js-format
 msgid "Are you sure you want to publish %d membership(s)?"
 msgstr ""
 
-#: assets/build/suremembers.js:37
-#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:40
+#: assets/build/suremembers.js:42
 msgid "Publish"
 msgstr ""
 
-#: assets/build/suremembers.js:37
+#: assets/build/suremembers.js:40
 msgid "No drafts found in selected items"
 msgstr ""
 
 #. translators: %d: number of memberships
-#: assets/build/suremembers.js:38
+#: assets/build/suremembers.js:41
+#, js-format
 msgid "%d membership(s) published successfully!"
 msgstr ""
 
 #. translators: %d: number of memberships
-#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:42
+#, js-format
 msgid "Failed to publish %d membership(s)"
 msgstr ""
 
-#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:42
 msgid "An error occurred during bulk publish"
 msgstr ""
 
-#: assets/build/suremembers.js:39
+#: assets/build/suremembers.js:42
 msgid "Confirm Bulk Draft"
 msgstr ""
 
 #. translators: %d: number of memberships
-#: assets/build/suremembers.js:40
+#: assets/build/suremembers.js:43
+#, js-format
 msgid "Are you sure you want to draft %d membership(s)?"
 msgstr ""
 
 #. translators: %d: number of memberships
-#: assets/build/suremembers.js:41
+#: assets/build/suremembers.js:44
+#, js-format
 msgid "%d membership(s) drafted successfully!"
 msgstr ""
 
 #. translators: %d: number of memberships
-#: assets/build/suremembers.js:42
+#: assets/build/suremembers.js:45
+#, js-format
 msgid "Failed to draft %d membership(s)"
 msgstr ""
 
-#: assets/build/suremembers.js:42
+#: assets/build/suremembers.js:45
 msgid "An error occurred during bulk draft"
 msgstr ""
 
-#: assets/build/suremembers.js:42
+#: assets/build/suremembers.js:45
 msgid "Confirm Bulk Delete"
 msgstr ""
 
 #. translators: %d: number of memberships
-#: assets/build/suremembers.js:43
+#: assets/build/suremembers.js:46
+#, js-format
 msgid "Are you sure you want to delete %d membership(s)? This action cannot be undone."
 msgstr ""
 
 #. translators: %d: number of memberships
-#: assets/build/suremembers.js:44
+#: assets/build/suremembers.js:47
+#, js-format
 msgid "Failed to delete %d membership(s)"
 msgstr ""
 
-#: assets/build/suremembers.js:44
+#: assets/build/suremembers.js:47
 msgid "Failed to delete memberships"
 msgstr ""
 
-#: assets/build/suremembers.js:44
+#: assets/build/suremembers.js:47
 msgid "An error occurred during bulk delete"
 msgstr ""
 
-#: assets/build/suremembers.js:44
+#: assets/build/suremembers.js:47
 msgid "Membership variation created."
 msgstr ""
 
-#: assets/build/suremembers.js:44
+#: assets/build/suremembers.js:47
 msgid "Failed to create the membership variation."
 msgstr ""
 
-#: assets/build/suremembers.js:44
+#: assets/build/suremembers.js:47
 msgid "An error occurred while creating the variation."
 msgstr ""
 
-#: assets/build/suremembers.js:44
+#: assets/build/suremembers.js:47
 msgid "Search users…"
 msgstr ""
 
 #. translators: %d is the number of users per page.
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
+#, js-format
 msgid "%d Users per page"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "10 per page"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "25 per page"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "50 per page"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "75 per page"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "100 per page"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "User Roles: "
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Select roles…"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Search roles…"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Memberships: "
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Select memberships…"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "year"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "years"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "ago"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "month"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "months"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "week"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "weeks"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "day"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "days"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "hour"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "hours"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "minute"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "minutes"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Just now"
 msgstr ""
 
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:55
 msgid "Name"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Roles"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Total Memberships"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "users"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "User Profile"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "View"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Role"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Select a membership"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Assign Membership"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Expired"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Set date"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Edit expiration date"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Clear expiration"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Team account"
 msgstr ""
 
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:55
 msgid "Revoked"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Revoke membership"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Restore membership"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Remove membership"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Revoke before removing"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "No memberships assigned to this user yet."
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Team"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Open"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "(untitled)"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Owner"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Team Member"
 msgstr ""
 
-#: assets/build/suremembers.js:47
-#: assets/build/suremembers.js:51
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:50
+#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:55
 msgid "Inactive"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Grant or revoke this user's plan access."
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Save Changes"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "No users found"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Try adjusting your search or filter criteria"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "No Users Yet."
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Users will appear here once they register on your site."
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Create Team Account"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Team owner"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Change"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Search by name or email…"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Team membership"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Select Membership"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "No memberships have team management enabled yet. Enable it on a membership first."
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Team account created."
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Could not create the team account."
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Select a user and a membership."
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Could not load team accounts."
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Deactivate Team Accounts"
 msgstr ""
 
-#: assets/build/suremembers.js:47
+#: assets/build/suremembers.js:50
 msgid "Activate Team Accounts"
 msgstr ""
 
 #. translators: %d: number of accounts.
-#: assets/build/suremembers.js:48
+#: assets/build/suremembers.js:51
+#, js-format
 msgid "Suspend all members of %d team account(s) and revoke their access? Owners keep their own access, and members can be restored by activating the accounts again."
 msgstr ""
 
 #. translators: %d: number of accounts.
-#: assets/build/suremembers.js:49
+#: assets/build/suremembers.js:52
+#, js-format
 msgid "Reactivate %d team account(s) and restore access for their suspended members?"
 msgstr ""
 
-#: assets/build/suremembers.js:49
 #: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Deactivate"
 msgstr ""
 
-#: assets/build/suremembers.js:49
+#: assets/build/suremembers.js:52
 msgid "Bulk action applied."
 msgstr ""
 
-#: assets/build/suremembers.js:49
+#: assets/build/suremembers.js:52
 msgid "Bulk action failed."
 msgstr ""
 
-#: assets/build/suremembers.js:49
+#: assets/build/suremembers.js:52
 msgid "Search owner name or email…"
 msgstr ""
 
-#: assets/build/suremembers.js:49
+#: assets/build/suremembers.js:52
 msgid "Filters:"
 msgstr ""
 
 #. translators: %d: rows per page.
-#: assets/build/suremembers.js:50
-#: assets/build/suremembers.js:51
+#: assets/build/suremembers.js:53
+#: assets/build/suremembers.js:54
+#, js-format
 msgid "%d per page"
 msgstr ""
 
-#: assets/build/suremembers.js:51
+#: assets/build/suremembers.js:54
 msgid "All statuses"
 msgstr ""
 
-#: assets/build/suremembers.js:51
+#: assets/build/suremembers.js:54
 msgid "All memberships"
 msgstr ""
 
 #. translators: %d: number selected.
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
+#, js-format
 msgid "%d selected"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Team Owner"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Team Members"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Created"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Actions"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "View details"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Deactivate Team Account"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Activate Team Account"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "This suspends all team members and revokes their access. The owner keeps their own access. You can restore the members later by activating the account again. Continue?"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "This reactivates the team account and restores access for all members who were suspended when it was deactivated. Continue?"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Account updated."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Action failed."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "No team accounts found."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Manual"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Invite Link"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "CSV Import"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Could not load account details."
 msgstr ""
 
-#: assets/build/suremembers.js:52
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:55
+#: assets/build/suremembers.js:57
 msgid "Back"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Account not found."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Back to Team Accounts"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Deactivate the team account before deleting it."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Delete Team Account"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "This permanently deletes the team account and its member records. This cannot be undone. The owner keeps their own access. Continue?"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Team account deleted."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Could not delete team account."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Invite link copied."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Could not copy the invite link."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Export failed."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Export CSV"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Added Via"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Joined"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Suspended"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "This member was suspended when the team account was deactivated. Reactivate the account to restore them."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "—"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Make owner"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Make Team Owner"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "This makes the selected member the new team owner. The current owner becomes a regular member of the team. Both keep their access. Continue?"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Team ownership transferred."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Could not transfer ownership."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Remove member"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Remove Team Member"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "This removes the member from the team and revokes their access. Their user account is kept. Continue?"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Member removed."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Could not remove member."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "No members yet."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Sell team & corporate memberships"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Let buyers invite members via a shareable link"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Add or remove members manually or via CSV"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Members inherit the owner’s access automatically"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Per-team seat limits with usage tracking"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Manage every team account from one dashboard"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Offer team or corporate plans where one buyer becomes the team owner and invites members who inherit their membership access — perfect for B2B and bulk sign-ups."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Start typing…"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Enter email address"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Please enter the valid email ID to send the test email"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Test email sent successfully."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Failed to send test email"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "An error occurred while sending test email"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Sending…"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Send Test Email"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "General Emails"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Emails sent to members for account and membership activity."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Email sent when users request password reset"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Email Subject"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Enter email subject"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Available Shortcodes"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Select a shortcode"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Use WooCommerce Template"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Email Content"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Welcome email sent to new users"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Email sent when users gain access to content"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Branded welcome email for new users"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Password reset email template"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Access expiration notifications"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Team account owner & member emails"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Merge tags for personalization"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Send test emails before going live"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Customize every email SureMembers sends — member onboarding, password resets, access alerts and team account notifications — with a rich editor, merge tags and test sends."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Sender Details"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "The name and address all SureMembers emails are sent from."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "From Name"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Enter sender name"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "From Email"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Enter sender email"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Owner — sent when their team account is created"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Owner — sent when a member joins via the invite link"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Member — sent when added to a team (manual / CSV)"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Member — sent when removed from a team"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Team Account Emails"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Transactional emails sent to team owners and their members."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Available Merge Tags"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Select a merge tag"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Failed to send test email."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "An error occurred while sending the test email."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Please enter a valid email to send the test."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Email Settings"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Today"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "By tomorrow"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Next 7 days"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Next 30 days"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Jan"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Feb"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Mar"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Apr"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "May"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Jun"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Jul"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Aug"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Sep"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Oct"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Nov"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Dec"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Manual / Other"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "WooCommerce"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "TutorLMS"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Team Account"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "New Members"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Churn"
 msgstr ""
 
-#: assets/build/suremembers.js:52
-#: assets/build/suremembers.js:53
+#: assets/build/suremembers.js:55
+#: assets/build/suremembers.js:56
 msgid "Growth & Trends"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Upcoming Expirations"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Recent Activity"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Membership Snapshot"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "No activity recorded yet."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Member"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Source"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Date"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Granted"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "No active memberships yet."
 msgstr ""
 
-#: assets/build/suremembers.js:52
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:55
+#: assets/build/suremembers.js:57
 msgid "Active Members"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "See which members are about to lose access, across configurable look-ahead windows, so you can act before they churn."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Today, tomorrow, 7, 30, 90 and 365-day windows"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Per-member expiry dates and days remaining"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "No memberships expiring in this window."
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Expires On"
 msgstr ""
 
-#: assets/build/suremembers.js:52
+#: assets/build/suremembers.js:55
 msgid "Days Left"
 msgstr ""
 
 #. translators: 1: first record index, 2: last record index, 3: total records.
-#: assets/build/suremembers.js:53
+#: assets/build/suremembers.js:56
+#, js-format
 msgid "%1$d–%2$d of %3$d"
 msgstr ""
 
-#: assets/build/suremembers.js:53
+#: assets/build/suremembers.js:56
 msgid "Track new members vs churn over time, break new members down by source and by membership, and measure net growth across any date range."
 msgstr ""
 
-#: assets/build/suremembers.js:53
+#: assets/build/suremembers.js:56
 msgid "New member vs churn trends over custom date ranges"
 msgstr ""
 
-#: assets/build/suremembers.js:53
+#: assets/build/suremembers.js:56
 msgid "New members by source and by membership breakdowns"
 msgstr ""
 
-#: assets/build/suremembers.js:53
+#: assets/build/suremembers.js:56
 msgid "Net growth and active member totals"
 msgstr ""
 
-#: assets/build/suremembers.js:53
+#: assets/build/suremembers.js:56
 msgid "Select membership"
 msgstr ""
 
 #. translators: 1: start date, 2: end date.
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
+#, js-format
 msgid "%1$s — %2$s"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Last 7 days"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Last 30 days"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Last 90 days"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Last 12 months"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Apply"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Importing historical membership data in the background. Charts may be incomplete until the import finishes."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Net Growth"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "New Members vs Churn"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "New Members by Source"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "New Members by Membership"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Screenshot coming soon."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Mark step incomplete"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Mark step complete"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Read documentation"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "View screenshot"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Learn how"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Celebration"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "You've completed setup!"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Your membership site is ready to welcome members. Explore Pro features below to take it further."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Failed to load learn chapters."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Could not update your progress. Please try again."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Could not dismiss the Learn tab. Please try again."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "To help you get the most out of SureMembers, we have outlined a few key tasks. These will help you learn how to set up, customize, and grow your membership site."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "No learn chapters available yet."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Dismiss Learn tab"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Access Group is active"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Delete Membership"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Leave"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Protect your content easily"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Manage member access seamlessly"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Control user permissions"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Works perfectly with WordPress"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Quick and easy setup"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Smart, Quick and Powerful Membership Management."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Onboarding Welcome Banner"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "List of features"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Let's Get Started"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "What you will get:"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Skip"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Installing…"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Okay, just one last step…"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Help us tailor your SureMembers experience by sharing a bit about yourself:"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Subscribe for email updates about products and new features"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Stay in the loop and help shape SureMembers! Help us build a better SureMembers by sharing how you use the plugin."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Next"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Protect your content easily with memberships"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Manage member access seamlessly across your site"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Control user permissions and restrictions"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Integrate with SureCart for membership sales"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "You're All Set! 🚀"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Create your first membership to start protecting your content. You can easily manage members, set restrictions, and control access across your entire site."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "What You Can Do Next:"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Create a Private Community for Your Members"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Many membership sites struggle to keep members engaged because content is spread across different tools and platforms."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "SureDash "
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "gives you a clean and simple space to bring everything together so your members can learn, interact, and stay active in one place."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "SureDash Community"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Create Spaces for Courses, Discussions, Feeds, Events, and more"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Organize lessons with Sections and Topics"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Works smoothly with your SureMembers access rules"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Simple setup, even if you are not technical"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Fast and lightweight design that keeps your site running smoothly"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Sell Memberships the Easy Way"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Turn your membership site into a revenue-generating business with powerful e-commerce capabilities."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "SureCart "
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "helps you sell memberships, subscriptions, and digital products with ease."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "SureCart E-commerce"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Create and sell memberships that connect directly with SureMembers"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Smooth checkout experience that looks great on all devices"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Easy to manage payments, subscriptions, and refunds"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "No coding needed to get started"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Built to be fast so it does not slow down your site"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Fail-Proof Email Delivery"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Power reliable membership email delivery—from sign-ups to renewals—with advanced SMTP, analytics, and failover support."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "SureMail "
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "keep your membership running smoothly with reliable email delivery for registrations, access changes, renewals, and member notifications."
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Reduce the chances of your emails getting lost in spam"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Quick and easy setup, no technical skills needed"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Track, log, and resend emails with ease"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Connect to multiple email providers"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Auto-retry failed emails"
 msgstr ""
 
-#: assets/build/suremembers.js:54
+#: assets/build/suremembers.js:57
 msgid "Exit Guided Setup"
 msgstr ""

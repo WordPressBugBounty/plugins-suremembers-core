@@ -300,6 +300,7 @@ class Plugin_Loader {
 		Dashboard_Access::get_instance();
 		Access_Logs::get_instance();
 		Routes::get_instance();
+		Inc\Promotion::get_instance();
 		Learn::get_instance();
 		Rest_Restriction::get_instance();
 		Expiration_Sweep::get_instance();

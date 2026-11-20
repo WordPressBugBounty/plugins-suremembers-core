@@ -499,6 +499,7 @@ class Admin_Menu {
 			'is_premium_active'         => $this->get_plugin_status( 'suremembers/suremembers.php' ) === 'active',
 			'upgrade_link'              => 'https://suremembers.com/pricing/?utm_source=suremembers-core&utm_medium=dashboard&utm_campaign=upgrade',
 			'pro_promo_image'           => SUREMEMBERS_CORE_URL . 'admin/assets/images/onboarding.png',
+			'promotion'                 => \SureMembersCore\Inc\Promotion::get_for_dashboard(),
 			'learn_dismissed'           => $learn_dismissed,
 			'learn_has_new_steps'       => $learn_has_new_steps,
 			'email_template_defaults'   => \SureMembersCore\Inc\Services\Email_Templates::registered(),
